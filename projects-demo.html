@@ -737,7 +737,6 @@
             poster: 'assets/elements_canva/projects/lily_cover.png',
             video: 'assets/videos_showcase/animation_videos/lily_animation.MP4',
             link: 'assets/videos_showcase/animation_videos/lily_animation.MP4',
-            pdf: 'assets/videos_showcase/animation_videos/lily_ppt.pdf',
             software: {
               name: 'Adobe Animate',
               logo: 'assets/elements_canva/profile/software_logo/animate.png'
@@ -2025,9 +2024,44 @@
           });
         });
 
-        // Start video playback
+        // Start video playback with robust error & loading fallback
         const activeVideo = modalDynamicContent.querySelector('#modalVideoPlayer');
         if (activeVideo) {
+          const showVideoNotice = (msg) => {
+            const frame = activeVideo.closest('.video-fullscreen-frame') || activeVideo.parentElement;
+            if (frame && !frame.querySelector('.video-fallback-banner')) {
+              const banner = document.createElement('div');
+              banner.className = 'video-fallback-banner';
+              banner.style.cssText = 'padding: 24px 20px; text-align: center; background: rgba(248, 250, 252, 0.95); border-radius: 12px; margin-top: 10px; border: 1.5px dashed #cbd5e1;';
+              banner.innerHTML = `
+                <div style="font-size: 1.6rem; margin-bottom: 6px;">🎬</div>
+                <h4 style="font-size: 0.95rem; color: #1e293b; margin-bottom: 4px; font-weight: 700;">${msg}</h4>
+                <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 12px;">This full-length recording is high-definition and buffering from GitHub.</p>
+                <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                  ${p.gameplayUrl ? `<a href="${p.gameplayUrl}" target="_blank" style="display:inline-flex; align-items:center; gap:6px; padding:7px 16px; background:#ef4444; color:#fff; border-radius:20px; font-size:0.85rem; font-weight:600; text-decoration:none;"><i class="fab fa-youtube"></i> Watch on YouTube</a>` : ''}
+                  ${p.figma ? `<a href="${p.figma}" target="_blank" style="display:inline-flex; align-items:center; gap:6px; padding:7px 16px; background:#a855f7; color:#fff; border-radius:20px; font-size:0.85rem; font-weight:600; text-decoration:none;"><i class="fab fa-figma"></i> Open Figma Prototype</a>` : ''}
+                </div>
+              `;
+              frame.appendChild(banner);
+            }
+          };
+
+          activeVideo.addEventListener('error', () => {
+            showVideoNotice('High-Res Video Optimizing For Web');
+          });
+
+          const loadTimeout = setTimeout(() => {
+            if (activeVideo.readyState === 0) {
+              showVideoNotice('Buffering Video Stream...');
+            }
+          }, 4000);
+
+          activeVideo.addEventListener('playing', () => {
+            clearTimeout(loadTimeout);
+            const banner = activeVideo.parentElement?.querySelector('.video-fallback-banner');
+            if (banner) banner.remove();
+          });
+
           activeVideo.play().catch(() => {});
         }
       }
