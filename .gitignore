@@ -11,16 +11,8 @@ npm-debug.log*
 node_modules/
 
 # Large raw media files (> 100MB) temporarily ignored until compressed for GitHub Pages
+assets/videos_showcase/uiux_videos/codu_video.mp4
 assets/videos_showcase/animation_videos/dontol_ppt.pdf
 assets/videos_showcase/animation_videos/Inner Thoughts.mp4
-assets/videos_showcase/animation_videos/lily_ppt.pdf
-assets/videos_showcase/game_videos/enviornment_pirate.mp4
-assets/videos_showcase/game_videos/environment_hut.mp4
-assets/videos_showcase/game_videos/environment_school.mov
-assets/videos_showcase/game_videos/mario_gameplay.mov
-assets/videos_showcase/game_videos/mummy_gameplay.mp4
-assets/videos_showcase/game_videos/seavagabond_gameplay.mp4
-assets/videos_showcase/game_videos/cutscenes/sea_cutscene1.mp4
-assets/videos_showcase/game_videos/cutscenes/sea_cutscene2.mp4
 assets/videos_showcase/game_videos/cutscenes/sea_cutscene4.mp4
-assets/videos_showcase/uiux_videos/codu_video.mp4
+assets/videos_showcase/animation_videos/lily_ppt.pdf
