@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Celyne's Portfolio</title>
+  <meta name="description" content="Get in touch with Jocelyne Audrey Tando (Celyne). Connect via Email, LinkedIn, or WhatsApp.">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Contact Stylesheet -->
+  <link rel="stylesheet" href="contact-style.css">
+</head>
+<body>
+
+  <!-- Warm Wooden Desk Background Surface (Matching Profile, Projects & Awards) -->
+  <div class="desk-surface"></div>
+
+  <!-- Doodled Table Accents (Heart ♡ & Star ✦ on Wood) -->
+  <div class="desk-doodle doodle-h1" aria-hidden="true">♡</div>
+  <div class="desk-doodle doodle-h2" aria-hidden="true">♡</div>
+  <div class="desk-doodle doodle-s1" aria-hidden="true">✦</div>
+  <div class="desk-doodle doodle-s2" aria-hidden="true">✦</div>
+
+  <!-- ==========================================================================
+       TOP NAVIGATION BAR (Matching Site Mockup)
+       ========================================================================== -->
+  <header class="celyne-top-nav">
+    <!-- Brand Logo: Sun + "Celyne" -->
+    <a href="index.html" class="nav-brand-sun" title="Celyne's Portfolio (Desk View)">
+      <svg class="sun-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="12" fill="#fef08a" stroke="#f59e0b" stroke-width="2.5"/>
+        <line x1="20" y1="2" x2="20" y2="5" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="20" y1="35" x2="20" y2="38" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="2" y1="20" x2="5" y2="20" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="35" y1="20" x2="38" y2="20" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="7" y1="7" x2="10" y2="10" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="30" y1="30" x2="33" y2="33" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="7" y1="33" x2="10" y2="30" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="30" y1="10" x2="33" y2="7" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="16" cy="19" r="1.5" fill="#78350f"/>
+        <circle cx="24" cy="19" r="1.5" fill="#78350f"/>
+        <path d="M17 23 Q20 26 23 23" stroke="#78350f" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span class="nav-brand-name">Celyne</span>
+    </a>
+
+    <!-- Navigation Menu Links -->
+    <nav class="nav-menu-links">
+      <a href="index.html" class="nav-item-link" title="Desk View">Home</a>
+      <a href="profile-demo.html" class="nav-item-link">Profile</a>
+      <a href="projects-demo.html" class="nav-item-link">Projects</a>
+      <a href="awards-demo.html" class="nav-item-link">Awards</a>
+      <a href="contact-demo.html" class="nav-item-link nav-active">Contact</a>
+    </nav>
+
+    <!-- Right Controls: Audio + Doodles -->
+    <div class="nav-right-actions">
+      <button id="soundToggleBtn" class="nav-btn-pill" title="Toggle Sound Effects">
+        <i class="fas fa-volume-high" id="soundIcon"></i>
+        <span id="soundLabel">Sound ON</span>
+      </button>
+
+      <div class="nav-doodle-end">
+        <span>♡</span>
+        <span class="star-doodle">✦</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MAIN CARD CONTAINER (Simple, Clean Layout)
+       ========================================================================== -->
+  <main class="contact-container">
+    <div class="contact-card">
+      
+      <!-- Card Header -->
+      <h1 class="contact-title">
+        <i class="fas fa-comments"></i>
+        <span>Let's Connect!</span>
+      </h1>
+      <p class="contact-subtitle">
+        Have a game project, UI/UX inquiry, or creative collaboration in mind? Feel free to reach out anytime!
+      </p>
+
+      <!-- 2-Column Grid -->
+      <div class="contact-grid">
+        
+        <!-- Left: Direct Channels (Email, LinkedIn, WhatsApp) -->
+        <div class="contact-panel">
+          <h2 class="panel-title">Direct Channels</h2>
+          
+          <div class="channels-list">
+            
+            <!-- 1. Gmail (Red Google Mail Direct Compose) -->
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jocelyneaudreytando@gmail.com" target="_blank" rel="noopener noreferrer" class="channel-row channel-row-email" id="emailRowBtn" title="Open Gmail to compose email to jocelyneaudreytando@gmail.com">
+              <div class="channel-left">
+                <div class="channel-icon icon-email">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-name">Gmail</span>
+                  <span class="channel-detail">jocelyneaudreytando@gmail.com</span>
+                </div>
+              </div>
+              <span class="channel-btn-badge badge-email">
+                <i class="fas fa-paper-plane"></i>
+                <span>Gmail</span>
+              </span>
+            </a>
+
+            <!-- 2. LinkedIn (Direct Button Link to Jocelyne's Profile) -->
+            <a href="https://www.linkedin.com/in/jocelyne-audrey-tando-7a840b379/" target="_blank" rel="noopener noreferrer" class="channel-row channel-row-linkedin" id="linkedInRowBtn" title="Connect with Jocelyne on LinkedIn">
+              <div class="channel-left">
+                <div class="channel-icon icon-linkedin">
+                  <i class="fab fa-linkedin-in"></i>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-name">LinkedIn</span>
+                  <span class="channel-detail">linkedin.com/in/jocelyne-audrey-tando</span>
+                </div>
+              </div>
+              <span class="channel-btn-badge badge-linkedin">
+                <i class="fas fa-arrow-up-right-from-square"></i>
+                <span>Connect</span>
+              </span>
+            </a>
+
+            <!-- 3. WhatsApp -->
+            <a href="https://wa.me/60165432530" target="_blank" rel="noopener noreferrer" class="channel-row channel-row-whatsapp" id="whatsappRowBtn" title="Chat on WhatsApp">
+              <div class="channel-left">
+                <div class="channel-icon icon-whatsapp">
+                  <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-name">WhatsApp</span>
+                  <span class="channel-detail">+60 165432530</span>
+                </div>
+              </div>
+              <span class="channel-btn-badge badge-whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                <span>Chat</span>
+              </span>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Right: Send a Message Form -->
+        <div class="contact-panel">
+          <h2 class="panel-title">Send a Message</h2>
+          
+          <form class="contact-form" id="contactForm">
+            <input type="text" id="senderName" placeholder="Your Name" required class="form-input">
+            <input type="email" id="senderEmail" placeholder="Your Email" required class="form-input">
+            <textarea id="senderMessage" placeholder="Your Message..." rows="4" required class="form-textarea"></textarea>
+            
+            <button type="submit" class="form-submit-btn" id="sendBtn">
+              <i class="fas fa-paper-plane"></i>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Interactive Audio Script -->
+  <script src="desk-audio.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Audio Setup
+      const audio = window.deskAudio || (typeof DeskAudio !== 'undefined' ? new DeskAudio() : null);
+      if (audio) window.deskAudio = audio;
+
+      const soundToggleBtn = document.getElementById('soundToggleBtn');
+      const soundIcon = document.getElementById('soundIcon');
+      const soundLabel = document.getElementById('soundLabel');
+
+      function updateSoundBtnUI() {
+        if (!soundIcon || !soundLabel || !audio) return;
+        if (audio.isMuted) {
+          soundIcon.className = 'fas fa-volume-xmark';
+          soundLabel.textContent = 'Sound OFF';
+        } else {
+          soundIcon.className = 'fas fa-volume-high';
+          soundLabel.textContent = 'Sound ON';
+        }
+      }
+
+      if (soundToggleBtn && audio) {
+        soundToggleBtn.addEventListener('click', () => {
+          audio.toggleMute();
+          updateSoundBtnUI();
+          if (!audio.isMuted) audio.playPop(700);
+        });
+        updateSoundBtnUI();
+      }
+
+      // Audio feedback on click & hover
+      document.querySelectorAll('a, button, .channel-row').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          if (audio && !audio.isMuted) audio.playPop(850);
+        });
+        el.addEventListener('click', () => {
+          if (audio && !audio.isMuted) audio.playClick();
+        });
+      });
+
+      // Form submission handler
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('senderName').value.trim();
+          const email = document.getElementById('senderEmail').value.trim();
+          const message = document.getElementById('senderMessage').value.trim();
+
+          const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=jocelyneaudreytando@gmail.com&su=${encodeURIComponent('Portfolio Message from ' + name)}&body=${encodeURIComponent('From: ' + name + ' (' + email + ')\n\n' + message)}`;
+          
+          if (audio && !audio.isMuted) audio.playPop(900);
+          
+          window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+          contactForm.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

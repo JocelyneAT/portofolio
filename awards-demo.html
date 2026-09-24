@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Honors & Achievements — Celyne's Portfolio</title>
+  <meta name="description" content="Explore Tando Jocelyne Audrey's academic honors, Dean's List certificates, and game development competition awards on an interactive wooden bookcase.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="awards-style.css">
+</head>
+<body>
+
+  <!-- Starry Background Overlay -->
+  <div class="bg-doodles-overlay" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       TOP NAVIGATION BAR (Matching Site Mockup)
+       ========================================================================== -->
+  <header class="celyne-top-nav">
+    <!-- Brand Logo: Sun + "Celyne" -->
+    <a href="index.html" class="nav-brand-sun" title="Celyne's Portfolio (Desk View)">
+      <svg class="sun-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="12" fill="#fef08a" stroke="#f59e0b" stroke-width="2.5"/>
+        <!-- Sun Rays -->
+        <line x1="20" y1="2" x2="20" y2="5" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="20" y1="35" x2="20" y2="38" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="2" y1="20" x2="5" y2="20" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="35" y1="20" x2="38" y2="20" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="7" y1="7" x2="10" y2="10" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="30" y1="30" x2="33" y2="33" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="7" y1="33" x2="10" y2="30" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="30" y1="10" x2="33" y2="7" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- Cute Face -->
+        <circle cx="16" cy="19" r="1.5" fill="#78350f"/>
+        <circle cx="24" cy="19" r="1.5" fill="#78350f"/>
+        <path d="M17 23 Q20 26 23 23" stroke="#78350f" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span class="nav-brand-name">Celyne</span>
+    </a>
+
+    <!-- Navigation Menu Links -->
+    <nav class="nav-menu-links">
+      <a href="index.html" class="nav-item-link" title="Desk View">Home</a>
+      <a href="profile-demo.html" class="nav-item-link">Profile</a>
+      <a href="projects-demo.html" class="nav-item-link">Projects</a>
+      <a href="awards-demo.html" class="nav-item-link nav-active">Awards</a>
+      <a href="contact-demo.html" class="nav-item-link">Contact</a>
+    </nav>
+
+    <!-- Right Controls: Audio + Doodles -->
+    <div class="nav-right-actions">
+      <button id="soundToggleBtn" class="nav-btn-pill" title="Toggle Sound Effects">
+        <i class="fas fa-volume-high" id="soundIcon"></i>
+        <span id="soundLabel">Sound ON</span>
+      </button>
+
+      <div class="nav-doodle-end">
+        <span>♡</span>
+        <span class="star-doodle">✦</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Showcase Container -->
+  <main class="shelf-page-main">
+    <div class="shelf-wrapper" id="shelfBookcase">
+      <!-- High-Res Wooden Bookcase Graphic -->
+      <img src="assets/elements_canva/awards/award-shelves.png" class="shelf-bg-image" alt="Wooden Award Bookcase Shelves">
+
+      <!-- ==========================================
+           SHELF 1 (TOP SHELF)
+           Items: award-1.png (Dean's List 2024/09), award-5.png (Top CGPA Achiever Trophy)
+           ========================================== -->
+      <div class="shelf-level shelf-level-1" aria-label="Top Shelf">
+        <!-- Award 1: Dean's List Award 2024/09 -->
+        <div class="shelf-item item-award-1 float-bob-1" data-id="award-1" role="button" tabindex="0" aria-label="Dean's List Award 2024/09">
+          <div class="shelf-speech-bubble" aria-hidden="true">
+            <img src="assets/elements_canva/profile/bubble.png" alt="" class="bubble-bg-img" draggable="false">
+            <span class="bubble-text">Dean's List Award 2024/09</span>
+          </div>
+          <img src="assets/elements_canva/awards/award-1.png" alt="Dean's List Award Certificate 2024/09">
+        </div>
+
+        <!-- Award 5: Top CGPA Achiever Crystal Trophy -->
+        <div class="shelf-item item-award-5 float-bob-2" data-id="award-5" role="button" tabindex="0" aria-label="Top CGPA Achiever Trophy">
+          <div class="shelf-speech-bubble" aria-hidden="true">
+            <img src="assets/elements_canva/profile/bubble.png" alt="" class="bubble-bg-img" draggable="false">
+            <span class="bubble-text">Top CGPA Achiever</span>
+          </div>
+          <img src="assets/elements_canva/awards/award-5.png" alt="Top CGPA Achiever Acrylic Crystal Trophy">
+        </div>
+      </div>
+
+      <!-- ==========================================
+           SHELF 2 (SECOND SHELF)
+           Items: award-3.png (Dean's List 2025/04), award-4.png (Dean's List 2025/09)
+           ========================================== -->
+      <div class="shelf-level shelf-level-2" aria-label="Second Shelf">
+        <!-- Award 3: Dean's List Award 2025/04 -->
+        <div class="shelf-item item-award-3 float-bob-3" data-id="award-3" role="button" tabindex="0" aria-label="Dean's List Award 2025/04">
+          <div class="shelf-speech-bubble" aria-hidden="true">
+            <img src="assets/elements_canva/profile/bubble.png" alt="" class="bubble-bg-img" draggable="false">
+            <span class="bubble-text">Dean's List Award 2025/04</span>
+          </div>
+          <img src="assets/elements_canva/awards/award-3.png" alt="Dean's List Academic Honors Certificate 2025/04">
+        </div>
+
+        <!-- Award 4: Dean's List Award 2025/09 -->
+        <div class="shelf-item item-award-4 float-bob-4" data-id="award-4" role="button" tabindex="0" aria-label="Dean's List Award 2025/09">
+          <div class="shelf-speech-bubble" aria-hidden="true">
+            <img src="assets/elements_canva/profile/bubble.png" alt="" class="bubble-bg-img" draggable="false">
+            <span class="bubble-text">Dean's List Award 2025/09</span>
+          </div>
+          <img src="assets/elements_canva/awards/award-4.png" alt="Dean's List Award Certificate 2025/09">
+        </div>
+      </div>
+
+      <!-- ==========================================
+           SHELF 3 (THIRD SHELF)
+           Items: award-2.png (Code Enternis Showcase), award-6.png (Code Enternis 1st Place)
+           ========================================== -->
+      <div class="shelf-level shelf-level-3" aria-label="Third Shelf">
+        <!-- Award 2: Code Enternis DMT Student Showcase Award -->
+        <div class="shelf-item item-award-2 float-bob-2" data-id="award-2" role="button" tabindex="0" aria-label="Code Enternis Popular Booth Award">
+          <div class="shelf-speech-bubble" aria-hidden="true">
+            <img src="assets/elements_canva/profile/bubble.png" alt="" class="bubble-bg-img" draggable="false">
+            <span class="bubble-text">Code Enternis Award</span>
+          </div>
+          <img src="assets/elements_canva/awards/award-2.png" alt="Code Enternis Certificate of Achievement">
+        </div>
+
+        <!-- Award 6: Code Enternis 1st Place GD-XMUM 2025 -->
+        <div class="shelf-item item-award-6 float-bob-1" data-id="award-6" role="button" tabindex="0" aria-label="Code Enternis 1st Place Award">
+          <div class="shelf-speech-bubble" aria-hidden="true">
+            <img src="assets/elements_canva/profile/bubble.png" alt="" class="bubble-bg-img" draggable="false">
+            <span class="bubble-text">Code Enternis 1st Place</span>
+          </div>
+          <img src="assets/elements_canva/awards/award-6.png" alt="Code Enternis 1st Place Certificate of Achievement">
+        </div>
+      </div>
+
+      <!-- ==========================================
+           SHELF 4 (BOTTOM BASE SHELF)
+           Item: award-7.png (Sea Vagabond 1st Place Award)
+           ========================================== -->
+      <div class="shelf-level shelf-level-4" aria-label="Bottom Shelf">
+        <!-- Award 7: Sea Vagabond Game Award -->
+        <div class="shelf-item item-award-7 float-bob-3" data-id="award-7" role="button" tabindex="0" aria-label="Sea Vagabond 1st Place Award">
+          <div class="shelf-speech-bubble" aria-hidden="true">
+            <img src="assets/elements_canva/profile/bubble.png" alt="" class="bubble-bg-img" draggable="false">
+            <span class="bubble-text">Sea Vagabond 1st Place</span>
+          </div>
+          <img src="assets/elements_canva/awards/award-7.png" alt="Sea Vagabond Certificate of Achievement">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Floating Scroll Down Indicator with Mouse Icon -->
+  <div class="shelf-scroll-hint" id="scrollHint" role="button" tabindex="0" title="Scroll down to explore shelves">
+    <span class="scroll-mouse-icon" aria-hidden="true">
+      <span class="mouse-wheel-dot"></span>
+    </span>
+    <span class="scroll-hint-text">Scroll</span>
+    <i class="fas fa-chevron-down scroll-bounce-arrow" aria-hidden="true"></i>
+  </div>
+
+  <!-- macOS-Style Award Showcase Window Modal (Preserves Top Nav & Matches Game Window Aesthetic) -->
+  <div class="award-modal-backdrop" id="awardModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="award-modal-box project-modal-window">
+      <!-- Window Titlebar matching the game showcase macOS style -->
+      <div class="modal-header-bar project-modal-titlebar">
+        <div class="modal-window-dots">
+          <span class="modal-dot dot-red" id="modalCloseDot" title="Close Window"></span>
+          <span class="modal-dot dot-yellow" id="modalMinimizeDot" title="Close Window"></span>
+          <span class="modal-dot dot-green" id="modalExpandDot" title="Award Showcase"></span>
+        </div>
+        <div class="modal-title-center">
+          <span class="modal-title-text" id="modalWindowHeaderTitle">
+            <i class="fas fa-folder-open" style="color: #f59e0b;"></i> Award Showcase
+          </span>
+        </div>
+        <button id="modalCloseBtn" class="modal-back-btn" aria-label="Back to Awards">
+          <i class="fas fa-arrow-left"></i> <span>Back to Awards</span>
+        </button>
+      </div>
+
+      <!-- Scrollable Window Content Body -->
+      <div class="modal-body-scroll" id="modalBodyScroll">
+        <div class="modal-body-content">
+          <!-- Award Title & Badges Row inside window -->
+          <div class="modal-award-header-section">
+            <h2 class="modal-award-title" id="modalAwardTitle">Award Title</h2>
+            <div class="modal-award-subtitle" id="modalAwardSubtitle">Subtitle / Semester</div>
+            <div class="modal-badges-row">
+              <span class="modal-category-badge" id="modalCategoryBadge">Academic Honor</span>
+              <span class="modal-meta-pill"><i class="fas fa-university" style="color: #f59e0b;"></i> <span id="modalInstitution">Institution</span></span>
+              <span class="modal-meta-pill"><i class="fas fa-calendar-alt" style="color: #3b82f6;"></i> <span id="modalDate">Semester</span></span>
+            </div>
+          </div>
+
+          <!-- Image Display Frame with Nav Arrows -->
+          <div class="modal-image-display">
+            <div class="modal-img-container">
+              <button class="modal-nav-arrow arrow-prev" id="modalPrevArrow" aria-label="Previous photo" title="Previous photo">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <img id="modalPreviewImg" src="" alt="Award Preview" title="Click photo to see next image">
+              <button class="modal-nav-arrow arrow-next" id="modalNextArrow" aria-label="Next photo" title="Next photo">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+            <div class="modal-caption-text" id="modalImgCaption"></div>
+          </div>
+
+          <!-- Info Details -->
+          <div class="modal-info-details">
+            <p class="modal-award-description" id="modalAwardDescription">Detailed description of the honor and recognition.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sound System & Interactivity Script -->
+  <script src="desk-audio.js"></script>
+  <script>
+    // Comprehensive Awards Dataset with multiple photos per award
+    const awardsData = {
+      "award-1": {
+        title: "Dean's List Award",
+        subtitle: "Outstanding Academic Achievement",
+        institution: "School of Computing & Data Science, Xiamen University Malaysia",
+        date: "2024/09 Semester",
+        category: "Academic Honor",
+        caption: "Dean's List Certificate of Academic Achievement (2024/09)",
+        items: [
+          { src: "assets/elements_canva/awards/award-1.png" },
+          { src: "assets/elements_canva/awards/award1-1.PNG" },
+          { src: "assets/elements_canva/awards/award1-2.PNG" }
+        ],
+        description: "Awarded to Tando Jocelyne Audrey in recognition of outstanding scholastic performance and high grade point average in Digital Media Technology (DMT) for the 2024/09 academic semester."
+      },
+      "award-5": {
+        title: "Top CGPA Achiever (DMT)",
+        subtitle: "Rank #1 Highest GPA Cohort Honor",
+        institution: "School of Computing & Data Science, Xiamen University Malaysia",
+        date: "September 2025 Semester",
+        category: "Top Faculty Honor",
+        caption: "Top CGPA Achiever (DMT) Trophy",
+        items: [
+          { src: "assets/elements_canva/awards/award-5.png" },
+          { src: "assets/elements_canva/awards/award5-1.PNG" },
+          { src: "assets/elements_canva/awards/award5-2.PNG" }
+        ],
+        description: "Prestigious engraved acrylic crystal trophy conferred to Tando Jocelyne Audrey for securing the highest Cumulative Grade Point Average (CGPA) in the Digital Media Technology degree programme."
+      },
+      "award-3": {
+        title: "Dean's List Award",
+        subtitle: "Outstanding Academic Achievement",
+        institution: "School of Computing & Data Science, Xiamen University Malaysia",
+        date: "2025/04 Semester",
+        category: "Academic Honor",
+        caption: "Dean's List Academic Honors Certificate (2025/04)",
+        items: [
+          { src: "assets/elements_canva/awards/award-3.png" },
+          { src: "assets/elements_canva/awards/award3-1.PNG" },
+          { src: "assets/elements_canva/awards/award3-2.PNG" }
+        ],
+        description: "Conferred to Tando Jocelyne Audrey in recognition of continued academic excellence, top percentile rank, and dedication across digital media technology courses."
+      },
+      "award-4": {
+        title: "Dean's List Award",
+        subtitle: "Outstanding Academic Achievement",
+        institution: "School of Computing & Data Science, Xiamen University Malaysia",
+        date: "2025/09 Semester",
+        category: "Academic Honor",
+        caption: "Dean's List Award Certificate (2025/09)",
+        items: [
+          { src: "assets/elements_canva/awards/award-4.png" },
+          { src: "assets/elements_canva/awards/award4-1.jpeg" },
+          { src: "assets/elements_canva/awards/award4-2.jpeg" }
+        ],
+        description: "Conferred to Tando Jocelyne Audrey by Deputy Dean Assoc. Prof. Dr. Tee Sim Hui and Head of Programme Ms. Heng Yu Ping for sustained scholastic distinction."
+      },
+      "award-2": {
+        title: "Code Enternis — Popular Booth Award (1st Prize)",
+        subtitle: "RēnDify: DMT Student Showcase 2025",
+        institution: "School of Computing & Data Science, XMUM",
+        date: "23–25 October 2025",
+        category: "Showcase Award",
+        caption: "Code Enternis Certificate of Achievement — Popular Booth Award",
+        items: [
+          { src: "assets/elements_canva/awards/award-2.png" },
+          { src: "assets/elements_canva/awards/award2-1.PNG" },
+          { src: "assets/elements_canva/awards/award2-2.PNG" },
+          { src: "assets/elements_canva/awards/award2-3.PNG" }
+        ],
+        description: "Presented to the Code Enternis development team in recognition of outstanding creativity, innovation, and player engagement, winning 1st Prize Popular Booth Award at RēnDify: DMT Student Showcase 2025."
+      },
+      "award-6": {
+        title: "Best Advanced & Creative 3D FPS Game (1st Place)",
+        subtitle: "Game Entry: 'CODE ENTERNIS'",
+        institution: "Game Development, Digital Media Technology XMUM (GD-XMUM 2025)",
+        date: "12th June – 30th July 2025",
+        category: "Game Development Award",
+        caption: "Code Enternis 1st Place Certificate of Achievement (GD-XMUM 2025)",
+        items: [
+          { src: "assets/elements_canva/awards/award-6.png" },
+          { src: "assets/elements_canva/awards/award2-3.PNG" },
+          { src: "assets/elements_canva/awards/award2-1.PNG" }
+        ],
+        description: "Awarded 1st Place for 'Code Enternis', a survival exploration and tactical FPS game recognized by faculty judges for high atmospheric tension, AI mechanics, and environmental storytelling."
+      },
+      "award-7": {
+        title: "Best Creative 3rd-Person Action Game (1st Place)",
+        subtitle: "Game Entry: 'SEA VAGABOND'",
+        institution: "Embedded Game Design & Development XMUM (EGDAD-XMUM 2025)",
+        date: "September 2025",
+        category: "Game Development Award",
+        caption: "Sea Vagabond 1st Place Certificate of Achievement (EGDAD-XMUM 2025)",
+        items: [
+          { src: "assets/elements_canva/awards/award-7.png" },
+          { src: "assets/elements_canva/projects/seavagabond_cover.png" },
+          { src: "assets/photo_showcase/seavagabond_gameplay.jpg" },
+          { src: "assets/photo_showcase/env_pirate_10s.jpg" }
+        ],
+        description: "Awarded 1st Place for 'Sea Vagabond', an action-adventure pirate game developed using Unity 3D. Praised for stylized visuals, dynamic ocean simulation, and engaging sword combat."
+      }
+    };
+
+    // Initialize Audio
+    const audio = window.deskAudio || new DeskAudio();
+
+    // Sound toggle state
+    const soundToggleBtn = document.getElementById('soundToggleBtn');
+    const soundIcon = document.getElementById('soundIcon');
+    const soundLabel = document.getElementById('soundLabel');
+
+    function updateSoundBtnUI() {
+      if (audio.isMuted) {
+        soundIcon.className = 'fas fa-volume-xmark';
+        soundLabel.textContent = 'Sound OFF';
+      } else {
+        soundIcon.className = 'fas fa-volume-high';
+        soundLabel.textContent = 'Sound ON';
+      }
+    }
+    updateSoundBtnUI();
+
+    soundToggleBtn.addEventListener('click', () => {
+      audio.toggleMute();
+      updateSoundBtnUI();
+      if (!audio.isMuted) audio.playPop(620);
+    });
+
+    // Navigation buttons sound
+    document.querySelectorAll('.nav-btn-pill, .pill-btn').forEach(btn => {
+      if (btn !== soundToggleBtn) {
+        btn.addEventListener('click', () => {
+          audio.playClick();
+        });
+      }
+    });
+
+    // Auto-hide scroll hint when user scrolls down and allow click to scroll
+    const scrollHint = document.getElementById('scrollHint');
+    if (scrollHint) {
+      scrollHint.addEventListener('click', () => {
+        window.scrollBy({ top: 420, behavior: 'smooth' });
+        if (typeof audio !== 'undefined' && audio && !audio.isMuted) audio.playClick();
+      });
+    }
+
+    window.addEventListener('scroll', () => {
+      if (scrollHint) {
+        if (window.scrollY > 40) {
+          scrollHint.classList.add('hidden');
+        } else {
+          scrollHint.classList.remove('hidden');
+        }
+      }
+    }, { passive: true });
+
+    // Lightbox Modal Elements
+    const modalBackdrop = document.getElementById('awardModal');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+    const modalCategoryBadge = document.getElementById('modalCategoryBadge');
+    const modalPreviewImg = document.getElementById('modalPreviewImg');
+    const modalImgCaption = document.getElementById('modalImgCaption');
+    const modalAwardTitle = document.getElementById('modalAwardTitle');
+    const modalAwardSubtitle = document.getElementById('modalAwardSubtitle');
+    const modalInstitution = document.getElementById('modalInstitution');
+    const modalDate = document.getElementById('modalDate');
+    const modalAwardDescription = document.getElementById('modalAwardDescription');
+    const modalPrevArrow = document.getElementById('modalPrevArrow');
+    const modalNextArrow = document.getElementById('modalNextArrow');
+
+    let currentAwardData = null;
+    let currentPhotoIndex = 0;
+
+    function showPhotoAtIndex(idx, playSound = false) {
+      if (!currentAwardData || !currentAwardData.items || currentAwardData.items.length === 0) return;
+      currentPhotoIndex = (idx + currentAwardData.items.length) % currentAwardData.items.length;
+      const item = currentAwardData.items[currentPhotoIndex];
+
+      if (playSound) {
+        audio.playPop(640 + currentPhotoIndex * 40);
+      }
+
+      // Update arrows visibility
+      const hasMultiple = currentAwardData.items.length > 1;
+      if (modalPrevArrow) modalPrevArrow.style.display = hasMultiple ? 'flex' : 'none';
+      if (modalNextArrow) modalNextArrow.style.display = hasMultiple ? 'flex' : 'none';
+
+      // Smooth image transition
+      modalPreviewImg.style.opacity = '0.3';
+      modalPreviewImg.style.transform = 'scale(0.98)';
+      setTimeout(() => {
+        modalPreviewImg.src = item.src;
+        modalPreviewImg.alt = currentAwardData.caption || currentAwardData.title;
+        modalPreviewImg.style.opacity = '1';
+        modalPreviewImg.style.transform = 'scale(1)';
+      }, 100);
+    }
+
+    function openAwardModal(awardId) {
+      const data = awardsData[awardId];
+      if (!data) return;
+
+      currentAwardData = data;
+      currentPhotoIndex = 0;
+      audio.playClick();
+
+      modalCategoryBadge.textContent = data.category;
+      modalAwardTitle.textContent = data.title;
+      modalAwardSubtitle.textContent = data.subtitle;
+      modalInstitution.textContent = data.institution;
+      modalDate.textContent = data.date;
+      modalAwardDescription.textContent = data.description;
+
+      // Caption stays persistent across all pictures
+      modalImgCaption.textContent = data.caption || '';
+      modalImgCaption.style.display = data.caption ? 'block' : 'none';
+
+      showPhotoAtIndex(0, false);
+
+      modalBackdrop.classList.add('active');
+      modalBackdrop.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Click on preview image cycles to next photo
+    modalPreviewImg.addEventListener('click', () => {
+      if (currentAwardData && currentAwardData.items && currentAwardData.items.length > 1) {
+        showPhotoAtIndex(currentPhotoIndex + 1, true);
+      }
+    });
+
+    if (modalPrevArrow) {
+      modalPrevArrow.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (currentAwardData && currentAwardData.items && currentAwardData.items.length > 1) {
+          showPhotoAtIndex(currentPhotoIndex - 1, true);
+        }
+      });
+    }
+
+    if (modalNextArrow) {
+      modalNextArrow.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (currentAwardData && currentAwardData.items && currentAwardData.items.length > 1) {
+          showPhotoAtIndex(currentPhotoIndex + 1, true);
+        }
+      });
+    }
+
+    function closeAwardModal() {
+      audio.playPop(480);
+      modalBackdrop.classList.remove('active');
+      modalBackdrop.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      currentAwardData = null;
+    }
+
+    const modalCloseDot = document.getElementById('modalCloseDot');
+    const modalMinimizeDot = document.getElementById('modalMinimizeDot');
+
+    if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeAwardModal);
+    if (modalCloseDot) modalCloseDot.addEventListener('click', closeAwardModal);
+    if (modalMinimizeDot) modalMinimizeDot.addEventListener('click', closeAwardModal);
+
+    modalBackdrop.addEventListener('click', (e) => {
+      if (e.target === modalBackdrop) {
+        closeAwardModal();
+      }
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (!modalBackdrop.classList.contains('active')) return;
+      if (e.key === 'Escape') {
+        closeAwardModal();
+      } else if (e.key === 'ArrowRight') {
+        if (currentAwardData && currentAwardData.items && currentAwardData.items.length > 1) {
+          showPhotoAtIndex(currentPhotoIndex + 1, true);
+        }
+      } else if (e.key === 'ArrowLeft') {
+        if (currentAwardData && currentAwardData.items && currentAwardData.items.length > 1) {
+          showPhotoAtIndex(currentPhotoIndex - 1, true);
+        }
+      }
+    });
+
+    // Hover sound & Click handler on all shelf items
+    const shelfItems = document.querySelectorAll('.shelf-item');
+    const popPitches = [580, 620, 660, 700, 740, 780];
+
+    shelfItems.forEach((item, index) => {
+      item.addEventListener('mouseenter', () => {
+        const pitch = popPitches[index % popPitches.length];
+        audio.playPop(pitch);
+      });
+
+      item.addEventListener('click', () => {
+        const awardId = item.getAttribute('data-id');
+        openAwardModal(awardId);
+      });
+
+      item.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          const awardId = item.getAttribute('data-id');
+          openAwardModal(awardId);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

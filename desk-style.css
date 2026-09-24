@@ -1,0 +1,444 @@
+/* ==========================================================================
+   CELYNE'S PORTFOLIO — INTERACTIVE CANVA DESK HUB
+   Clean, full-screen, high-resolution image desk view:
+   - Background: assets/elements_canva/Celyne’s Portofolio.png
+   - Floating Title: assets/elements_canva/element_title2.png
+   - Interactive Elements: Laptop, ID Badge, Certificate, Smartphone
+   - Custom Canva Speech Bubbles on hover/touch
+   - Web Audio API Sound Effects (desk-audio.js)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Grandstander:wght@600;700;800;900&display=swap');
+
+:root {
+  --wood-bg: #fae2cc;
+  --text-dark: #1e293b;
+  --accent-blue: #3b82f6;
+  --accent-amber: #f59e0b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #fae2cc;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  user-select: none;
+}
+
+/* -------------------------------------------------------------
+   FULL-SCREEN DESK VIEWPORT & 16:9 CANVAS
+   ------------------------------------------------------------- */
+.desk-viewport {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 50%, #fffcf8 0%, #fae6d2 55%, #eed0b4 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.desk-canvas-outer {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.desk-canvas-box {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Background Canvas Image */
+.desk-canvas-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* -------------------------------------------------------------
+   Title Artwork Layer (element_title2.png)
+   ------------------------------------------------------------- */
+.element-img-title {
+  transform-origin: 50% 55%;
+  animation: idleFloatTitle 6.5s ease-in-out infinite;
+  z-index: 5;
+  pointer-events: none;
+  filter: 
+    drop-shadow(0 0 10px rgba(255, 255, 255, 0.95))
+    drop-shadow(0 0 22px rgba(255, 255, 255, 0.85))
+    drop-shadow(0 0 38px rgba(255, 255, 255, 0.65))
+    drop-shadow(0 4px 14px rgba(0, 0, 0, 0.08));
+}
+
+@keyframes idleFloatTitle {
+  0%, 100% {
+    transform: translateY(0px) scale(0.88);
+  }
+  50% {
+    transform: translateY(-4px) scale(0.9);
+  }
+}
+
+/* -------------------------------------------------------------
+   Interactive Element Overlays (Laptop, Badge, Certificate, Phone)
+   ------------------------------------------------------------- */
+.desk-element-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  pointer-events: none;
+  z-index: 3;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+              filter 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.element-img-laptop {
+  transform-origin: 23% 25%;
+  animation: idleFloatLaptop 5.5s ease-in-out infinite;
+}
+
+.element-img-badge {
+  transform-origin: 82% 28%;
+  animation: idleFloatBadge 6s ease-in-out infinite 0.8s;
+}
+
+.element-img-awards {
+  transform-origin: 14% 78%;
+  animation: idleFloatAwards 6.4s ease-in-out infinite 1.6s;
+}
+
+.element-img-contact {
+  transform-origin: 84% 82%;
+  animation: idleFloatContact 5.8s ease-in-out infinite 2.4s;
+}
+
+@keyframes idleFloatLaptop {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-4px) rotate(-0.5deg); }
+}
+
+@keyframes idleFloatBadge {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-5px) rotate(0.8deg); }
+}
+
+@keyframes idleFloatAwards {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-4px) rotate(-0.4deg); }
+}
+
+@keyframes idleFloatContact {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-5px) rotate(0.6deg); }
+}
+
+/* Hover & Active Lift on Elements */
+.desk-canvas-box:has(#hotspot-laptop:hover) .element-img-laptop,
+.element-img-laptop.element-hovered,
+.element-img-laptop.element-active {
+  transform: scale(1.06) translateY(-8px) !important;
+  filter: drop-shadow(0 16px 28px rgba(0, 0, 0, 0.18)) !important;
+  z-index: 8;
+}
+
+.desk-canvas-box:has(#hotspot-badge:hover) .element-img-badge,
+.element-img-badge.element-hovered,
+.element-img-badge.element-active {
+  transform: scale(1.06) translateY(-8px) rotate(1deg) !important;
+  filter: drop-shadow(0 16px 28px rgba(0, 0, 0, 0.18)) !important;
+  z-index: 8;
+}
+
+.desk-canvas-box:has(#hotspot-certificate:hover) .element-img-awards,
+.element-img-awards.element-hovered,
+.element-img-awards.element-active {
+  transform: scale(1.06) translateY(-8px) rotate(-1deg) !important;
+  filter: drop-shadow(0 16px 28px rgba(0, 0, 0, 0.18)) !important;
+  z-index: 8;
+}
+
+.desk-canvas-box:has(#hotspot-phone:hover) .element-img-contact,
+.element-img-contact.element-hovered,
+.element-img-contact.element-active {
+  transform: scale(1.06) translateY(-8px) rotate(1deg) !important;
+  filter: drop-shadow(0 16px 28px rgba(0, 0, 0, 0.18)) !important;
+  z-index: 8;
+}
+
+/* -------------------------------------------------------------
+   Desk Hotspot Click Zones
+   ------------------------------------------------------------- */
+.desk-hotspot {
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.hotspot-laptop {
+  top: 0%;
+  left: 0%;
+  width: 53%;
+  height: 54%;
+}
+
+.hotspot-badge {
+  top: 0%;
+  left: 68%;
+  width: 32%;
+  height: 60%;
+}
+
+.hotspot-certificate {
+  top: 52%;
+  left: 0%;
+  width: 38%;
+  height: 48%;
+}
+
+.hotspot-phone {
+  top: 60%;
+  left: 66%;
+  width: 34%;
+  height: 40%;
+}
+
+/* -------------------------------------------------------------
+   Custom Canva Speech Bubble Images (Shown on Hover/Touch)
+   ------------------------------------------------------------- */
+.desk-bubble-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 20;
+  transition: opacity 0.28s cubic-bezier(0.34, 1.56, 0.64, 1),
+              transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              filter 0.35s ease;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.12));
+}
+
+.bubble-img-laptop {
+  transform-origin: 47% 24%;
+  transform: scale(0.85);
+}
+
+.bubble-img-badge {
+  transform-origin: 82% 22%;
+  transform: scale(0.85);
+}
+
+.bubble-img-awards {
+  transform-origin: 28% 74%;
+  transform: scale(0.85);
+}
+
+.bubble-img-contact {
+  transform-origin: 75% 78%;
+  transform: scale(0.85);
+}
+
+/* Revealed on Hover / Active Pop */
+.desk-canvas-box:has(#hotspot-laptop:hover) .bubble-img-laptop,
+.bubble-img-laptop.bubble-visible,
+.bubble-img-laptop.element-hovered {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.06) translateY(-4px);
+  filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.18));
+}
+
+.desk-canvas-box:has(#hotspot-badge:hover) .bubble-img-badge,
+.bubble-img-badge.bubble-visible,
+.bubble-img-badge.element-hovered {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.06) translateY(-4px);
+  filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.18));
+}
+
+.desk-canvas-box:has(#hotspot-certificate:hover) .bubble-img-awards,
+.bubble-img-awards.bubble-visible,
+.bubble-img-awards.element-hovered {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.06) translateY(-4px);
+  filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.18));
+}
+
+.desk-canvas-box:has(#hotspot-phone:hover) .bubble-img-contact,
+.bubble-img-contact.bubble-visible,
+.bubble-img-contact.element-hovered {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.06) translateY(-4px);
+  filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.18));
+}
+
+/* -------------------------------------------------------------
+   Top-Right Audio Toggle Button
+   ------------------------------------------------------------- */
+.desk-minimal-sound-btn {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  z-index: 60;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #fed7aa;
+  color: #3b82f6;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  outline: none;
+}
+
+.desk-minimal-sound-btn:hover {
+  transform: scale(1.12);
+  background: #ffffff;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.25);
+  border-color: #93c5fd;
+}
+
+/* -------------------------------------------------------------
+   Bottom Floating Hint
+   ------------------------------------------------------------- */
+.desk-bottom-hint {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  padding: 8px 20px;
+  border-radius: 999px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #78350f;
+  box-shadow: 0 4px 14px rgba(120, 80, 40, 0.1);
+  pointer-events: none;
+  animation: floatHint 3s ease-in-out infinite;
+}
+
+@keyframes floatHint {
+  0%, 100% { transform: translateX(-50%) translateY(0px); }
+  50% { transform: translateX(-50%) translateY(-5px); }
+}
+
+/* -------------------------------------------------------------
+   Subpage Base Styles (For awards-demo and contact-demo)
+   ------------------------------------------------------------- */
+.subpage-container {
+  max-width: 1080px;
+  margin: 30px auto;
+  padding: 0 24px;
+}
+
+.subpage-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1.5px solid #fed7aa;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #78350f;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(120, 80, 40, 0.08);
+  transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+  transform: translateY(-2px);
+  border-color: #3b82f6;
+  color: #2563eb;
+  background: #f8fafc;
+}
+
+.desk-brand {
+  font-family: 'Fredoka', cursive;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #8c6d53;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.page-card {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 28px;
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 24px 50px -12px rgba(110, 75, 45, 0.12);
+  padding: 40px 48px;
+}
+
+@media (max-width: 640px) {
+  .page-card {
+    padding: 24px 20px;
+  }
+}

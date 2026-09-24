@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ==========================================================================
+     PORTFOLIO PROJECTS DATA
+     Edit project titles, descriptions, badges, tags, and media links here.
+     ========================================================================== -->
+<projects>
+
+  <!-- Project 0: Sea Vagabond 3D Pirate Action-Adventure (Team Project) -->
+  <project id="sea-vagabond">
+    <category>gamedev 3d</category>
+    <badge color="badge-cyan">3D Pirate Adventure · Team</badge>
+    <thumbnail>assets/images/project1.jpg</thumbnail>
+    <placeholderIcon>fa-anchor</placeholderIcon>
+    <placeholderText>Sea Vagabond: 3D Pirate Game</placeholderText>
+    <hoverVideo>assets/videos_showcase/game_videos/seavagabond_gameplay.mp4</hoverVideo>
+    <mediaButton>
+      <icon>fab fa-youtube</icon>
+      <text>Watch Gameplay Video</text>
+      <videoUrl>https://youtu.be/BEFC1k0lOBw</videoUrl>
+    </mediaButton>
+    <title>Sea Vagabond: 3D Pirate Action-Adventure</title>
+    <description>An epic team-built 3D pirate action-adventure game. Continue a father's legacy across 5 island realms to recover the mystical stones and unlock a legendary treasure. Featured focus on Area 1 (Havenport Isle) environment design, tutorial quest, dialogues, and cutscenes.</description>
+    <tags>
+      <tag>Unity 3D</tag>
+      <tag>C#</tag>
+      <tag>Award Winner</tag>
+      <tag>Level Design</tag>
+      <tag>Team Project</tag>
+    </tags>
+    <link>
+      <url>sea-vagabond-showcase.html</url>
+      <text>View Sea Vagabond Showcase</text>
+    </link>
+  </project>
+
+  <!-- Project 0B: We Were Mummies 2-Player Online Co-op (Team Project) -->
+  <project id="we-were-mummies">
+    <category>gamedev 3d</category>
+    <badge color="badge-amber">2-Player Online Co-op · Team</badge>
+    <thumbnail>assets/images/project2.jpg</thumbnail>
+    <placeholderIcon>fa-users-viewfinder</placeholderIcon>
+    <placeholderText>We Were Mummies: 3D Co-op Game</placeholderText>
+    <hoverVideo>assets/videos_showcase/game_videos/mummy_gameplay.mp4</hoverVideo>
+    <mediaButton>
+      <icon>fab fa-youtube</icon>
+      <text>Watch Gameplay Video</text>
+      <videoUrl>https://youtu.be/WZfB8VD5NtY</videoUrl>
+    </mediaButton>
+    <title>We Were Mummies: 2-Player Co-op Puzzle</title>
+    <description>A stylized 2-player online cooperative escape game inspired by We Were Here. Trapped and transformed into mummies inside an ancient Egyptian tomb, two players must communicate across separate chambers, solve interconnected puzzles, and defeat the Guardian Statue to break the curse.</description>
+    <tags>
+      <tag>Unity 3D</tag>
+      <tag>C#</tag>
+      <tag>Online Co-op</tag>
+      <tag>Puzzle Design</tag>
+      <tag>Level Art</tag>
+      <tag>Team Project</tag>
+    </tags>
+    <link>
+      <url>we-were-mummies-showcase.html</url>
+      <text>View We Were Mummies Showcase</text>
+    </link>
+  </project>
+
+  <!-- Project 1: Runaway Timmy 3D Endless Runner -->
+  <project id="runaway-timmy">
+    <category>gamedev 3d</category>
+    <badge color="badge-purple">Mobile 3D Runner</badge>
+    <thumbnail>assets/images/project1.jpg</thumbnail>
+    <placeholderIcon>fa-gamepad</placeholderIcon>
+    <placeholderText>Runaway Timmy: 3D Game</placeholderText>
+    <hoverVideo>assets/videos_showcase/game_videos/timmy_gameplay.mp4</hoverVideo>
+    <mediaButton>
+      <icon>fa-play</icon>
+      <text>Watch Gameplay Video</text>
+      <videoUrl>https://youtu.be/maJktk8v5lA</videoUrl>
+    </mediaButton>
+    <title>Runaway Timmy: 3D Endless Runner</title>
+    <description>A fast-paced cartoon mobile endless runner inspired by Subway Surfers. Escape an enraged Granny through modular European town streets, dodging obstacles, swimming canals, collecting coins, and stacking mystery power-ups in Unity 3D.</description>
+    <tags>
+      <tag>Unity 3D</tag>
+      <tag>C#</tag>
+      <tag>Endless Runner</tag>
+      <tag>Blender</tag>
+      <tag>Mobile Game</tag>
+    </tags>
+    <link>
+      <url>game-showcase.html</url>
+      <text>View Runaway Timmy Showcase</text>
+    </link>
+  </project>
+
+  <!-- Project 2: The Lost Tomato 3D Ball Adventure -->
+  <project id="lost-tomato">
+    <category>gamedev 3d</category>
+    <badge color="badge-rose">3D Ball Adventure</badge>
+    <thumbnail>assets/images/project2.jpg</thumbnail>
+    <placeholderIcon>fa-circle-dot</placeholderIcon>
+    <placeholderText>The Lost Tomato: 3D Game</placeholderText>
+    <hoverVideo>assets/videos_showcase/game_videos/tomato_gameplay.mp4</hoverVideo>
+    <mediaButton>
+      <icon>fa-play</icon>
+      <text>Watch Gameplay Video</text>
+      <videoUrl>https://youtu.be/utgsa_6fV0M</videoUrl>
+    </mediaButton>
+    <title>The Lost Tomato: 3D Ball Adventure</title>
+    <description>A physics-based 3D ball adventure game where a lost tomato journeys through Fruit Land to find its way back home to Veggie Land. Roll, jump, dash across traps, solve maze puzzles, and collect power-ups in Unity 3D.</description>
+    <tags>
+      <tag>Unity 3D</tag>
+      <tag>C#</tag>
+      <tag>Physics Ball</tag>
+      <tag>3D Platformer</tag>
+      <tag>Blender</tag>
+    </tags>
+    <link>
+      <url>tomato-showcase.html</url>
+      <text>View The Lost Tomato Showcase</text>
+    </link>
+  </project>
+
+  <!-- Project 3: Kitchin Smart Fridge & Food Waste Reduction App -->
+  <project id="kitchin">
+    <category>uiux</category>
+    <badge color="badge-kitchin">HCI &amp; Mobile UI/UX</badge>
+    <thumbnail>assets/elements_canva/projects/kitchin_cover.png</thumbnail>
+    <placeholderIcon>fa-mobile-screen</placeholderIcon>
+    <placeholderText>Kitchin UI/UX Case Study</placeholderText>
+    <hoverVideo>assets/videos_showcase/uiux_videos/kitchin_video.mp4</hoverVideo>
+    <mediaButton>
+      <icon>fab fa-figma</icon>
+      <text>Live Figma Prototype</text>
+      <videoUrl>https://www.figma.com/proto/Q5gTXsWb1tPzoU5ZLWw5bB/HCI-Prototype?node-id=0-1&amp;p=f&amp;viewport=-1074%2C1054%2C1&amp;t=OS76Hi7PPhiikFMD-0&amp;scaling=scale-down&amp;content-scaling=fixed&amp;starting-point-node-id=149%3A87</videoUrl>
+    </mediaButton>
+    <title>Kitchin: Smart Fridge &amp; Food Waste App</title>
+    <description>An intelligent mobile app that connects with your smart fridge to organize food items, track expiration dates, recommend recipes, and facilitate community food bank donations. Validated through HCI evaluation with an 85.4 SUS score.</description>
+    <tags>
+      <tag>Figma</tag>
+      <tag>Mobile UI/UX</tag>
+      <tag>HCI Prototype</tag>
+      <tag>SUS 85.4</tag>
+      <tag>Design System</tag>
+    </tags>
+    <link>
+      <url>kitchin-showcase.html</url>
+      <text>View Kitchin Showcase</text>
+    </link>
+  </project>
+
+  <!-- Project 3B: Best Rate Currency & Remittance Comparison App -->
+  <project id="best-rate">
+    <category>uiux</category>
+    <badge color="badge-cyan">FinTech · Mobile UI/UX</badge>
+    <thumbnail>assets/elements_canva/projects/best rate cover.png</thumbnail>
+    <placeholderIcon>fa-coins</placeholderIcon>
+    <placeholderText>Best Rate UI/UX</placeholderText>
+    <hoverVideo>assets/videos_showcase/uiux_videos/bestrate_video.mp4</hoverVideo>
+    <mediaButton>
+      <icon>fa-play</icon>
+      <text>Watch App Demo</text>
+      <videoUrl>assets/videos_showcase/uiux_videos/bestrate_video.mp4</videoUrl>
+    </mediaButton>
+    <title>Best Rate: Currency &amp; Remittance Comparison App</title>
+    <description>A modern FinTech mobile application designed in Figma to compare real-time currency exchange rates and remittance providers (Wise, WorldRemit, Remitly, Revolut). Eliminates hidden fees with intraday trend graphs, transparent cost breakdowns, and customizable market rate alerts.</description>
+    <tags>
+      <tag>Figma</tag>
+      <tag>Mobile UI/UX</tag>
+      <tag>FinTech</tag>
+      <tag>Design System</tag>
+      <tag>Rate Alerts</tag>
+    </tags>
+    <link>
+      <url>projects-demo.html</url>
+      <text>Explore in Laptop Workspace</text>
+    </link>
+  </project>
+
+  <!-- Project 3C: Codu Gamified Coding Education App -->
+  <project id="codu">
+    <category>uiux</category>
+    <badge color="badge-purple">Gamified EdTech · Mobile UI/UX</badge>
+    <thumbnail>assets/elements_canva/projects/codu_cover.png</thumbnail>
+    <placeholderIcon>fa-code</placeholderIcon>
+    <placeholderText>Codu UI/UX</placeholderText>
+    <hoverVideo>assets/videos_showcase/uiux_videos/codu_video.mp4</hoverVideo>
+    <mediaButton>
+      <icon>fa-play</icon>
+      <text>Watch App Demo</text>
+      <videoUrl>assets/videos_showcase/uiux_videos/codu_video.mp4</videoUrl>
+    </mediaButton>
+    <title>Codu: Gamified Coding Education &amp; 1v1 Battle App</title>
+    <description>A charming, gamified mobile application designed in Figma for learning programming languages through interactive puzzle blocks, streak milestones, real-time 1v1 PvP coding battles, and an AI tutor mascot.</description>
+    <tags>
+      <tag>Figma</tag>
+      <tag>Gamified UI/UX</tag>
+      <tag>EdTech</tag>
+      <tag>1v1 Battles</tag>
+      <tag>Design System</tag>
+    </tags>
+    <link>
+      <url>projects-demo.html</url>
+      <text>Explore in Laptop Workspace</text>
+    </link>
+  </project>
+
+  <!-- Project 3D: Asian Cuisine Pixel Restaurant Simulation & Cooking Game UI/UX -->
+  <project id="asian-cuisine">
+    <category>uiux</category>
+    <badge color="badge-amber">Designed in Canva · Mobile Game UI/UX</badge>
+    <thumbnail>assets/elements_canva/projects/asiancuisine_cover.png</thumbnail>
+    <placeholderIcon>fa-bowl-rice</placeholderIcon>
+    <placeholderText>Asian Cuisine UI/UX</placeholderText>
+    <hoverVideo>assets/videos_showcase/uiux_videos/asiancuisine_video.mp4</hoverVideo>
+    <mediaButton>
+      <icon>fa-play</icon>
+      <text>Watch Game UI Demo</text>
+      <videoUrl>assets/videos_showcase/uiux_videos/asiancuisine_video.mp4</videoUrl>
+    </mediaButton>
+    <title>Asian Cuisine: Pixel Restaurant &amp; Cooking Simulation Game</title>
+    <description>A cozy 2D pixel-art restaurant management and cooking simulation mobile game UI/UX designed in Canva. Features 8 complete high-fidelity flows: character creation, live kitchen orders, 20-slot ingredient pantry, closet fitting, recipe gacha, and Pan-Asian cookbook catalog.</description>
+    <tags>
+      <tag>Canva</tag>
+      <tag>Mobile UI/UX</tag>
+      <tag>Game UI</tag>
+      <tag>Pixel Art</tag>
+      <tag>Simulation</tag>
+    </tags>
+    <link>
+      <url>projects-demo.html</url>
+      <text>Explore in Laptop Workspace</text>
+    </link>
+  </project>
+
+  <!-- Project 3E: NBA The Shift Toward International Players (Tableau InfoVis) -->
+  <project id="infovis">
+    <category>uiux</category>
+    <badge color="badge-blue">Tableau · Information Visualization</badge>
+    <thumbnail>assets/elements_canva/projects/infovis_cover.png</thumbnail>
+    <placeholderIcon>fa-chart-line</placeholderIcon>
+    <placeholderText>NBA InfoVis Dashboard</placeholderText>
+    <hoverVideo>assets/videos_showcase/uiux_videos/infovis_video.mp4</hoverVideo>
+    <mediaButton>
+      <icon>fa-chart-simple</icon>
+      <text>Live Tableau Dashboard</text>
+      <videoUrl>https://public.tableau.com/app/profile/jocelyne.audrey/viz/Group14_17835961965340/Dashboard3</videoUrl>
+    </mediaButton>
+    <title>The Shift Toward International NBA Players</title>
+    <description>Interactive sports analytics dashboard comparing USA vs. International player performance across 22 NBA seasons (2000–2022) built with Tableau Public. Explores RAPTOR efficiency, WAR impact, minutes distribution, and global player migration.</description>
+    <tags>
+      <tag>Tableau</tag>
+      <tag>Information Visualization</tag>
+      <tag>Sports Analytics</tag>
+      <tag>Data Storytelling</tag>
+      <tag>HCI</tag>
+    </tags>
+    <link>
+      <url>projects-demo.html</url>
+      <text>Explore in Laptop Workspace</text>
+    </link>
+  </project>
+
+  <!-- Project 4: Mario Arena: Luma Star Wars -->
+  <project id="mario-arena">
+    <category>game</category>
+    <badge color="badge-indigo">Unity 3D · Action Combat</badge>
+    <thumbnail>assets/elements_canva/projects/mario_cover.png</thumbnail>
+    <placeholderIcon>fa-star</placeholderIcon>
+    <placeholderText>Mario Arena: Luma Star Wars</placeholderText>
+    <mediaButton>
+      <icon>fab fa-youtube</icon>
+      <text>Watch Gameplay</text>
+      <videoUrl>https://youtu.be/Ie3MEz1A0PE</videoUrl>
+    </mediaButton>
+    <title>Mario Arena: Luma Star Wars</title>
+    <description>Cosmic 3D arena action combat prototype developed in Unity with C#. Guide Mario and Luma through planetary battlegrounds, dodge orbital hazards, and challenge galactic bosses.</description>
+    <tags>
+      <tag>Unity 3D</tag>
+      <tag>C# Scripting</tag>
+      <tag>Boss AI</tag>
+      <tag>Combat Prototype</tag>
+    </tags>
+    <link>
+      <url>projects-demo.html</url>
+      <text>Explore in Laptop Workspace</text>
+    </link>
+  </project>
+
+  <!-- Project 5: Komorebi Animation Short -->
+  <project id="komorebi">
+    <category>animation</category>
+    <badge color="badge-purple">2D &amp; 3D Animation</badge>
+    <thumbnail>assets/images/project5.jpg</thumbnail>
+    <placeholderIcon>fa-wand-magic-sparkles</placeholderIcon>
+    <placeholderText>Komorebi Animation Short</placeholderText>
+    <mediaButton>
+      <icon>fa-play</icon>
+      <text>Watch Animation</text>
+      <videoUrl>https://www.youtube.com/embed/dQw4w9WgXcQ</videoUrl>
+    </mediaButton>
+    <title>Komorebi: Animated Narrative Short</title>
+    <description>An emotional short animated film featuring hand-drawn 2D frame sequences, character rigging, 3D camera staging, sound staging, and post-production color grading.</description>
+    <tags>
+      <tag>After Effects</tag>
+      <tag>Premiere Pro</tag>
+      <tag>Photoshop</tag>
+      <tag>Storyboarding</tag>
+    </tags>
+    <link>
+      <url>game-showcase.html#cutscenes</url>
+      <text>View Storyboard &amp; Video</text>
+    </link>
+  </project>
+
+  <!-- Project 5B: Lily and the Veggies Animation Short -->
+  <project id="lily-and-the-veggies">
+    <category>animation</category>
+    <badge color="badge-rose">2D Animation · Short Film</badge>
+    <thumbnail>assets/elements_canva/projects/lily_cover.png</thumbnail>
+    <placeholderIcon>fa-carrot</placeholderIcon>
+    <placeholderText>Lily and the Veggies</placeholderText>
+    <hoverVideo>assets/videos_showcase/animation_videos/lily_animation.MP4</hoverVideo>
+    <mediaButton>
+      <icon>fa-play</icon>
+      <text>Watch Animation Short</text>
+      <videoUrl>assets/videos_showcase/animation_videos/lily_animation.MP4</videoUrl>
+    </mediaButton>
+    <title>Lily and the Veggies: Animated Short</title>
+    <description>A charming, cheerful animated story following young Lily and whimsical living vegetables. Highlights vibrant character acting, lively squash-and-stretch timing, colorful storybook art, and wholesome nutritional values.</description>
+    <tags>
+      <tag>Adobe Animate</tag>
+      <tag>2D Character Animation</tag>
+      <tag>Storytelling</tag>
+      <tag>Sound Sync</tag>
+    </tags>
+    <link>
+      <url>assets/videos_showcase/animation_videos/lily_animation.MP4</url>
+      <text>Watch Animated Short</text>
+    </link>
+  </project>
+
+  <!-- Project 6: Orbital Interactive 3D Web Portal -->
+  <project id="orbital-web">
+    <category>uiux</category>
+    <badge color="badge-cyan">Frontend Web / 3D Web</badge>
+    <thumbnail>assets/images/project6.jpg</thumbnail>
+    <placeholderIcon>fa-code</placeholderIcon>
+    <placeholderText>Interactive 3D Web App</placeholderText>
+    <mediaButton>
+      <icon>fa-magnifying-glass-plus</icon>
+      <text>View Web Preview</text>
+      <lightboxSrc>https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&amp;fit=crop&amp;w=1200&amp;q=80</lightboxSrc>
+    </mediaButton>
+    <title>Orbital: Interactive 3D Web Portal</title>
+    <description>Modern responsive frontend web application with interactive 3D particle systems, smooth page transitions, and accessible dark mode interfaces.</description>
+    <tags>
+      <tag>HTML5/CSS3</tag>
+      <tag>JavaScript</tag>
+      <tag>Three.js</tag>
+      <tag>Responsive</tag>
+    </tags>
+    <link>
+      <url>project-detail.html</url>
+      <text>View Frontend Details</text>
+    </link>
+  </project>
+
+</projects>

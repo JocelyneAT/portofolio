@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celyne's Portfolio — Interactive Desk Hub</title>
+  <meta name="description" content="Portfolio of Jocelyne Audrey Tando (Celyne) — Digital Media Technology engineer, Game Developer & UI/UX Designer. Explore the interactive desk setup to view Projects, Profile, Awards, and Contact.">
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="desk-style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       INITIAL INTERACTIVE DESK VIEW (Full-Screen Canva Artwork Canvas)
+       ========================================================================== -->
+  <main class="desk-viewport">
+    
+    <!-- Sound Toggle Button (Top-Right) -->
+    <button id="soundToggleBtn" class="desk-minimal-sound-btn" title="Toggle Sound Effects" aria-label="Toggle Sound Effects">
+      <i class="fas fa-volume-high" id="soundIcon"></i>
+    </button>
+
+    <!-- The 16:9 Canvas Container -->
+    <div class="desk-canvas-outer">
+      <div class="desk-canvas-box" id="deskCanvasBox">
+        
+        <!-- Background Artwork from elements_canva -->
+        <img src="assets/elements_canva/Celyne’s Portofolio.png" alt="Celyne's Desk Setup" class="desk-canvas-bg" draggable="false">
+
+        <!-- Title Artwork Layer (element_title2.png) -->
+        <img src="assets/elements_canva/element_title2.png" alt="Celyne's Portofolio" class="desk-element-img element-img-title" id="elImgTitle" draggable="false">
+
+        <!-- Interactive Element Overlays (Laptop, Badge, Certificate, Phone) -->
+        <img src="assets/elements_canva/element_projects.png" alt="Laptop Element" class="desk-element-img element-img-laptop" id="elImgLaptop" draggable="false">
+        <img src="assets/elements_canva/element_profile.png" alt="Profile Badge Element" class="desk-element-img element-img-badge" id="elImgBadge" draggable="false">
+        <img src="assets/elements_canva/element_awards.png" alt="Certificate Awards Element" class="desk-element-img element-img-awards" id="elImgAwards" draggable="false">
+        <img src="assets/elements_canva/element_contact.png" alt="Smartphone Contact Element" class="desk-element-img element-img-contact" id="elImgContact" draggable="false">
+
+        <!-- Custom Speech Bubble Artwork Layers (Canva bubble images, Shown on Hover/Touch) -->
+        <img src="assets/elements_canva/bubble_project2.png" alt="Projects Speech Bubble" class="desk-bubble-img bubble-img-laptop" id="bubbleImgLaptop" draggable="false">
+        <img src="assets/elements_canva/bubble_profile.png" alt="Profile Speech Bubble" class="desk-bubble-img bubble-img-badge" id="bubbleImgBadge" draggable="false">
+        <img src="assets/elements_canva/bubble_award.png" alt="Awards Speech Bubble" class="desk-bubble-img bubble-img-awards" id="bubbleImgAwards" draggable="false">
+        <img src="assets/elements_canva/bubble_contact.png" alt="Contact Speech Bubble" class="desk-bubble-img bubble-img-contact" id="bubbleImgContact" draggable="false">
+
+        <!-- Hotspot 1: Laptop -> Projects (Opens Laptop Workspace) -->
+        <a href="projects-demo.html" class="desk-hotspot hotspot-laptop" id="hotspot-laptop" data-element="elImgLaptop" data-bubble="bubbleImgLaptop" aria-label="Projects (Laptop)"></a>
+
+        <!-- Hotspot 2: ID Badge -> Profile / About (Opens Profile Workspace) -->
+        <a href="profile-demo.html" class="desk-hotspot hotspot-badge" id="hotspot-badge" data-element="elImgBadge" data-bubble="bubbleImgBadge" aria-label="Profile (ID Badge)"></a>
+
+        <!-- Hotspot 3: Certificate -> Awards / Honors -->
+        <a href="awards-demo.html" class="desk-hotspot hotspot-certificate" id="hotspot-certificate" data-element="elImgAwards" data-bubble="bubbleImgAwards" aria-label="Awards (Certificate)"></a>
+
+        <!-- Hotspot 4: Smartphone -> Contact -->
+        <a href="contact-demo.html" class="desk-hotspot hotspot-phone" id="hotspot-phone" data-element="elImgContact" data-bubble="bubbleImgContact" aria-label="Contact (Smartphone)"></a>
+
+      </div>
+    </div>
+
+    <!-- Bottom Floating Instruction Pill -->
+    <div class="desk-bottom-hint">
+      <i class="fas fa-hand-pointer" style="margin-right: 6px; color: #f59e0b;"></i> Hover or click an item on the desk!
+    </div>
+
+  </main>
+
+  <!-- Interactive Audio Script & Micro-interactions -->
+  <script src="desk-audio.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const audio = window.deskAudio;
+      const soundBtn = document.getElementById('soundToggleBtn');
+      const soundIcon = document.getElementById('soundIcon');
+
+      function updateSoundUI() {
+        if (!audio || !soundIcon) return;
+        if (audio.muted) {
+          soundIcon.className = 'fas fa-volume-xmark';
+          if (soundBtn) soundBtn.title = 'Sound OFF (Click to unmute)';
+        } else {
+          soundIcon.className = 'fas fa-volume-high';
+          if (soundBtn) soundBtn.title = 'Sound ON (Click to mute)';
+        }
+      }
+
+      if (soundBtn && audio) {
+        updateSoundUI();
+        soundBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const isMuted = audio.toggleMute();
+          updateSoundUI();
+          if (!isMuted) audio.playPop(620);
+        });
+      }
+
+      // Hotspots interaction
+      const hotspots = document.querySelectorAll('.desk-hotspot');
+      const freqMap = {
+        'hotspot-laptop': 580,      // Laptop pop
+        'hotspot-badge': 660,       // Profile badge pop
+        'hotspot-certificate': 480, // Awards pop
+        'hotspot-phone': 740        // Contact pop
+      };
+
+      hotspots.forEach(hotspot => {
+        const freq = freqMap[hotspot.id] || 550;
+        const elId = hotspot.getAttribute('data-element');
+        const elImg = elId ? document.getElementById(elId) : null;
+        const bubbleId = hotspot.getAttribute('data-bubble');
+        const bubbleImg = bubbleId ? document.getElementById(bubbleId) : null;
+
+        // Hover
+        hotspot.addEventListener('mouseenter', () => {
+          if (elImg) elImg.classList.add('element-hovered');
+          if (bubbleImg) bubbleImg.classList.add('bubble-visible');
+          if (audio) audio.playPop(freq);
+        });
+
+        hotspot.addEventListener('mouseleave', () => {
+          if (elImg) elImg.classList.remove('element-hovered');
+          if (bubbleImg) bubbleImg.classList.remove('bubble-visible');
+        });
+
+        // Touch
+        hotspot.addEventListener('touchstart', () => {
+          if (elImg) elImg.classList.add('element-hovered');
+          if (bubbleImg) bubbleImg.classList.add('bubble-visible');
+          if (audio) audio.playPop(freq);
+        }, { passive: true });
+
+        hotspot.addEventListener('touchend', () => {
+          setTimeout(() => {
+            if (elImg) elImg.classList.remove('element-hovered');
+            if (bubbleImg) bubbleImg.classList.remove('bubble-visible');
+          }, 500);
+        });
+
+        // Click
+        hotspot.addEventListener('click', (e) => {
+          e.preventDefault();
+          const href = hotspot.getAttribute('href');
+          if (elImg) elImg.classList.add('element-active');
+          if (audio) {
+            audio.playClick();
+            audio.playNavChime();
+          }
+          setTimeout(() => {
+            window.location.href = href;
+          }, 180);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

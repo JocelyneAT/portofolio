@@ -1,0 +1,890 @@
+/* ==========================================================================
+   AWARDS SHOWCASE — BOOKCASE & CERTIFICATES SHELF
+   Pixel-matched to user's desk visual with interactive hovering, 
+   full shelf scrolling, audio effects, and rich detail modal.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Grandstander:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary-wood: #8c532b;
+  --gold-accent: #f59e0b;
+  --amber-dark: #78350f;
+  --bg-creamy: #fff8f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #fae2cc;
+  background-image: url('assets/elements_canva/bg.png');
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #1e293b;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Subtle starry background particles */
+.bg-doodles-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* -------------------------------------------------------------
+   TOP NAVIGATION BAR (Matching Site Mockup)
+   ------------------------------------------------------------- */
+.celyne-top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  width: 100%;
+  background: rgba(254, 250, 244, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1.5px solid rgba(220, 200, 180, 0.6);
+  padding: 10px 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(100, 80, 50, 0.04);
+}
+
+.nav-brand-sun {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.sun-icon-svg {
+  width: 32px;
+  height: 32px;
+}
+
+.nav-brand-name {
+  font-family: 'Grandstander', 'Fredoka', cursive;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  letter-spacing: -0.5px;
+}
+
+.nav-menu-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-item-link {
+  font-family: 'Grandstander', 'Fredoka', cursive;
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s ease;
+  padding: 4px 6px;
+}
+
+.nav-item-link:hover {
+  color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.nav-item-link.nav-active {
+  color: #1e3a8a;
+}
+
+.nav-item-link.nav-active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #3b82f6;
+  border-radius: 999px;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+}
+
+.nav-right-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav-btn-pill {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1.5px solid rgba(59, 130, 246, 0.2);
+  background: #ffffff;
+  color: #1e3a8a;
+}
+
+.nav-btn-pill:hover {
+  transform: translateY(-1px);
+  border-color: #3b82f6;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.nav-doodle-end {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Grandstander', cursive;
+  font-size: 1.3rem;
+  color: #1e3a8a;
+  user-select: none;
+}
+
+.nav-doodle-end span.star-doodle {
+  color: #f59e0b;
+}
+
+/* -------------------------------------------------------------
+   BOOKCASE CONTAINER & SHELVES
+   ------------------------------------------------------------- */
+.shelf-page-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 16px 80px 16px;
+  position: relative;
+  z-index: 10;
+}
+
+.shelf-wrapper {
+  position: relative;
+  width: min(1200px, 96vw);
+  aspect-ratio: 1 / 1;
+  margin: 10px auto 40px auto;
+  filter: drop-shadow(0 28px 55px rgba(110, 70, 30, 0.32));
+  user-select: none;
+}
+
+.shelf-bg-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+/* -------------------------------------------------------------
+   SHELF LEVELS (CAVITIES & PLANK SURFACES)
+   Coordinates derived from 2000x2000 award-shelves.png:
+   - Inner cavity width: 23.3% to 77.0% -> width = 53.7%
+   - Shelf 1 plank surface: Y = 28.25%
+   - Shelf 2 plank surface: Y = 48.0%
+   - Shelf 3 plank surface: Y = 67.75%
+   - Shelf 4 plank surface: Y = 85.75%
+   ------------------------------------------------------------- */
+.shelf-level {
+  position: absolute;
+  left: 23.3%;
+  width: 53.7%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  pointer-events: none;
+  z-index: 15;
+}
+
+/* Shelf 1 (Top) */
+.shelf-level-1 {
+  top: 11.2%;
+  height: 17.05%; /* 11.2% + 17.05% = 28.25% */
+  padding: 0 16px;
+}
+
+/* Shelf 2 */
+.shelf-level-2 {
+  top: 31.5%;
+  height: 16.5%; /* 31.5% + 16.5% = 48.0% */
+  padding: 0 16px;
+}
+
+/* Shelf 3 */
+.shelf-level-3 {
+  top: 51.25%;
+  height: 16.5%; /* 51.25% + 16.5% = 67.75% */
+  padding: 0 16px;
+}
+
+/* Shelf 4 (Bottom - Centered Single Feature) */
+.shelf-level-4 {
+  top: 71.0%;
+  height: 14.75%; /* 71.0% + 14.75% = 85.75% */
+  padding: 0 16px;
+  justify-content: center;
+}
+
+/* -------------------------------------------------------------
+   INTERACTIVE SHELF ITEMS (CERTIFICATES & TROPHY)
+   ------------------------------------------------------------- */
+.shelf-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  pointer-events: auto;
+  cursor: pointer;
+  transform-origin: 50% 100%;
+  transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.28s ease;
+  will-change: transform;
+}
+
+/* Idle Floating Animation (like files / folders in projects) */
+@keyframes shelfBob1 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6.5px) rotate(0.35deg);
+  }
+}
+
+@keyframes shelfBob2 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-7.5px) rotate(-0.35deg);
+  }
+}
+
+@keyframes shelfBob3 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(0.3deg);
+  }
+}
+
+@keyframes shelfBob4 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-7px) rotate(-0.3deg);
+  }
+}
+
+.float-bob-1 {
+  animation: shelfBob1 3.8s ease-in-out infinite;
+}
+
+.float-bob-2 {
+  animation: shelfBob2 4.2s ease-in-out infinite 0.6s;
+}
+
+.float-bob-3 {
+  animation: shelfBob3 3.6s ease-in-out infinite 1.2s;
+}
+
+.float-bob-4 {
+  animation: shelfBob4 4.0s ease-in-out infinite 1.8s;
+}
+
+/* Hover Movement & Pop effect */
+.shelf-item:hover {
+  animation-play-state: paused;
+  transform: translateY(-11px) scale(1.06) !important;
+  z-index: 60;
+}
+
+.shelf-item:active {
+  transform: translateY(-2px) scale(0.98) !important;
+}
+
+.shelf-item img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.28));
+  transition: filter 0.28s ease, transform 0.28s ease;
+}
+
+.shelf-item:hover img {
+  filter: drop-shadow(0 16px 26px rgba(0, 0, 0, 0.42)) brightness(1.03);
+}
+
+/* Specific item height rules inside cavities - Zoomed in & enlarged */
+/* Horizontal Certificates: larger aspect ratio */
+.item-award-1,
+.item-award-2,
+.item-award-3,
+.item-award-4 {
+  height: 87%;
+  max-width: 47%;
+}
+
+.item-award-1 img,
+.item-award-2 img,
+.item-award-3 img,
+.item-award-4 img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+}
+
+/* Crystal trophy (slender and tall) */
+.item-award-5 {
+  height: 94%;
+  max-width: 32%;
+}
+
+.item-award-5 img {
+  height: 100%;
+  width: auto;
+}
+
+/* Vertical game certificates (A4 tall format) */
+.item-award-6 {
+  height: 94%;
+  max-width: 38%;
+}
+
+.item-award-6 img {
+  height: 100%;
+  width: auto;
+}
+
+.item-award-7 {
+  height: 94%;
+  max-width: 38%;
+}
+
+.item-award-7 img {
+  height: 100%;
+  width: auto;
+}
+
+/* -------------------------------------------------------------
+   SPEECH BUBBLE ON HOVER (Using profile bubble.png)
+   ------------------------------------------------------------- */
+.shelf-speech-bubble {
+  position: absolute;
+  top: -72px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.65) translateY(12px);
+  width: 184px;
+  height: 78px;
+  pointer-events: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 70;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.22s cubic-bezier(0.34, 1.56, 0.64, 1),
+              transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+              visibility 0.22s;
+}
+
+.shelf-item:hover .shelf-speech-bubble,
+.shelf-item:focus-visible .shelf-speech-bubble {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) scale(1) translateY(0);
+}
+
+.shelf-speech-bubble .bubble-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.16));
+}
+
+.shelf-speech-bubble .bubble-text {
+  position: relative;
+  z-index: 2;
+  font-family: 'Grandstander', 'Fredoka', cursive, sans-serif;
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  text-align: center;
+  line-height: 1.16;
+  padding: 0 16px 14px 16px;
+  max-width: 172px;
+}
+
+/* -------------------------------------------------------------
+   FLOATING SCROLL HINT (Bottom)
+   ------------------------------------------------------------- */
+.shelf-scroll-hint {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(220, 200, 180, 0.85);
+  padding: 7px 18px;
+  border-radius: 999px;
+  font-family: 'Fredoka', 'Grandstander', cursive, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  box-shadow: 0 8px 24px rgba(110, 75, 45, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 85;
+  cursor: pointer;
+  pointer-events: auto;
+  user-select: none;
+  animation: scrollFloatBounce 2.4s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.shelf-scroll-hint:hover {
+  background: #ffffff;
+  color: #2563eb;
+  border-color: #93c5fd;
+  transform: translateX(-50%) scale(1.06);
+  box-shadow: 0 12px 30px rgba(59, 130, 246, 0.22);
+}
+
+.shelf-scroll-hint.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(12px);
+  pointer-events: none;
+}
+
+.scroll-mouse-icon {
+  width: 14px;
+  height: 20px;
+  border: 2px solid #3b82f6;
+  border-radius: 10px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.mouse-wheel-dot {
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2.5px;
+  height: 4.5px;
+  background: #3b82f6;
+  border-radius: 2px;
+  animation: mouseWheelSlide 1.6s ease-in-out infinite;
+}
+
+.scroll-bounce-arrow {
+  font-size: 0.8rem;
+  color: #3b82f6;
+  animation: arrowBounceMini 1.6s ease-in-out infinite;
+}
+
+@keyframes scrollFloatBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-5px); }
+}
+
+@keyframes mouseWheelSlide {
+  0% { transform: translate(-50%, 0); opacity: 1; }
+  60% { transform: translate(-50%, 5px); opacity: 0.2; }
+  100% { transform: translate(-50%, 0); opacity: 1; }
+}
+
+@keyframes arrowBounceMini {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(3px); }
+}
+
+/* -------------------------------------------------------------
+   MACOS-STYLE AWARD SHOWCASE WINDOW MODAL (Matches Game Window Aesthetic)
+   ------------------------------------------------------------- */
+.award-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 28, 45, 0.48);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 1500; /* Stays below .celyne-top-nav (z-index: 2000) so top nav remains fully visible! */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 82px 24px 24px 24px; /* Leaves breathing room below sticky top nav */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.28s ease;
+}
+
+.award-modal-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.award-modal-box {
+  position: relative;
+  width: min(920px, 94vw);
+  max-height: calc(100vh - 105px);
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1.5px solid rgba(226, 232, 240, 0.95);
+  box-shadow: 0 25px 60px -12px rgba(15, 23, 42, 0.28), 0 0 0 1px rgba(255, 255, 255, 0.9) inset, 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: scale(0.95) translateY(12px);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.award-modal-backdrop.active .award-modal-box {
+  transform: scale(1) translateY(0);
+}
+
+/* Modal Titlebar matching Game Project Showcase */
+.modal-header-bar {
+  background: #ffffff;
+  border-bottom: 1.5px solid #edf2f7;
+  padding: 8px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.modal-window-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 75px;
+}
+
+.modal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.18s ease;
+}
+
+.modal-dot:hover {
+  transform: scale(1.18);
+}
+
+.modal-dot.dot-red { background: #ff5f56; box-shadow: 0 0 6px rgba(255, 95, 86, 0.45); }
+.modal-dot.dot-yellow { background: #ffbd2e; box-shadow: 0 0 6px rgba(255, 189, 46, 0.45); }
+.modal-dot.dot-green { background: #27c93f; box-shadow: 0 0 6px rgba(39, 201, 63, 0.45); }
+
+.modal-dot.dot-red::after {
+  content: '×';
+  font-size: 11px;
+  line-height: 1;
+  color: #7f1d1d;
+  opacity: 0;
+  font-weight: 900;
+  transition: opacity 0.15s ease;
+}
+
+.modal-dot.dot-red:hover::after {
+  opacity: 0.85;
+}
+
+.modal-title-center {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.modal-title-text {
+  font-family: 'Grandstander', 'Fredoka', sans-serif;
+  font-size: clamp(0.96rem, 1.2vw, 1.12rem);
+  font-weight: 800;
+  color: #0f172a;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modal-back-btn {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #334155;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.modal-back-btn:hover {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+}
+
+.modal-body-scroll {
+  overflow-y: auto;
+  flex: 1;
+  padding: 16px 22px 20px 22px;
+}
+
+.modal-body-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.modal-body-scroll::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+.modal-body-scroll::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+.modal-body-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Award Title & Badges in Window */
+.modal-award-header-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modal-award-title {
+  font-family: 'Grandstander', 'Fredoka', cursive, sans-serif;
+  font-size: clamp(1.22rem, 1.6vw, 1.55rem);
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.modal-award-subtitle {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+.modal-badges-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 2px;
+}
+
+.modal-category-badge {
+  background: #fef3c7;
+  color: #b45309;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  padding: 3px 12px;
+  border-radius: 999px;
+  border: 1px solid #fde68a;
+}
+
+.modal-meta-pill {
+  background: #f1f5f9;
+  color: #475569;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 3px 12px;
+  border-radius: 999px;
+  border: 1px solid #e2e8f0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Image Showcase Area */
+.modal-image-display {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 16px;
+  padding: 14px 16px 12px 16px;
+  border: 1.5px solid #e2e8f0;
+}
+
+.modal-img-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.modal-img-container img {
+  max-height: 42vh;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 10px 28px -6px rgba(0, 0, 0, 0.22);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  cursor: pointer;
+}
+
+.modal-img-container img:hover {
+  transform: scale(1.015);
+}
+
+.modal-nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(226, 232, 240, 0.95);
+  color: #1e3a8a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 10;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
+  font-size: 1rem;
+}
+
+.modal-nav-arrow:hover {
+  background: #ffffff;
+  color: #2563eb;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.25);
+  border-color: #3b82f6;
+}
+
+.modal-nav-arrow:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+.arrow-prev {
+  left: 10px;
+}
+
+.arrow-next {
+  right: 10px;
+}
+
+.modal-caption-text {
+  margin-top: 10px;
+  font-family: 'Grandstander', 'Fredoka', cursive, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  text-align: center;
+  line-height: 1.35;
+}
+
+/* Info Details */
+.modal-info-details {
+  width: 100%;
+}
+
+.modal-award-description {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #334155;
+  background: #f8fafc;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border-left: 4px solid #f59e0b;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .celyne-top-nav {
+    padding: 10px 18px;
+  }
+  .nav-menu-links {
+    display: none;
+  }
+  .shelf-wrapper {
+    width: 98vw;
+    margin: 5px auto 30px auto;
+  }
+  .award-modal-backdrop {
+    padding: 72px 12px 16px 12px;
+  }
+  .award-modal-box {
+    max-height: calc(100vh - 85px);
+  }
+  .modal-img-container img {
+    max-height: 36vh;
+  }
+  .modal-nav-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+  }
+  .arrow-prev {
+    left: 6px;
+  }
+  .arrow-next {
+    right: 6px;
+  }
+}

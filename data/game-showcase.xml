@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ==========================================================================
+     RUNAWAY TIMMY - GAME SHOWCASE DATA
+     Edit the title, synopsis, introduction, how to play, videos, and mechanics here.
+     ========================================================================== -->
+<gameShowcase id="runaway-timmy">
+
+  <!-- ==========================================================================
+       HERO HEADER & META INFORMATION
+       ========================================================================== -->
+  <hero>
+    <eyebrows>
+      <badge color="badge-purple">All Works</badge>
+      <badge color="badge-cyan">Mobile Game Development</badge>
+      <badge color="badge-rose">3D Endless Runner</badge>
+    </eyebrows>
+    <title>Runaway Timmy:</title>
+    <titleGradient>Cartoon Mobile Endless Runner</titleGradient>
+    <subtitle>A fast-paced, cartoon-style 3D mobile endless runner inspired by Subway Surfers. Escape an enraged Granny through vibrant modular European town streets, dodging multi-lane obstacles, swimming waterways, collecting coin trails, and stacking mystery power-ups!</subtitle>
+    <metaList>
+      <metaItem label="My Role" value="Lead Game Dev &amp; Technical Artist" />
+      <metaItem label="Platform" value="Mobile (Android / iOS) &amp; PC" />
+      <metaItem label="Genre" value="3D Cartoon Endless Runner" />
+      <metaItem label="Tech Stack" value="Unity 3D, C#, Blender, Cinemachine" />
+    </metaList>
+    <youtubeStreams>
+      <explanationVideoUrl>https://youtu.be/h-d8EciMMEw</explanationVideoUrl>
+      <explanationButtonText>Explanation &amp; Devlog</explanationButtonText>
+      <gameplayVideoUrl>https://youtu.be/maJktk8v5lA</gameplayVideoUrl>
+      <gameplayButtonText>Gameplay Walkthrough</gameplayButtonText>
+    </youtubeStreams>
+  </hero>
+
+  <!-- ==========================================================================
+       HERO VIDEO SHOWCASE PLAYERS
+       ========================================================================== -->
+  <videos>
+    <openingVideo>
+      <title>Timmy Opening Cutscene</title>
+      <badge>Cinematic Intro</badge>
+      <src>assets/videos_showcase/game_videos/timmy_opening.mp4</src>
+      <poster>assets/images/project1.jpg</poster>
+      <captionText>Cinematic opening sequence capturing Timmy's coin heist and Granny's furious pursuit.</captionText>
+    </openingVideo>
+    <gameplayVideo>
+      <title>Timmy Gameplay Demo</title>
+      <badge>In-Engine Real-Time</badge>
+      <src>assets/videos_showcase/game_videos/timmy_gameplay.mp4</src>
+      <poster>assets/images/project1.jpg</poster>
+      <captionText>High-speed endless runner gameplay, lane switching, obstacle avoidance, and dynamic water swimming.</captionText>
+    </gameplayVideo>
+  </videos>
+
+  <!-- ==========================================================================
+       SECTION 01: GAME INTRODUCTION (Before Synopsis)
+       ========================================================================== -->
+  <introduction>
+    <sectionLabel>Section 01</sectionLabel>
+    <sectionTitle>About the Game &amp; Core Concept</sectionTitle>
+    <heading>Runaway Timmy: The High-Speed Town Escape</heading>
+    <leadParagraph>Runaway Timmy is an action-packed, cartoon-style 3D mobile endless runner inspired by arcade classics such as Subway Surfers. Built from the ground up in Unity, the game focuses on rapid-fire reflexes, precise multi-lane maneuvering, dynamic obstacle avoidance, rich coin collection, and exhilarating stackable power-ups.</leadParagraph>
+    <secondaryParagraph>Players take control of Timmy as he sprints endlessly through a playfully designed modular European town. Each run dynamically generates charming cobblestone streets, sharp corner turns, and refreshing canal water sections where Timmy transitions seamlessly from sprinting to swimming. The overarching objective: survive as long as possible, collect coins, chain power-ups, and rack up the highest score while keeping just one step ahead of Granny!</secondaryParagraph>
+
+    <pillars>
+      <pillar>
+        <icon>fa-person-running</icon>
+        <title>Fast-Paced Traversal</title>
+        <description>Immediate swipe responsiveness, high-speed momentum curves, and smooth jump/slide animations tuned for mobile gameplay.</description>
+      </pillar>
+      <pillar>
+        <icon>fa-city</icon>
+        <title>Modular European Town</title>
+        <description>Dynamic procedural street blocks, scenic canals, plaza arches, and corner turns keeping every single run fresh and unpredictable.</description>
+      </pillar>
+      <pillar>
+        <icon>fa-water</icon>
+        <title>Multi-Terrain Swimming</title>
+        <description>Fluid water sections where Timmy dives into town canals, introducing unique aquatic obstacles and buoyant lane navigation.</description>
+      </pillar>
+    </pillars>
+  </introduction>
+
+  <!-- ==========================================================================
+       SECTION 02: STORY SYNOPSIS & LORE
+       ========================================================================== -->
+  <synopsis>
+    <sectionLabel>Section 02</sectionLabel>
+    <sectionTitle>Story Synopsis &amp; Opening Cutscene</sectionTitle>
+    <heading>The Coin Jar Heist &amp; Granny's Pursuit</heading>
+    <quote>"Caught red-handed with his fingers in Granny's coin jar to buy the new gaming console, Timmy had only one choice: run like the wind through the town before Granny catches up!"</quote>
+    <paragraphs>
+      <p>Timmy is an energetic, mischievous young boy with one burning dream: getting his hands on the latest gaming console. Short on pocket money, he makes the cheeky decision to swipe coins from his Granny's cherished coin jar. But Granny has eagle eyes—and boundless stamina!</p>
+      <p>Caught in the act, Timmy bolts out the front door and sprints into the bustling European town. Hot on his heels, Granny chases after him with relentless determination. Players must guide Timmy through winding streets, leap over roadblocks, duck under low awnings, and surf the canals.</p>
+      <p>Every mistake matters: colliding with obstacles depletes Timmy's health and lets Granny close the gap, cranking up the urgency and intensity with every second on the run!</p>
+    </paragraphs>
+    <badges>
+      <badge color="badge-purple" icon="fa-gamepad">Playful Cartoon Lore</badge>
+      <badge color="badge-rose" icon="fa-person-running">Dynamic Granny Chase</badge>
+      <badge color="badge-cyan" icon="fa-coins">Coin Rush Stacking</badge>
+    </badges>
+  </synopsis>
+
+  <!-- ==========================================================================
+       SECTION 03: GAME MECHANICS & HEALTH SYSTEM
+       ========================================================================== -->
+  <mechanicsSystem>
+    <sectionLabel>Section 03</sectionLabel>
+    <sectionTitle>Game Mechanics &amp; Health System</sectionTitle>
+    <subtitle>Intuitive swipe controls, responsive multi-lane switching, and dynamic health feedback.</subtitle>
+    
+    <movement>
+      <control>
+        <action>Swipe Up / Space / Up Arrow</action>
+        <title>Jump Over Obstacles</title>
+        <desc>Leap over traffic barriers, low street roadblocks, and parked cars.</desc>
+      </control>
+      <control>
+        <action>Swipe Down / S / Down Arrow</action>
+        <title>Slide Underneath</title>
+        <desc>Slide low to effortlessly pass beneath overhead scaffolding and arches.</desc>
+      </control>
+      <control>
+        <action>Swipe Left / Right (A / D)</action>
+        <title>Switch 3 Lanes</title>
+        <desc>Dart swiftly between 3 parallel lanes to grab coins and dodge collisions.</desc>
+      </control>
+      <control>
+        <action>Canal Entry (Automatic)</action>
+        <title>Water Swimming</title>
+        <desc>Smooth aquatic locomotion allowing Timmy to navigate river hazards and waterways.</desc>
+      </control>
+    </movement>
+
+    <healthDetails>
+      <initialHp>3 Hearts</initialHp>
+      <collisionPenalty>-1 Heart on obstacle impact</collisionPenalty>
+      <failCondition>Game Over when all 3 Hearts are depleted</failCondition>
+      <recovery>Heal pickups restore +1 Heart up to max 3</recovery>
+      <visualFeedback>Timmy's facial expressions and animations change dynamically reflecting his current health condition</visualFeedback>
+    </healthDetails>
+  </mechanicsSystem>
+
+  <!-- ==========================================================================
+       SECTION 04: OBSTACLE SYSTEM
+       ========================================================================== -->
+  <obstaclesSystem>
+    <sectionLabel>Section 04</sectionLabel>
+    <sectionTitle>Obstacle Categories &amp; Lane Design</sectionTitle>
+    <subtitle>Multi-layered obstacles strategically placed across lanes to test reflexes and timing.</subtitle>
+    <obstacleTypes>
+      <type name="Jump Obstacles" icon="fa-arrow-up">
+        <desc>Road barriers, construction fences, and parked vehicles requiring precise jump timing.</desc>
+      </type>
+      <type name="Slide Obstacles" icon="fa-arrow-down">
+        <desc>Low-hanging signs, scaffoldings, and market canopies that must be ducked under.</desc>
+      </type>
+      <type name="Water Obstacles" icon="fa-water">
+        <desc>Floating buoys, logs, and canal barriers that cannot be jumped over—demanding instant lane-switching while swimming.</desc>
+      </type>
+    </obstacleTypes>
+  </obstaclesSystem>
+
+  <!-- ==========================================================================
+       SECTION 05: COINS & PICKUPS
+       ========================================================================== -->
+  <powerupsSystem>
+    <sectionLabel>Section 05</sectionLabel>
+    <sectionTitle>Coins, Pickups &amp; Stackable Power-Ups</sectionTitle>
+    <subtitle>Collect shiny coin trails and combine mystery power-ups for unstoppable runs.</subtitle>
+    <powerups>
+      <item name="Coins" icon="fa-coins" color="badge-amber">
+        <title>Gold Coin Trails</title>
+        <desc>The core collectible. Placed strategically across lanes and high jump arcs to boost total score and currency.</desc>
+      </item>
+      <item name="Skateboard" icon="fa-bolt" color="badge-cyan">
+        <title>Skateboard Rush (5s)</title>
+        <desc>Grants 5 seconds of hyper speed and complete invulnerability! Smashes through obstacles on contact instead of taking damage.</desc>
+      </item>
+      <item name="Double Coin" icon="fa-star" color="badge-amber">
+        <title>2x Coin Multiplier</title>
+        <desc>Doubles the value of all coins picked up for a limited duration, maximizing high scores.</desc>
+      </item>
+      <item name="Shield" icon="fa-shield-halved" color="badge-purple">
+        <title>Protective Shield</title>
+        <desc>Absorbs the next incoming obstacle collision without losing a health heart.</desc>
+      </item>
+      <item name="Magnet" icon="fa-magnet" color="badge-rose">
+        <title>Coin Magnet</title>
+        <desc>Automatically vacuums all nearby coins from all 3 lanes directly to Timmy.</desc>
+      </item>
+      <item name="Bomb" icon="fa-bomb" color="badge-rose">
+        <title>Obstacle Blast Bomb</title>
+        <desc>Triggers an explosive shockwave that obliterates all upcoming obstacles in front of Timmy.</desc>
+      </item>
+      <item name="Heal" icon="fa-heart" color="badge-rose">
+        <title>Heart Restore (+1 HP)</title>
+        <desc>Recovers 1 lost health point, keeping Timmy alive and resetting Granny's proximity.</desc>
+      </item>
+    </powerups>
+    <stackingFeature>
+      <title>Stackable Ability Synergy</title>
+      <desc>Collecting multiple Mystery Boxes stacks their active powers together—combine Magnet + Double Coin + Skateboard to trigger the ultimate unstoppable coin frenzy!</desc>
+    </stackingFeature>
+  </powerupsSystem>
+
+  <!-- ==========================================================================
+       SECTION 06: 3D ENVIRONMENT & LEVEL ART
+       ========================================================================== -->
+  <environment>
+    <sectionLabel>Section 06</sectionLabel>
+    <sectionTitle>Modular 3D Environment &amp; Cartoon Level Art</sectionTitle>
+    <subtitle>Modular stylized European town assets modeled in Blender, custom toon shaders, and vibrant lighting in Unity.</subtitle>
+    <gallery>
+      <item src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Vibrant Modular Town Street Environment" />
+      <item src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Stylized 3D Props, Obstacles &amp; Collectibles" />
+      <item src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Modular Canal &amp; Waterway Level Geometry" />
+    </gallery>
+  </environment>
+
+</gameShowcase>
+

@@ -1,0 +1,2347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects Showcase — Celyne's Portfolio</title>
+  <meta name="description" content="Explore Celyne's featured projects in Game Development, Environment Art, UI/UX Design, and Animation on the interactive laptop workspace.">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Projects Laptop Stylesheet -->
+  <link rel="stylesheet" href="projects-style.css">
+</head>
+<body>
+
+  <!-- Warm Wooden Desk Surface (Fixed background) -->
+  <div class="desk-surface"></div>
+
+  <!-- Doodled Table Accents (Heart ♡ & Star ✦ on Wood) -->
+  <div class="desk-doodle doodle-h1" aria-hidden="true">♡</div>
+  <div class="desk-doodle doodle-h2" aria-hidden="true">♡</div>
+  <div class="desk-doodle doodle-s1" aria-hidden="true">✦</div>
+  <div class="desk-doodle doodle-s2" aria-hidden="true">✦</div>
+
+  <!-- ==========================================================================
+       TOP NAVIGATION BAR (Matching Mockup)
+       ========================================================================== -->
+  <header class="celyne-top-nav">
+    <!-- Brand Logo: Sun + "Celyne" -->
+    <a href="index.html" class="nav-brand-sun" title="Celyne's Portfolio (Desk View)">
+      <svg class="sun-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="12" fill="#fef08a" stroke="#f59e0b" stroke-width="2.5"/>
+        <!-- Sun Rays -->
+        <line x1="20" y1="2" x2="20" y2="5" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="20" y1="35" x2="20" y2="38" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="2" y1="20" x2="5" y2="20" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="35" y1="20" x2="38" y2="20" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="7" y1="7" x2="10" y2="10" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="30" y1="30" x2="33" y2="33" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="7" y1="33" x2="10" y2="30" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="30" y1="10" x2="33" y2="7" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- Cute Face -->
+        <circle cx="16" cy="19" r="1.5" fill="#78350f"/>
+        <circle cx="24" cy="19" r="1.5" fill="#78350f"/>
+        <path d="M17 23 Q20 26 23 23" stroke="#78350f" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span class="nav-brand-name">Celyne</span>
+    </a>
+
+    <!-- Navigation Menu Links -->
+    <nav class="nav-menu-links">
+      <a href="index.html" class="nav-item-link" title="Desk View">Home</a>
+      <a href="profile-demo.html" class="nav-item-link">Profile</a>
+      <a href="projects-demo.html" class="nav-item-link nav-active">Projects</a>
+      <a href="awards-demo.html" class="nav-item-link">Awards</a>
+      <a href="contact-demo.html" class="nav-item-link">Contact</a>
+    </nav>
+
+    <!-- Right Controls: Audio + Doodles -->
+    <div class="nav-right-actions">
+      <button id="soundToggleBtn" class="nav-btn-pill" title="Toggle Sound Effects">
+        <i class="fas fa-volume-high" id="soundIcon"></i>
+        <span id="soundLabel">Sound ON</span>
+      </button>
+
+      <div class="nav-doodle-end">
+        <span>♡</span>
+        <span class="star-doodle">✦</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       LAPTOP WORKSPACE SECTION (16:9 Canva Device Canvas)
+       ========================================================================== -->
+  <main class="laptop-stage-wrapper">
+    
+    <!-- Intro Prompt Above Laptop -->
+    <div class="laptop-stage-intro">
+      <h1 class="laptop-stage-title">
+        <i class="fas fa-laptop-code" style="color: #3b82f6;"></i>
+        Select a Project Folder
+      </h1>
+      <p class="laptop-stage-subtitle">Click any folder on the laptop screen to view its 6 featured works!</p>
+    </div>
+
+    <!-- 16:9 Canvas Stage -->
+    <div class="laptop-canvas-box" id="laptopStage">
+      
+      <!-- Realistic Laptop Frame with Sky Wallpaper Background (laptop bg.png) -->
+      <img 
+        src="assets/elements_canva/projects/laptop bg.png" 
+        alt="Laptop Workspace" 
+        class="laptop-bg-img"
+        draggable="false"
+      >
+
+      <!-- Inside Laptop Screen Content Area -->
+      <div class="laptop-screen-content" id="laptopScreen">
+        
+        <!-- 4 Desktop Folders Grid (Initial View) -->
+        <div class="desktop-folders-grid" id="foldersGrid">
+          
+          <!-- Folder 1: Game -->
+          <button class="folder-item folder-game" id="folderBtnGame" data-category="game" aria-label="Game Projects: 6 items">
+            <div class="folder-icon-wrap">
+              <img src="assets/elements_canva/projects/game folder.png" alt="Game Folder" class="folder-icon-img" draggable="false">
+              <!-- Speech Bubble: "6 projects" -->
+              <div class="folder-speech-bubble">
+                <img src="assets/elements_canva/projects/circle bubble.png" alt="Speech Bubble" class="bubble-bg-img" draggable="false">
+                <span class="bubble-text">6 projects</span>
+              </div>
+            </div>
+            <span class="folder-label">Game</span>
+          </button>
+
+          <!-- Folder 2: Environment -->
+          <button class="folder-item folder-env" id="folderBtnEnv" data-category="environment" aria-label="Environment Projects: 3 items">
+            <div class="folder-icon-wrap">
+              <img src="assets/elements_canva/projects/environment folder.png" alt="Environment Folder" class="folder-icon-img" draggable="false">
+              <!-- Speech Bubble: "3 projects" -->
+              <div class="folder-speech-bubble">
+                <img src="assets/elements_canva/projects/circle bubble.png" alt="Speech Bubble" class="bubble-bg-img" draggable="false">
+                <span class="bubble-text">3 projects</span>
+              </div>
+            </div>
+            <span class="folder-label">Environment</span>
+          </button>
+
+          <!-- Folder 3: UI/UX Design -->
+          <button class="folder-item folder-uiux" id="folderBtnUiux" data-category="uiux" aria-label="UI/UX Design Projects: 5 items">
+            <div class="folder-icon-wrap">
+              <img src="assets/elements_canva/projects/ui_ux folder.png" alt="UI/UX Folder" class="folder-icon-img" draggable="false">
+              <!-- Speech Bubble: "5 projects" -->
+              <div class="folder-speech-bubble">
+                <img src="assets/elements_canva/projects/circle bubble.png" alt="Speech Bubble" class="bubble-bg-img" draggable="false">
+                <span class="bubble-text">5 projects</span>
+              </div>
+            </div>
+            <span class="folder-label">UI/UX Design</span>
+          </button>
+
+          <!-- Folder 4: Animation -->
+          <button class="folder-item folder-anim" id="folderBtnAnim" data-category="animation" aria-label="Animation Projects: 5 items">
+            <div class="folder-icon-wrap">
+              <img src="assets/elements_canva/projects/animation folder.png" alt="Animation Folder" class="folder-icon-img" draggable="false">
+              <!-- Speech Bubble: "5 projects" -->
+              <div class="folder-speech-bubble">
+                <img src="assets/elements_canva/projects/circle bubble.png" alt="Speech Bubble" class="bubble-bg-img" draggable="false">
+                <span class="bubble-text">5 projects</span>
+              </div>
+            </div>
+            <span class="folder-label">Animation</span>
+          </button>
+
+        </div>
+
+        <!-- In-Screen Folder Window Explorer (Opened on folder click - Matches Picture 3) -->
+        <div class="folder-window-explorer" id="folderWindowExplorer" aria-hidden="true">
+          
+          <!-- Window Titlebar matching Picture 3 -->
+          <div class="window-titlebar">
+            <div class="window-dots">
+              <span class="window-dot dot-red" id="windowCloseDot" title="Close Window"></span>
+              <span class="window-dot dot-yellow" title="Minimize"></span>
+              <span class="window-dot dot-green" title="Expand"></span>
+            </div>
+
+            <div class="window-title-info">
+              <span id="windowCategoryTitle">Game Projects</span>
+            </div>
+
+            <button class="window-back-btn" id="windowBackBtn" title="Back to Desktop Folders">
+              ← Back
+            </button>
+          </div>
+
+          <!-- Window Content Body Wrap (Scrollable Grid) -->
+          <div class="window-body-wrap">
+            <div class="window-content-scroll" id="windowContentScroll">
+              <div class="window-items-grid" id="windowItemsGrid">
+                <!-- 6 Project Cards Populated by JavaScript -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Floating Cute Scroll Down Indicator -->
+    <a href="#allProjectsDirectory" class="desk-scroll-indicator" id="projectsScrollIndicator" title="Scroll down to Project Showcase Directory">
+      <span class="scroll-mouse-icon" aria-hidden="true">
+        <span class="mouse-wheel-dot"></span>
+      </span>
+      <span class="scroll-hint-text">Scroll</span>
+      <i class="fas fa-chevron-down scroll-bounce-arrow" aria-hidden="true"></i>
+    </a>
+
+  </main>
+
+  <!-- ==========================================================================
+       ALL PROJECTS DIRECTORY SECTION (Scrollable Showcase Below Laptop)
+       ========================================================================== -->
+  <section class="projects-directory-section" id="allProjectsDirectory">
+    <div class="directory-header">
+      <h2 class="directory-title">
+        <i class="fas fa-sparkles" style="color: #f59e0b;"></i>
+        Project Showcase Directory
+      </h2>
+      <p class="directory-subtitle">Browse through all engineering works, interactive prototypes, and creative productions.</p>
+      
+      <!-- Filter Tabs -->
+      <div class="directory-tabs">
+        <button class="tab-btn tab-active" data-filter="all"><i class="fas fa-border-all"></i> All Projects (25)</button>
+        <button class="tab-btn" data-filter="game"><i class="fas fa-gamepad" style="color: #6366f1;"></i> Game (6)</button>
+        <button class="tab-btn" data-filter="environment"><i class="fas fa-cubes" style="color: #16a34a;"></i> Environment (6)</button>
+        <button class="tab-btn" data-filter="uiux"><i class="fas fa-mobile-screen" style="color: #d97706;"></i> UI/UX Design (5)</button>
+        <button class="tab-btn" data-filter="animation"><i class="fas fa-film" style="color: #dc2626;"></i> Animation (7)</button>
+      </div>
+    </div>
+
+    <!-- Showcase Cards Grid -->
+    <div class="directory-grid" id="directoryCardsGrid">
+      
+      <!-- 1. Sea Vagabond -->
+      <a href="sea-vagabond-showcase.html" class="showcase-card" data-cat="game">
+        <div class="showcase-banner banner-game">
+          <i class="fas fa-anchor banner-icon" style="color: #312e81;"></i>
+          <span class="banner-category-badge">Game Dev</span>
+        </div>
+        <div class="showcase-body">
+          <h3 class="showcase-title">Sea Vagabond: 3D Pirate Adventure</h3>
+          <p class="showcase-desc">Action-adventure pirate quest across 5 island realms. Features realistic ship navigation, water physics, dialogue systems, and cinematic island exploration.</p>
+          <div class="showcase-tags">
+            <span class="showcase-tag">Unity 3D</span>
+            <span class="showcase-tag">C#</span>
+            <span class="showcase-tag">Award Winner</span>
+            <span class="showcase-tag">Team Lead</span>
+          </div>
+          <span class="showcase-link-btn">Explore Showcase <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <!-- 2. We Were Mummies -->
+      <a href="we-were-mummies-showcase.html" class="showcase-card" data-cat="game">
+        <div class="showcase-banner banner-game">
+          <i class="fas fa-pyramid banner-icon" style="color: #9a3412;"></i>
+          <span class="banner-category-badge">Game Dev</span>
+        </div>
+        <div class="showcase-body">
+          <h3 class="showcase-title">We Were Mummies: 2-Player Co-op</h3>
+          <p class="showcase-desc">Online cooperative puzzle escape game inside an ancient Egyptian pyramid tomb. Solve interconnected traps across dual chambers to break the curse.</p>
+          <div class="showcase-tags">
+            <span class="showcase-tag">Unity 3D</span>
+            <span class="showcase-tag">C#</span>
+            <span class="showcase-tag">Multiplayer Co-op</span>
+            <span class="showcase-tag">Puzzle Design</span>
+          </div>
+          <span class="showcase-link-btn">Explore Showcase <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <!-- 3. Runaway Timmy -->
+      <a href="game-showcase.html" class="showcase-card" data-cat="game">
+        <div class="showcase-banner banner-game">
+          <i class="fas fa-person-running banner-icon" style="color: #4338ca;"></i>
+          <span class="banner-category-badge">Game Dev</span>
+        </div>
+        <div class="showcase-body">
+          <h3 class="showcase-title">Runaway Timmy: 3D Endless Runner</h3>
+          <p class="showcase-desc">Fast-paced cartoon mobile endless runner inspired by Subway Surfers. Escape an enraged Granny through modular European town streets with obstacle dodging.</p>
+          <div class="showcase-tags">
+            <span class="showcase-tag">Unity 3D</span>
+            <span class="showcase-tag">C#</span>
+            <span class="showcase-tag">Mobile</span>
+            <span class="showcase-tag">Blender</span>
+          </div>
+          <span class="showcase-link-btn">Explore Showcase <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <!-- 4. The Lost Tomato -->
+      <a href="tomato-showcase.html" class="showcase-card" data-cat="game">
+        <div class="showcase-banner banner-game">
+          <i class="fas fa-circle-dot banner-icon" style="color: #be123c;"></i>
+          <span class="banner-category-badge">Game Dev</span>
+        </div>
+        <div class="showcase-body">
+          <h3 class="showcase-title">The Lost Tomato: 3D Ball Adventure</h3>
+          <p class="showcase-desc">Physics-based 3D adventure where a lost tomato journeys through Fruit Land to find its way back home. Roll, dash, jump over traps, and solve maze puzzles.</p>
+          <div class="showcase-tags">
+            <span class="showcase-tag">Unity 3D</span>
+            <span class="showcase-tag">Physics Ball</span>
+            <span class="showcase-tag">3D Platformer</span>
+          </div>
+          <span class="showcase-link-btn">Explore Showcase <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <!-- 5. Havenport Isle 3D Island -->
+      <a href="sea-vagabond-showcase.html" class="showcase-card" data-cat="environment">
+        <div class="showcase-banner banner-env">
+          <i class="fas fa-mountain-sun banner-icon" style="color: #15803d;"></i>
+          <span class="banner-category-badge">Environment</span>
+        </div>
+        <div class="showcase-body">
+          <h3 class="showcase-title">Havenport Isle: 3D Pirate Environment</h3>
+          <p class="showcase-desc">Comprehensive 3D island level design featuring harbor docks, tropical foliage, custom lighting, realistic atmospheric fog, and modular tavern structures.</p>
+          <div class="showcase-tags">
+            <span class="showcase-tag">Unity HDRP</span>
+            <span class="showcase-tag">Blender</span>
+            <span class="showcase-tag">Level Art</span>
+            <span class="showcase-tag">Lighting</span>
+          </div>
+          <span class="showcase-link-btn">Explore Breakdown <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <!-- 6. Mario Arena: Luma Star Wars -->
+      <a href="#laptopStage" class="showcase-card" data-cat="game" id="showcaseMarioCard">
+        <div class="showcase-banner banner-game" style="background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);">
+          <i class="fas fa-star banner-icon" style="color: #facc15;"></i>
+          <span class="banner-category-badge" style="background: rgba(250, 204, 21, 0.25); color: #fef08a;">Unity 3D Action</span>
+        </div>
+        <div class="showcase-body">
+          <h3 class="showcase-title">Mario Arena: Luma Star Wars</h3>
+          <p class="showcase-desc">Cosmic 3D arena action combat prototype developed in Unity with C#. Guide Mario and Luma through planetary battlegrounds, dodge orbital hazards, and challenge galactic bosses.</p>
+          <div class="showcase-tags">
+            <span class="showcase-tag">Unity 3D</span>
+            <span class="showcase-tag">C# Scripting</span>
+            <span class="showcase-tag">Boss AI</span>
+            <span class="showcase-tag">Luma Star Powers</span>
+          </div>
+          <span class="showcase-link-btn" style="color: #6366f1;">View in Workspace <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <!-- 7. Kitchin Mobile UI/UX -->
+      <a href="kitchin-showcase.html" class="showcase-card" data-cat="uiux">
+        <div class="showcase-banner banner-uiux" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+          <i class="fas fa-mobile-screen banner-icon" style="color: #ffffff;"></i>
+          <span class="banner-category-badge" style="background: rgba(255, 255, 255, 0.25); color: #fff;">HCI &amp; UI/UX</span>
+        </div>
+        <div class="showcase-body">
+          <h3 class="showcase-title">Kitchin: Smart Fridge &amp; Food Waste App</h3>
+          <p class="showcase-desc">Intelligent mobile application connecting with smart fridges to eliminate household food waste. Features real-time expiry tracking, recipe discovery, and food bank donations. Validated with an 85.4 SUS score.</p>
+          <div class="showcase-tags">
+            <span class="showcase-tag">Figma</span>
+            <span class="showcase-tag">HCI Research</span>
+            <span class="showcase-tag">SUS 85.4</span>
+            <span class="showcase-tag">Interactive Prototype</span>
+          </div>
+          <span class="showcase-link-btn" style="color: #059669;">Explore Case Study <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <!-- 7B. Best Rate Mobile UI/UX -->
+      <a href="#laptopStage" class="showcase-card" data-cat="uiux" id="showcaseBestRateCard">
+        <div class="showcase-banner banner-uiux" style="background: linear-gradient(135deg, #0f172a 0%, #064e3b 100%);">
+          <i class="fas fa-coins banner-icon" style="color: #10b981;"></i>
+          <span class="banner-category-badge" style="background: rgba(16, 185, 129, 0.25); color: #34d399;">FinTech UI/UX</span>
+        </div>
+        <div class="showcase-body">
+          <h3 class="showcase-title">BestRate: Currency &amp; Remittance App</h3>
+          <p class="showcase-desc">Modern cross-border remittance comparison app designed in Figma. Features real-time mid-market rate aggregation across Wise, WorldRemit, and Remitly with transparent fee breakdowns and target rate alerts.</p>
+          <div class="showcase-tags">
+            <span class="showcase-tag">Figma</span>
+            <span class="showcase-tag">FinTech UX</span>
+            <span class="showcase-tag">Exchange Rates</span>
+            <span class="showcase-tag">Design System</span>
+          </div>
+          <span class="showcase-link-btn" style="color: #059669;">View in Workspace <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <!-- 7C. Codu Gamified Coding Education Mobile UI/UX -->
+      <a href="#laptopStage" class="showcase-card" data-cat="uiux" id="showcaseCoduCard">
+        <div class="showcase-banner banner-uiux" style="background: linear-gradient(135deg, #0284c7 0%, #16a34a 100%);">
+          <i class="fas fa-gamepad banner-icon" style="color: #fde047;"></i>
+          <span class="banner-category-badge" style="background: rgba(255, 255, 255, 0.25); color: #ffffff;">Gamified EdTech</span>
+        </div>
+        <div class="showcase-body">
+          <h3 class="showcase-title">Codu: Gamified Coding Education App</h3>
+          <p class="showcase-desc">A playful, gamified programming education mobile application designed in Figma. Features tap-and-drop code puzzles, Python roadmap paths, live 1v1 real-time code battles, and a friendly AI mascot tutor.</p>
+          <div class="showcase-tags">
+            <span class="showcase-tag">Figma</span>
+            <span class="showcase-tag">Gamified UI/UX</span>
+            <span class="showcase-tag">1v1 Code Battles</span>
+            <span class="showcase-tag">AI Mascot Tutor</span>
+          </div>
+          <span class="showcase-link-btn" style="color: #0284c7;">View in Workspace <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <!-- 7D. Asian Cuisine Mobile Game UI/UX -->
+      <a href="#laptopStage" class="showcase-card" data-cat="uiux" id="showcaseAsianCuisineCard">
+        <div class="showcase-banner banner-uiux" style="background: linear-gradient(135deg, #f97316 0%, #b45309 100%);">
+          <i class="fas fa-bowl-rice banner-icon" style="color: #ffffff;"></i>
+          <span class="banner-category-badge" style="background: rgba(255, 255, 255, 0.25); color: #ffffff;">Canva UI/UX</span>
+        </div>
+        <div class="showcase-body">
+          <h3 class="showcase-title">Asian Cuisine: Pixel Restaurant Game</h3>
+          <p class="showcase-desc">Cozy 2D pixel-art restaurant management and cooking simulation mobile game UI/UX designed in Canva. Features 8 complete flows: character creation, live kitchen orders, pantry inventory, closet fitting, recipe gacha, and dish cookbook.</p>
+          <div class="showcase-tags">
+            <span class="showcase-tag">Canva</span>
+            <span class="showcase-tag">Game UI/UX</span>
+            <span class="showcase-tag">Pixel Art</span>
+            <span class="showcase-tag">Cooking Sim</span>
+          </div>
+          <span class="showcase-link-btn" style="color: #ea580c;">View in Workspace <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <!-- 7E. NBA Information Visualization Interactive Dashboard -->
+      <a href="#laptopStage" class="showcase-card" data-cat="uiux" id="showcaseInfovisCard">
+        <div class="showcase-banner banner-uiux" style="background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #b91c1c 100%);">
+          <i class="fas fa-chart-line banner-icon" style="color: #60a5fa;"></i>
+          <span class="banner-category-badge" style="background: rgba(255, 255, 255, 0.25); color: #ffffff;">Tableau Analytics</span>
+        </div>
+        <div class="showcase-body">
+          <h3 class="showcase-title">NBA: The Shift Toward International Players</h3>
+          <p class="showcase-desc">Interactive longitudinal sports analytics dashboard built in Tableau comparing USA vs. International player performance across 22 seasons (2000–2022). Explores RAPTOR ratings, WAR efficiency, minutes distribution, and global player migration.</p>
+          <div class="showcase-tags">
+            <span class="showcase-tag">Tableau</span>
+            <span class="showcase-tag">InfoVis &amp; HCI</span>
+            <span class="showcase-tag">Data Storytelling</span>
+            <span class="showcase-tag">Sports Analytics</span>
+          </div>
+          <span class="showcase-link-btn" style="color: #2563eb;">View in Workspace <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <!-- 8. Komorebi Animation Short -->
+      <a href="game-showcase.html" class="showcase-card" data-cat="animation">
+        <div class="showcase-banner banner-anim">
+          <i class="fas fa-wand-magic-sparkles banner-icon" style="color: #b91c1c;"></i>
+          <span class="banner-category-badge">Animation</span>
+        </div>
+        <div class="showcase-body">
+          <h3 class="showcase-title">Komorebi: Animated Short Film</h3>
+          <p class="showcase-desc">An emotional narrative animated film combining hand-drawn 2D frame sequences, 3D character rigging, cinematic camera staging, and post-production audio sync.</p>
+          <div class="showcase-tags">
+            <span class="showcase-tag">After Effects</span>
+            <span class="showcase-tag">Premiere Pro</span>
+            <span class="showcase-tag">Adobe Animate</span>
+            <span class="showcase-tag">Storyboarding</span>
+          </div>
+          <span class="showcase-link-btn">View Animation Breakdown <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <!-- 9. Lily and the Veggies -->
+      <a href="assets/videos_showcase/animation_videos/lily_animation.MP4" class="showcase-card" data-cat="animation" id="showcaseLilyCard">
+        <div class="showcase-banner banner-anim" style="background: linear-gradient(135deg, #f472b6 0%, #22c55e 100%);">
+          <i class="fas fa-carrot banner-icon" style="color: #ffffff;"></i>
+          <span class="banner-category-badge">Animation</span>
+        </div>
+        <div class="showcase-body">
+          <h3 class="showcase-title">Lily and the Veggies: Animated Short</h3>
+          <p class="showcase-desc">A whimsical storybook animated film following young Lily and living garden vegetables. Features lively character expressions, squash-and-stretch motion, and wholesome nutritional themes.</p>
+          <div class="showcase-tags">
+            <span class="showcase-tag">Adobe Animate</span>
+            <span class="showcase-tag">2D Character Animation</span>
+            <span class="showcase-tag">Storytelling</span>
+            <span class="showcase-tag">Sound Sync</span>
+          </div>
+          <span class="showcase-link-btn">Watch Animation Short <i class="fas fa-play"></i></span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- macOS-Style Project Showcase Window Modal (Preserves Top Nav & Cute Desk Aesthetic) -->
+  <div id="videoModal" class="modal-backdrop project-detail-modal" aria-hidden="true">
+    <div class="modal-container project-modal-window">
+      <!-- Window Titlebar matching the Mac window style -->
+      <div class="modal-header-bar project-modal-titlebar">
+        <div class="modal-window-dots">
+          <span class="modal-dot dot-red" id="closeVideoModal" title="Close Window"></span>
+          <span class="modal-dot dot-yellow" id="modalMinimizeDot" title="Close Window"></span>
+          <span class="modal-dot dot-green" id="modalExpandDot" title="Project Showcase"></span>
+        </div>
+        <div class="modal-title-center">
+          <span class="modal-title-text" id="modalVideoTitle">
+            <i class="fas fa-film" style="color: #dc2626;"></i> Inner Thoughts
+          </span>
+        </div>
+        <button id="modalBackBtn" class="modal-back-btn" aria-label="Back to Projects">
+          <i class="fas fa-arrow-left"></i> <span>Back to Projects</span>
+        </button>
+      </div>
+
+      <!-- Scrollable Window Content Body -->
+      <div class="modal-body-scroll" id="modalBodyScroll">
+        <div id="modalDynamicContent" class="modal-dynamic-content">
+          <!-- Populated dynamically by openProjectModal() -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sound & Interactivity Script -->
+  <script src="desk-audio.js"></script>
+  <script>
+    // Projects Data per Folder Category with High-Res Official Cover Art & Video Previews
+    const categoryProjectsData = {
+      game: {
+        title: 'Game Projects',
+        projects: [
+          {
+            title: 'The Lost Tomato',
+            subtitle: '3D Physics Adventure',
+            badge: 'Physics Platformer',
+            image: 'assets/elements_canva/projects/tomato_cover.png',
+            video: 'assets/videos_showcase/game_videos/tomato_gameplay.mp4',
+            gameplayUrl: 'https://youtu.be/utgsa_6fV0M',
+            link: 'tomato-showcase.html'
+          },
+          {
+            title: 'Runaway Timmy',
+            subtitle: 'Cartoon 3D Mobile Endless Runner',
+            badge: 'Endless Runner',
+            image: 'assets/elements_canva/projects/timmy_cover.png',
+            video: 'assets/videos_showcase/game_videos/timmy_gameplay.mp4',
+            gameplayUrl: 'https://youtu.be/maJktk8v5lA',
+            explanationUrl: 'https://youtu.be/h-d8EciMMEw',
+            link: 'game-showcase.html'
+          },
+          {
+            title: 'Sea Vagabond',
+            subtitle: '3D Pirate Action-Adventure',
+            badge: 'Award Winner',
+            image: 'assets/elements_canva/projects/seavagabond_cover.png',
+            video: 'assets/videos_showcase/game_videos/seavagabond_gameplay.mp4',
+            gameplayUrl: 'https://youtu.be/BEFC1k0lOBw',
+            certificate: 'assets/photo_showcase/seavagabond_certificate.png',
+            certificateTitle: '🏆 Best Game Project Award Certificate',
+            certificateDesc: 'Official Project Exhibition Award Certificate for Worldbuilding, Dialogue & Visual Art.',
+            link: 'sea-vagabond-showcase.html'
+          },
+          {
+            title: 'We Were Mummies',
+            subtitle: '2-Player Online Co-op Puzzle',
+            badge: 'Multiplayer Co-op',
+            image: 'assets/elements_canva/projects/mummies_cover.png',
+            video: 'assets/videos_showcase/game_videos/mummy_gameplay.mp4',
+            gameplayUrl: 'https://youtu.be/WZfB8VD5NtY',
+            link: 'we-were-mummies-showcase.html'
+          },
+          {
+            title: 'Code Eternis',
+            subtitle: 'Sci-Fi FPS Arena Prototype',
+            badge: 'DMT Showcase Award',
+            image: 'assets/photo_showcase/code_dmtshowcase.png',
+            certificate: 'assets/photo_showcase/code_certificate.png',
+            certificateTitle: '🏆 DMT Showcase Award Certificate',
+            certificateDesc: 'Official Digital Media Technology Exhibition Award Certificate of Excellence.',
+            additionalPhoto: 'assets/photo_showcase/code_dmtshowcase.png',
+            additionalPhotoTitle: '📸 DMT Live Exhibition Showcase',
+            additionalPhotoDesc: 'Live presentation booth and player exhibition during the campus tech expo.',
+            link: 'game-showcase.html'
+          },
+          {
+            title: 'Mario Arena: Luma Star Wars',
+            subtitle: 'Galactic Arena Boss Combat & FPS Action Prototype',
+            badge: 'Unity 3D Action / FPS',
+            image: 'assets/elements_canva/projects/mario_cover.png',
+            video: 'assets/videos_showcase/game_videos/mario_gameplay.mov',
+            gameplayUrl: 'https://youtu.be/Ie3MEz1A0PE',
+            link: 'https://youtu.be/Ie3MEz1A0PE'
+          }
+        ]
+      },
+      environment: {
+        title: 'Environment Projects',
+        projects: [
+          {
+            title: 'Pirate Harbor & Island',
+            subtitle: '3D Level & Environmental Design',
+            badge: '3D Environment',
+            image: 'assets/elements_canva/projects/pirate_cover.png',
+            video: 'assets/videos_showcase/game_videos/enviornment_pirate.mp4',
+            link: 'assets/videos_showcase/game_videos/enviornment_pirate.mp4'
+          },
+          {
+            title: 'Abandoned School',
+            subtitle: 'Atmospheric Horror Interior Design',
+            badge: 'Level Design',
+            image: 'assets/elements_canva/projects/school_cover.png',
+            video: 'assets/videos_showcase/game_videos/environment_school.mov',
+            link: 'assets/videos_showcase/game_videos/environment_school.mov'
+          },
+          {
+            title: 'Fantasy Dwarf Hut',
+            subtitle: 'Stylized Foliage & Modular Prop Art',
+            badge: 'Stylized 3D',
+            image: 'assets/elements_canva/projects/hut_cover.png',
+            video: 'assets/videos_showcase/game_videos/environment_hut.mp4',
+            link: 'assets/videos_showcase/game_videos/environment_hut.mp4'
+          }
+        ]
+      },
+      uiux: {
+        title: 'UI/UX Design Projects',
+        projects: [
+          {
+            id: 'kitchin',
+            title: 'Kitchin',
+            subtitle: 'Smart Fridge & Food Waste Reduction App',
+            badge: 'HCI Usability 85.4',
+            image: 'assets/elements_canva/projects/kitchin_cover.png',
+            poster: 'assets/elements_canva/projects/kitchin_poster.png',
+            video: 'assets/videos_showcase/uiux_videos/kitchin_video.mp4',
+            link: 'kitchin-showcase.html',
+            figma: 'https://www.figma.com/proto/Q5gTXsWb1tPzoU5ZLWw5bB/HCI-Prototype?node-id=0-1&p=f&viewport=-1074%2C1054%2C1&t=OS76Hi7PPhiikFMD-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=149%3A87',
+            software: {
+              name: 'Figma',
+              logo: 'assets/elements_canva/profile/software_logo/figma.png'
+            }
+          },
+          {
+            id: 'bestrate',
+            title: 'Best Rate',
+            subtitle: 'Real-Time Currency & Remittance Comparison App',
+            badge: 'FinTech Mobile UI',
+            image: 'assets/elements_canva/projects/best rate cover.png',
+            video: 'assets/videos_showcase/uiux_videos/bestrate_video.mp4',
+            software: {
+              name: 'Figma',
+              logo: 'assets/elements_canva/profile/software_logo/figma.png'
+            }
+          },
+          {
+            id: 'codu',
+            title: 'Codu',
+            subtitle: 'Gamified Coding Education & 1v1 Battle App',
+            badge: 'Gamified EdTech',
+            image: 'assets/elements_canva/projects/codu_cover.png',
+            video: 'assets/videos_showcase/uiux_videos/codu_video.mp4',
+            software: {
+              name: 'Figma',
+              logo: 'assets/elements_canva/profile/software_logo/figma.png'
+            }
+          },
+          {
+            id: 'asiancuisine',
+            title: 'Asian Cuisine',
+            subtitle: 'Pixel-Art Restaurant Simulation & Cooking Game UI/UX',
+            badge: 'Designed in Canva',
+            image: 'assets/elements_canva/projects/asiancuisine_cover.png',
+            video: 'assets/videos_showcase/uiux_videos/asiancuisine_video.mp4',
+            software: {
+              name: 'Canva',
+              logo: 'assets/elements_canva/profile/software_logo/canva.png'
+            }
+          },
+          {
+            id: 'infovis',
+            title: 'The Shift Toward International NBA Players',
+            subtitle: 'USA vs International NBA Player Performance (2000–2022) Tableau Dashboard',
+            badge: 'Designed in Tableau',
+            image: 'assets/elements_canva/projects/infovis_cover.png',
+            poster: 'assets/elements_canva/projects/infovis_poster.png',
+            video: 'assets/videos_showcase/uiux_videos/infovis_video.mp4',
+            tableau: 'https://public.tableau.com/app/profile/jocelyne.audrey/viz/Group14_17835961965340/Dashboard3',
+            software: {
+              name: 'Tableau',
+              logo: 'assets/elements_canva/profile/software_logo/tableau.svg'
+            }
+          }
+        ]
+      },
+      animation: {
+        title: 'Animation Projects',
+        projects: [
+          {
+            id: 'inner-thoughts',
+            title: 'Inner Thoughts',
+            subtitle: '3D Character Animation & Lipsync Short Film',
+            badge: 'Final Project',
+            image: 'assets/elements_canva/projects/inner_cover.png',
+            poster: 'assets/photo_showcase/inner_poster.jpg',
+            video: 'assets/videos_showcase/animation_videos/Inner Thoughts.mp4',
+            link: 'assets/videos_showcase/animation_videos/Inner Thoughts.mp4',
+            software: {
+              name: 'Autodesk Maya',
+              logo: 'assets/elements_canva/profile/software_logo/maya.png'
+            },
+            course: '3D Animation Class — Final Term Project',
+            teamType: 'Group Project (4 Members)',
+            teamMembers: [
+              { name: 'Jocelyne Audrey (Celyne)', role: 'Devil & Angel Dialogue Lipsync & Character Animation', isMe: true },
+              { name: 'Nelsen Keane', role: '3D Animation & Rigging', isMe: false },
+              { name: 'Ellen Louise', role: '3D Character Modeling & Texturing', isMe: false },
+              { name: 'Wilyman Howard', role: 'Environment, Lighting & Sound Design', isMe: false }
+            ],
+            myRole: '3D Character Animator (Devil & Angel Scene)',
+            myFocus: 'Dialogue Lipsync, Facial Acting & Body Language (Middle Sequence)',
+            moralStory: {
+              summary: "Bonnie faces an intense moral crossroads when he finds an envelope filled with money. As hesitation sets in, his conscience physically manifests into two dueling alter-egos perched on his shoulders—a mischievous Devil urging greed and swift indulgence, and an earnest Angel pleading for virtue and honesty. Through lively debate and comical friction, this animated short explores the battle between instant gratification and moral conscience.",
+              moralQuote: "Do not steal — hold true to honesty and integrity. What is rightfully meant for you will always be yours."
+            },
+            roleBreakdown: [
+              {
+                icon: 'fa-comments',
+                title: 'Middle Climax Dialogue Sequence',
+                desc: 'In charge of animating the pivotal middle scene where the Angel and Devil clash face-to-face over Bonnie’s shoulder, driving the comedic and moral peak of the story.'
+              },
+              {
+                icon: 'fa-microphone-lines',
+                title: 'Dialogue Lip-Sync & Phonemes',
+                desc: 'Meticulously crafted speech phonemes, jaw accents, and mouth shapes in Autodesk Maya to seamlessly synchronize character dialogue with the voice audio track.'
+              },
+              {
+                icon: 'fa-masks-theater',
+                title: 'Contrasting Character Dynamics',
+                desc: 'Animated the Devil’s frantic, mischievous body language and sly smirks against the Angel’s graceful, earnest, and pleading gestures to bring rhythmic contrast.'
+              },
+              {
+                icon: 'fa-cubes',
+                title: 'Autodesk Maya 3D Pipeline',
+                desc: 'Keyframed character controllers, graph editor curve refinement, facial blendshape tuning, and timing polish within an end-to-end 3D Maya animation pipeline.'
+              }
+            ]
+          },
+          {
+            id: 'lily-and-the-veggies',
+            title: 'Lily and the Veggies',
+            subtitle: 'Animated Short Film & Storytelling',
+            badge: 'Narrative Short',
+            image: 'assets/elements_canva/projects/lily_cover.png',
+            poster: 'assets/elements_canva/projects/lily_cover.png',
+            video: 'assets/videos_showcase/animation_videos/lily_animation.MP4',
+            link: 'assets/videos_showcase/animation_videos/lily_animation.MP4',
+            pdf: 'assets/videos_showcase/animation_videos/lily_ppt.pdf',
+            software: {
+              name: 'Adobe Animate',
+              logo: 'assets/elements_canva/profile/software_logo/animate.png'
+            },
+            course: '2D Animation & Storytelling — Term Project',
+            teamType: 'Group Animation Project',
+            myRole: 'Character Animator & Story Artist',
+            moralStory: {
+              summary: 'An enchanting and educational animated story following young Lily on an imaginative adventure with living, talkative garden vegetables, teaching children the joys of healthy eating, vibrant nutrition, and friendship.',
+              moralQuote: 'Healthy food brings vibrant energy and joy! Embracing goodness makes us grow strong together.'
+            }
+          },
+          {
+            id: 'bowling-ball',
+            title: 'Bowling & Tennis Ball',
+            subtitle: 'Keyframe Weight & Bounce Study',
+            badge: 'Keyframe Physics',
+            image: 'assets/elements_canva/projects/ball_cover.png',
+            video: 'assets/videos_showcase/animation_videos/ball_animation.mp4',
+            link: 'assets/videos_showcase/animation_videos/ball_animation.mp4',
+            software: {
+              name: 'Autodesk Maya',
+              logo: 'assets/elements_canva/profile/software_logo/maya.png'
+            },
+            course: '3D Animation Class — Physics Study',
+            teamType: 'Solo Technical Study',
+            myRole: 'Keyframe Animator',
+            summary: 'Comprehensive physical motion study examining squash & stretch, momentum transfer, decay curves, and contrasting mass between a dense bowling ball and an elastic tennis ball.'
+          },
+          {
+            id: 'human-walk',
+            title: 'Human Walk & Run Cycle',
+            subtitle: 'Biped Locomotion & Body Mechanics',
+            badge: 'Character Motion',
+            image: 'assets/elements_canva/projects/human_cover.png',
+            video: 'assets/videos_showcase/animation_videos/humanwalk_animation.mp4',
+            link: 'assets/videos_showcase/animation_videos/humanwalk_animation.mp4',
+            software: {
+              name: 'Autodesk Maya',
+              logo: 'assets/elements_canva/profile/software_logo/maya.png'
+            },
+            course: '3D Animation Class — Locomotion Mechanics',
+            teamType: 'Solo Animation Study',
+            myRole: 'Character Animator',
+            summary: 'Rigid body mechanics, hip weight shifts, spine counter-rotation, arm swings, and passing poses crafted to achieve a natural, balanced human bipedal walk and run cycle.'
+          },
+          {
+            id: 'animal-walk',
+            title: 'Animal Walk & Run Cycle',
+            subtitle: 'Quadruped Locomotion & Timing',
+            badge: 'Quadruped Rig',
+            image: 'assets/elements_canva/projects/animal_cover.png',
+            video: 'assets/videos_showcase/animation_videos/animalwalk_animation.mp4',
+            link: 'assets/videos_showcase/animation_videos/animalwalk_animation.mp4',
+            software: {
+              name: 'Autodesk Maya',
+              logo: 'assets/elements_canva/profile/software_logo/maya.png'
+            },
+            course: '3D Animation Class — Creature Locomotion',
+            teamType: 'Solo Animation Study',
+            myRole: 'Creature Animator',
+            summary: 'Quadruped anatomical motion analysis focusing on scapula mechanics, pelvic tilt, spine wave propagation, and coordinated footfall patterns across pacing and galloping gaits.'
+          }
+        ]
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const audio = window.deskAudio;
+      
+      // Sound Toggle Button
+      const soundToggleBtn = document.getElementById('soundToggleBtn');
+      const soundIcon = document.getElementById('soundIcon');
+      const soundLabel = document.getElementById('soundLabel');
+
+      function syncSoundBtn() {
+        if (!audio) return;
+        if (audio.isMuted) {
+          soundIcon.className = 'fas fa-volume-xmark';
+          soundLabel.textContent = 'Sound OFF';
+          soundToggleBtn.style.opacity = '0.7';
+        } else {
+          soundIcon.className = 'fas fa-volume-high';
+          soundLabel.textContent = 'Sound ON';
+          soundToggleBtn.style.opacity = '1';
+        }
+      }
+
+      if (audio) syncSoundBtn();
+
+      soundToggleBtn?.addEventListener('click', () => {
+        if (!audio) return;
+        const muted = audio.toggleMute();
+        syncSoundBtn();
+        if (!muted) audio.playPop(620);
+      });
+
+      // Desktop Folders & Window Explorer
+      const folderButtons = document.querySelectorAll('.folder-item');
+      const foldersGrid = document.getElementById('foldersGrid');
+      const folderWindow = document.getElementById('folderWindowExplorer');
+      const windowCategoryTitle = document.getElementById('windowCategoryTitle');
+      const windowItemsGrid = document.getElementById('windowItemsGrid');
+      const windowCloseDot = document.getElementById('windowCloseDot');
+      const windowBackBtn = document.getElementById('windowBackBtn');
+      const windowContentScroll = document.getElementById('windowContentScroll');
+
+      // macOS-Style Project Modal Elements
+      const videoModal = document.getElementById('videoModal');
+      const closeVideoModalBtn = document.getElementById('closeVideoModal');
+      const modalMinimizeDot = document.getElementById('modalMinimizeDot');
+      const modalExpandDot = document.getElementById('modalExpandDot');
+      const modalBackBtn = document.getElementById('modalBackBtn');
+      const modalVideoTitle = document.getElementById('modalVideoTitle');
+      const modalBodyScroll = document.getElementById('modalBodyScroll');
+      const modalDynamicContent = document.getElementById('modalDynamicContent');
+
+      // Open Rich macOS Project Showcase Modal
+      function openProjectModal(p, cat) {
+        if (!videoModal || !modalDynamicContent) return;
+
+        // Sound effect
+        if (audio) {
+          audio.playPop(660);
+          audio.playNavChime();
+        }
+
+        // Set Window Topbar Caption (Subtle macOS title bar)
+        modalVideoTitle.innerHTML = `<span style="opacity: 0.6; font-size: 0.84rem; font-weight: 600;"><i class="fas fa-folder-open" style="margin-right: 6px;"></i> Project Showcase</span>`;
+
+        // -------------------------------------------------------------
+        // 1. ANIMATION: Inner Thoughts
+        // -------------------------------------------------------------
+        if (p.id === 'inner-thoughts' || p.title === 'Inner Thoughts') {
+          modalDynamicContent.innerHTML = `
+            <!-- 1. Main Project Title Header (Most Up!) -->
+            <div class="modal-project-header-block">
+              <h1 class="modal-headline-title">Inner Thoughts</h1>
+              <p class="modal-headline-subtitle">3D Character Animation &amp; Lipsync Short Film</p>
+            </div>
+
+            <!-- 2. Subhead Row: Tags -->
+            <div class="modal-subhead-row">
+              <div class="modal-tags-group">
+                <div class="tool-tag maya-tag" title="Created using Autodesk Maya">
+                  <img src="${p.software.logo}" alt="Autodesk Maya" class="tool-logo-img">
+                  <span>Created using Autodesk Maya</span>
+                </div>
+                <div class="tool-tag class-tag">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>3D Animation Class</span>
+                </div>
+                <div class="tool-tag team-tag">
+                  <i class="fas fa-user-group"></i>
+                  <span>Group Project of 4 People</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Full-Width Video Player (No Cramped Squeeze!) -->
+            <div class="video-fullscreen-card">
+              <div class="video-fullscreen-frame">
+                <video id="modalVideoPlayer" controls playsinline preload="auto" poster="${p.image}">
+                  <source src="${p.video}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+            <!-- Creative Duality Grid: Story on Left, Role on Right -->
+            <div class="showcase-duality-grid">
+              <!-- Card 1: Story Synopsis & Moral Takeaway -->
+              <div class="duality-card story-card">
+                <div class="duality-card-header">
+                  <div class="duality-icon-bubble angel-bubble">
+                    <i class="fas fa-sparkles"></i>
+                  </div>
+                  <h4 class="duality-title">The Story &amp; Moral</h4>
+                </div>
+                <p class="duality-desc">
+                  When <strong>Bonnie</strong> discovers an envelope stuffed with cash, his conscience fractures into an intense inner battle between good and evil. Perched on his shoulders, an earnest <strong>Angel</strong> and a persuasive <strong>Devil</strong> quarrel over what he should do.
+                </p>
+                <div class="moral-golden-banner">
+                  <i class="fas fa-quote-left moral-quote-icon"></i>
+                  <div>
+                    <span class="moral-label">Moral Message</span>
+                    <p class="moral-text">"Do not steal — hold true to honesty and integrity. What is rightfully meant for you will always be yours."</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2: What I Did -->
+              <div class="duality-card role-card">
+                <div class="duality-card-header">
+                  <div class="duality-icon-bubble devil-bubble">
+                    <i class="fas fa-wand-magic-sparkles"></i>
+                  </div>
+                  <h4 class="duality-title">What I Did</h4>
+                </div>
+                <p class="duality-desc">
+                  In charge of animating the pivotal <strong>Devil and Angel scenes (the middle sequence)</strong>. Handled character acting, dynamic facial expressions, and comedic dialogue lipsync between the arguing alter-egos in Autodesk Maya.
+                </p>
+                <div class="role-focus-chips">
+                  <span class="chip-item"><i class="fas fa-comments"></i> Dialogue Lip-Sync</span>
+                  <span class="chip-item"><i class="fas fa-masks-theater"></i> Angel &amp; Devil Acting</span>
+                  <span class="chip-item"><i class="fas fa-clapperboard"></i> Middle Sequence</span>
+                  <span class="chip-item"><i class="fas fa-cube"></i> Autodesk Maya</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Authentic Poster Card Below (Clean, Spacious & Click-to-Zoom) -->
+            <div class="poster-below-card" id="posterWrap" data-zoom-src="${p.poster}" title="Click to view full poster">
+              <div class="poster-below-preview">
+                <div class="poster-below-thumb">
+                  <img src="${p.poster}" alt="Inner Thoughts Official Poster">
+                </div>
+                <div class="poster-below-info">
+                  <h4><i class="fas fa-film" style="color: #dc2626; margin-right: 6px;"></i> Official Film Poster</h4>
+                  <p>Click to inspect the complete high-resolution 3D theatrical poster and character art.</p>
+                </div>
+              </div>
+              <button class="btn-zoom-poster-pill" data-zoom-src="${p.poster}">
+                <i class="fas fa-expand"></i> View Full Poster
+              </button>
+            </div>
+          `;
+
+        // -------------------------------------------------------------
+        // 2. ANIMATION: Lily and the Veggies
+        // -------------------------------------------------------------
+        } else if (p.id === 'lily-and-the-veggies' || p.title === 'Lily and the Veggies') {
+          modalDynamicContent.innerHTML = `
+            <!-- 1. Main Project Title Header (Most Up!) -->
+            <div class="modal-project-header-block">
+              <h1 class="modal-headline-title">Lily and the Veggies</h1>
+              <p class="modal-headline-subtitle">2D Storybook Animation Short</p>
+            </div>
+
+            <!-- 2. Subhead Row: Tags & Pitch Deck Button -->
+            <div class="modal-subhead-row">
+              <div class="modal-tags-group">
+                <div class="tool-tag maya-tag" title="Created using Adobe Animate">
+                  <img src="${p.software.logo}" alt="Adobe Animate" class="tool-logo-img">
+                  <span>Created with Adobe Animate</span>
+                </div>
+                <div class="tool-tag class-tag">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>2D Animation &amp; Storytelling</span>
+                </div>
+                <div class="tool-tag team-tag">
+                  <i class="fas fa-user-group"></i>
+                  <span>Group Creative Project</span>
+                </div>
+              </div>
+              ${p.pdf ? `
+              <div class="modal-video-buttons-group">
+                <a href="${p.pdf}" target="_blank" class="btn-upper-video btn-upper-explanation" title="Open Presentation Pitch Deck">
+                  <i class="fas fa-file-pdf" style="color:#dc2626;"></i>
+                  <span>Pitch Deck (PDF)</span>
+                  <i class="fas fa-arrow-up-right-from-square btn-external-icon"></i>
+                </a>
+              </div>` : ''}
+            </div>
+
+            <!-- Full-Width Video Player -->
+            <div class="video-fullscreen-card">
+              <div class="video-fullscreen-frame">
+                <video id="modalVideoPlayer" controls playsinline preload="auto" poster="${p.image}">
+                  <source src="${p.video}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+            <!-- Duality Grid -->
+            <div class="showcase-duality-grid">
+              <div class="duality-card story-card">
+                <div class="duality-card-header">
+                  <div class="duality-icon-bubble lily-bubble">
+                    <i class="fas fa-seedling"></i>
+                  </div>
+                  <h4 class="duality-title">The Story &amp; Values</h4>
+                </div>
+                <p class="duality-desc">
+                  Join <strong>Lily</strong> as she journeys through a charming storybook garden where lively vegetables come alive! Through comedic antics, Lily learns how eating fresh veggies brings vitality and laughter.
+                </p>
+                <div class="moral-golden-banner veggie-green-banner">
+                  <i class="fas fa-heart-pulse moral-quote-icon"></i>
+                  <div>
+                    <span class="moral-label">Wholesome Message</span>
+                    <p class="moral-text">"Healthy food brings vibrant energy and joy! Embracing goodness makes us grow strong together."</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="duality-card role-card">
+                <div class="duality-card-header">
+                  <div class="duality-icon-bubble veggie-bubble">
+                    <i class="fas fa-wand-magic-sparkles"></i>
+                  </div>
+                  <h4 class="duality-title">What I Did</h4>
+                </div>
+                <p class="duality-desc">
+                  Spearheaded <strong>character animation, bouncy squash-and-stretch body mechanics, and expressive facial acting</strong> for Lily and the vegetable characters with comedic audio timing.
+                </p>
+                <div class="role-focus-chips">
+                  <span class="chip-item"><i class="fas fa-carrot" style="color:#f97316;"></i> Character Animation</span>
+                  <span class="chip-item"><i class="fas fa-masks-theater" style="color:#db2777;"></i> Expressive Acting</span>
+                  <span class="chip-item"><i class="fas fa-palette" style="color:#16a34a;"></i> Storybook Motion</span>
+                  <span class="chip-item"><i class="fas fa-file-pdf" style="color:#dc2626;"></i> Pitch Presentation</span>
+                </div>
+              </div>
+            </div>
+          `;
+
+        // -------------------------------------------------------------
+        // 3. UI/UX: Kitchin Smart Fridge App
+        // -------------------------------------------------------------
+        } else if (p.id === 'kitchin' || p.title === 'Kitchin' || (p.title && p.title.toLowerCase().includes('kitchin'))) {
+          modalDynamicContent.innerHTML = `
+            <!-- 1. Main Project Title Header (Most Up!) -->
+            <div class="modal-project-header-block">
+              <h1 class="modal-headline-title">Kitchin</h1>
+              <p class="modal-headline-subtitle">Smart Fridge &amp; Food Waste Reduction App</p>
+            </div>
+
+            <!-- 2. Subhead Row: Tags & Interactive Prototype Button -->
+            <div class="modal-subhead-row">
+              <div class="modal-tags-group">
+                <div class="tool-tag figma-tag" title="Designed in Figma">
+                  <i class="fab fa-figma" style="font-size: 1.1rem; color: #a21caf;"></i>
+                  <span>Designed in Figma</span>
+                </div>
+                <div class="tool-tag class-tag">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>HCI Usability Research</span>
+                </div>
+                <div class="tool-tag sus-pill-tag">
+                  <i class="fas fa-star" style="color: #ca8a04;"></i>
+                  <span>85.4 SUS Score (Grade A)</span>
+                </div>
+              </div>
+              <div class="modal-video-buttons-group">
+                <a href="https://www.figma.com/proto/Q5gTXsWb1tPzoU5ZLWw5bB/HCI-Prototype?node-id=0-1&p=f&viewport=-1074%2C1054%2C1&t=OS76Hi7PPhiikFMD-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=149%3A87" target="_blank" rel="noopener noreferrer" class="btn-upper-video btn-upper-figma" title="Open Interactive Figma Prototype">
+                  <i class="fab fa-figma"></i>
+                  <span>Interactive Prototype</span>
+                  <i class="fas fa-arrow-up-right-from-square btn-external-icon"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Full-Width Mobile/App Video Player -->
+            <div class="video-fullscreen-card">
+              <div class="video-fullscreen-frame" style="background:#000;">
+                <video id="modalVideoPlayer" controls playsinline preload="auto" poster="${p.image}">
+                  <source src="${p.video}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+            <!-- Duality Grid -->
+            <div class="showcase-duality-grid">
+              <div class="duality-card story-card">
+                <div class="duality-card-header">
+                  <div class="duality-icon-bubble" style="background: rgba(34, 197, 94, 0.15); color: #16a34a;">
+                    <i class="fas fa-seedling"></i>
+                  </div>
+                  <h4 class="duality-title">The Problem &amp; Mission</h4>
+                </div>
+                <p class="duality-desc">
+                  Billions of tons of household food are wasted every year while families struggle with grocery costs. <strong>Kitchin</strong> syncs with smart fridges to track expiry dates, suggest recipes from items you have, and route surplus food to local community shelters.
+                </p>
+                <div class="moral-golden-banner" style="background: linear-gradient(135deg, #f0fdf4, #dcfce7); border-color: #86efac;">
+                  <i class="fas fa-quote-left moral-quote-icon" style="color: #16a34a;"></i>
+                  <div>
+                    <span class="moral-label" style="color: #15803d;">Guiding Philosophy</span>
+                    <p class="moral-text" style="color: #166534;">"Know what you have. Get what you need. Cook with care. Give with heart."</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="duality-card role-card">
+                <div class="duality-card-header">
+                  <div class="duality-icon-bubble" style="background: rgba(16, 185, 129, 0.15); color: #059669;">
+                    <i class="fas fa-users"></i>
+                  </div>
+                  <h4 class="duality-title">Persona &amp; SUS Evaluation</h4>
+                </div>
+                <p class="duality-desc">
+                  Designed around primary persona <strong>Maria Paige (38, mother of 3 in London)</strong>. Validated through quantitative testing with <strong>24 participants</strong> yielding a top-tier <strong>85.4 System Usability Scale (SUS)</strong> score.
+                </p>
+                <div class="role-focus-chips">
+                  <span class="chip-item"><i class="fab fa-figma" style="color:#a21caf;"></i> Figma Design System</span>
+                  <span class="chip-item"><i class="fas fa-qrcode" style="color:#16a34a;"></i> Smart Fridge Barcode Sync</span>
+                  <span class="chip-item"><i class="fas fa-hand-holding-heart" style="color:#e11d48;"></i> Community Food Bank</span>
+                  <span class="chip-item"><i class="fas fa-chart-line" style="color:#2563eb;"></i> 85.4 SUS Usability</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5 Designed UI Screens Strip -->
+            <div class="kitchin-modal-screens-strip">
+              <div class="kitchin-modal-strip-title">
+                <div><i class="fas fa-layer-group" style="color: #10b981; margin-right: 6px;"></i> 5 Core Designed UI Screens</div>
+                <span>Click any screen to view full resolution</span>
+              </div>
+              <div class="kitchin-modal-screens-row">
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/kitchin-1.png" title="Screen 1: Recipes & Discovery">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/kitchin-1.png" alt="Recipes Screen">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">01. Recipes</div>
+                </div>
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/kitchin-2.png" title="Screen 2: Recipe Detail & Fridge Sync">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/kitchin-2.png" alt="Recipe Detail">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">02. Ingredients</div>
+                </div>
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/kitchin-3.png" title="Screen 3: Food Donation (From Fridge)">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/kitchin-3.png" alt="Donation Screen">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">03. Donation</div>
+                </div>
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/kitchin-4.png" title="Screen 4: FoodBank Delivery Hub">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/kitchin-4.png" alt="Delivery Hub">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">04. FoodBank</div>
+                </div>
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/kitchin-5.png" title="Screen 5: Charity Marketplace">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/kitchin-5.png" alt="Needed Items">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">05. Marketplace</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Authentic Scientific Poster Card Below -->
+            <div class="poster-below-card" id="posterWrap" data-zoom-src="${p.poster}" title="Click to view full poster">
+              <div class="poster-below-preview">
+                <div class="poster-below-thumb">
+                  <img src="${p.poster}" alt="Kitchin HCI Research Poster">
+                </div>
+                <div class="poster-below-info">
+                  <h4><i class="fas fa-scroll" style="color:#047857; margin-right:6px;"></i> Scientific Research Poster</h4>
+                  <p>Click to view the full peer-reviewed HCI evaluation methodology and participant metrics.</p>
+                </div>
+              </div>
+              <button class="btn-zoom-poster-pill" data-zoom-src="${p.poster}">
+                <i class="fas fa-expand"></i> View Poster
+              </button>
+            </div>
+
+            <div class="modal-bottom-actions">
+              <a href="kitchin-showcase.html" class="btn-standalone-link">
+                <i class="fas fa-book-open"></i> Full Standalone Case Study
+              </a>
+            </div>
+          `;
+
+        // -------------------------------------------------------------
+        // 3B. UI/UX: Best Rate Currency & Remittance App
+        // -------------------------------------------------------------
+        } else if (p.id === 'bestrate' || p.id === 'best-rate' || p.title === 'Best Rate' || (p.title && p.title.toLowerCase().includes('best rate')) || (p.title && p.title.toLowerCase().includes('bestrate'))) {
+          modalDynamicContent.innerHTML = `
+            <!-- 1. Main Project Title Header (Most Up!) -->
+            <div class="modal-project-header-block">
+              <h1 class="modal-headline-title">Best Rate</h1>
+              <p class="modal-headline-subtitle">Real-Time Currency &amp; Remittance Comparison App</p>
+            </div>
+
+            <!-- 2. Subhead Row: Tags -->
+            <div class="modal-subhead-row">
+              <div class="modal-tags-group">
+                <div class="tool-tag figma-tag" title="Designed in Figma">
+                  <i class="fab fa-figma" style="font-size: 1.1rem; color: #a21caf;"></i>
+                  <span>Designed in Figma</span>
+                </div>
+                <div class="tool-tag class-tag" style="background:#ecfdf5; border-color:#a7f3d0; color:#065f46;">
+                  <i class="fas fa-coins" style="color:#059669;"></i>
+                  <span>FinTech UX &amp; Remittance</span>
+                </div>
+                <div class="tool-tag sus-pill-tag" style="background:#f0fdf4; border-color:#86efac; color:#166534;">
+                  <i class="fas fa-chart-line" style="color:#10b981;"></i>
+                  <span>Mid-Market Live Rates</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Full-Width Mobile/App Video Player -->
+            <div class="video-fullscreen-card">
+              <div class="video-fullscreen-frame" style="background:#090d16;">
+                <video id="modalVideoPlayer" controls playsinline preload="auto" poster="${p.image}">
+                  <source src="${p.video}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+            <!-- Duality Grid -->
+            <div class="showcase-duality-grid">
+              <div class="duality-card story-card">
+                <div class="duality-card-header">
+                  <div class="duality-icon-bubble" style="background: rgba(16, 185, 129, 0.15); color: #059669;">
+                    <i class="fas fa-scale-balanced"></i>
+                  </div>
+                  <h4 class="duality-title">The Problem &amp; Value</h4>
+                </div>
+                <p class="duality-desc">
+                  Traditional banks and transfer agencies hide excessive markup fees in skewed exchange rates. <strong>BestRate</strong> empowers users with real-time mid-market aggregation across top providers (Wise, WorldRemit, Remitly, Revolut), ensuring transparent cost visibility.
+                </p>
+                <div class="moral-golden-banner" style="background: linear-gradient(135deg, #f0fdf4, #dcfce7); border-color: #86efac;">
+                  <i class="fas fa-quote-left moral-quote-icon" style="color: #10b981;"></i>
+                  <div>
+                    <span class="moral-label" style="color: #047857;">Guiding Value</span>
+                    <p class="moral-text" style="color: #065f46;">"Find the best rate, everytime. Never lose hard-earned money to hidden markup spreads."</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="duality-card role-card">
+                <div class="duality-card-header">
+                  <div class="duality-icon-bubble" style="background: rgba(14, 165, 233, 0.15); color: #0284c7;">
+                    <i class="fas fa-user-gear"></i>
+                  </div>
+                  <h4 class="duality-title">Persona &amp; UX Pillars</h4>
+                </div>
+                <p class="duality-desc">
+                  Tailored for primary persona <strong>Alex Morgan (28, remote freelance contractor)</strong> who sends frequent cross-border remittances. Designed with clean dark-mode data hierarchies, intraday sparklines, and automated rate alerts.
+                </p>
+                <div class="role-focus-chips">
+                  <span class="chip-item"><i class="fab fa-figma" style="color:#a21caf;"></i> Figma Design System</span>
+                  <span class="chip-item"><i class="fas fa-arrows-split-up-and-left" style="color:#10b981;"></i> Multi-Provider Compare</span>
+                  <span class="chip-item"><i class="fas fa-bell" style="color:#f59e0b;"></i> Smart Target Alerts</span>
+                  <span class="chip-item"><i class="fas fa-receipt" style="color:#6366f1;"></i> Zero-Hidden-Fee Calculator</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5 Designed UI Screens Strip -->
+            <div class="kitchin-modal-screens-strip">
+              <div class="kitchin-modal-strip-title">
+                <div><i class="fas fa-layer-group" style="color: #10b981; margin-right: 6px;"></i> 5 Core Designed UI Screens</div>
+                <span>Click any screen to view full resolution</span>
+              </div>
+              <div class="kitchin-modal-screens-row">
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/bestrate-1.png" title="Screen 1: Authentication & Sign-in">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/bestrate-1.png" alt="Authentication Screen">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">01. Sign In</div>
+                </div>
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/bestrate-2.png" title="Screen 2: Live Rate Comparison">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/bestrate-2.png" alt="Rate Comparison Screen">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">02. Compare Rates</div>
+                </div>
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/bestrate-3.png" title="Screen 3: Cost Breakdown & Trend Graph">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/bestrate-3.png" alt="Cost Breakdown Screen">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">03. Breakdown</div>
+                </div>
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/bestrate-4.png" title="Screen 4: Target Rate Alerts">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/bestrate-4.png" alt="Target Alerts Screen">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">04. Price Alerts</div>
+                </div>
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/bestrate-5.png" title="Screen 5: Profile & Connected Platforms">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/bestrate-5.png" alt="User Profile Screen">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">05. User Profile</div>
+                </div>
+              </div>
+            </div>
+          `;
+
+        // -------------------------------------------------------------
+        // 3C. UI/UX: Codu Gamified Coding Education & 1v1 Battle App
+        // -------------------------------------------------------------
+        } else if (p.id === 'codu' || p.title === 'Codu' || (p.title && p.title.toLowerCase().includes('codu'))) {
+          modalDynamicContent.innerHTML = `
+            <!-- 1. Main Project Title Header (Most Up!) -->
+            <div class="modal-project-header-block">
+              <h1 class="modal-headline-title">Codu</h1>
+              <p class="modal-headline-subtitle">Gamified Coding Education &amp; 1v1 Battle App</p>
+            </div>
+
+            <!-- 2. Subhead Row: Tags -->
+            <div class="modal-subhead-row">
+              <div class="modal-tags-group">
+                <div class="tool-tag figma-tag" title="Designed in Figma">
+                  <i class="fab fa-figma" style="font-size: 1.1rem; color: #a21caf;"></i>
+                  <span>Designed in Figma</span>
+                </div>
+                <div class="tool-tag class-tag" style="background:#eff6ff; border-color:#bfdbfe; color:#1d4ed8;">
+                  <i class="fas fa-gamepad" style="color:#2563eb;"></i>
+                  <span>Gamified EdTech</span>
+                </div>
+                <div class="tool-tag sus-pill-tag" style="background:#fef3c7; border-color:#fde68a; color:#b45309;">
+                  <i class="fas fa-bolt" style="color:#f59e0b;"></i>
+                  <span>1v1 Code Battles</span>
+                </div>
+                <div class="tool-tag sus-pill-tag" style="background:#f0fdf4; border-color:#bbf7d0; color:#15803d;">
+                  <i class="fas fa-robot" style="color:#16a34a;"></i>
+                  <span>AI Mascot Mentorship</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Full-Width Mobile/App Video Player -->
+            <div class="video-fullscreen-card">
+              <div class="video-fullscreen-frame" style="background:#090d16;">
+                <video id="modalVideoPlayer" controls playsinline preload="auto" poster="${p.image}">
+                  <source src="${p.video}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+            <!-- Duality Grid -->
+            <div class="showcase-duality-grid">
+              <div class="duality-card story-card">
+                <div class="duality-card-header">
+                  <div class="duality-icon-bubble" style="background: rgba(37, 99, 235, 0.12); color: #2563eb;">
+                    <i class="fas fa-graduation-cap"></i>
+                  </div>
+                  <h4 class="duality-title">The Problem &amp; Mission</h4>
+                </div>
+                <p class="duality-desc">
+                  Traditional computer science learning often frustrates beginners with dry syntax walls and passive video lectures, leading to high drop-out rates. <strong>Codu</strong> re-imagines coding as an interactive journey, turning programming exercises into bite-sized quest levels, real-time 1v1 arenas, and rewarding streak rituals.
+                </p>
+                <div class="moral-golden-banner" style="background: linear-gradient(135deg, #eff6ff, #dbeafe); border-color: #93c5fd;">
+                  <i class="fas fa-quote-left moral-quote-icon" style="color: #2563eb;"></i>
+                  <div>
+                    <span class="moral-label" style="color: #1d4ed8;">Core Vision</span>
+                    <p class="moral-text" style="color: #1e40af;">"Learn to code like playing your favorite game. Break the fear barrier with interactive feedback and friendly competition."</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="duality-card role-card">
+                <div class="duality-card-header">
+                  <div class="duality-icon-bubble" style="background: rgba(245, 158, 11, 0.15); color: #d97706;">
+                    <i class="fas fa-trophy"></i>
+                  </div>
+                  <h4 class="duality-title">Gamification Loops &amp; UX</h4>
+                </div>
+                <p class="duality-desc">
+                  Designed around proven engagement loops: instant validation feedback, dynamic streak multipliers, health lives management, AI mascot hints, and global leaderboard rankings.
+                </p>
+                <div class="role-focus-chips">
+                  <span class="chip-item"><i class="fab fa-figma" style="color:#a21caf;"></i> Figma UI Kit &amp; System</span>
+                  <span class="chip-item"><i class="fas fa-swords" style="color:#ef4444;"></i> 1v1 Live Code Matchmaking</span>
+                  <span class="chip-item"><i class="fas fa-fire" style="color:#f59e0b;"></i> Daily Streaks &amp; Star Rewards</span>
+                  <span class="chip-item"><i class="fas fa-robot" style="color:#06b6d4;"></i> AI Codu Mascot Bot</span>
+                  <span class="chip-item"><i class="fas fa-medal" style="color:#eab308;"></i> Global Leaderboard Arena</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Official Cover Art Banner (Zoomable) -->
+            <div class="poster-below-card" id="posterWrap" data-zoom-src="assets/elements_canva/projects/codu_cover.png" title="Click to inspect full cover illustration">
+              <div class="poster-below-preview">
+                <div class="poster-below-thumb">
+                  <img src="assets/elements_canva/projects/codu_cover.png" alt="Codu Cover Art">
+                </div>
+                <div class="poster-below-info">
+                  <h4><i class="fas fa-palette" style="color:#6366f1; margin-right:6px;"></i> Official Codu App Key Art &amp; Mascot Cover</h4>
+                  <p>Custom illustrated cover artwork featuring the Codu AI tutor robot and code block puzzles (Click to view full resolution).</p>
+                </div>
+              </div>
+              <button class="btn-zoom-poster-pill" data-zoom-src="assets/elements_canva/projects/codu_cover.png">
+                <i class="fas fa-expand"></i> View Full Cover Art
+              </button>
+            </div>
+
+            <!-- 10 Core Designed UI Screens Strip -->
+            <div class="kitchin-modal-screens-strip">
+              <div class="kitchin-modal-strip-title">
+                <div><i class="fas fa-layer-group" style="color: #2563eb; margin-right: 6px;"></i> 10 Core Designed UI Screens</div>
+                <span>Click any screen to view full resolution</span>
+              </div>
+              <div class="kitchin-modal-screens-row">
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/codu-1.png" title="Screen 1: Python Learning Path & Roadmaps">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/codu-1.png" alt="Python Learning Path Screen">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">01. Learning Path</div>
+                </div>
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/codu-2.png" title="Screen 2: 1v1 Arena Matchmaking">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/codu-2.png" alt="1v1 Matchmaking Screen">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">02. 1v1 Matchup</div>
+                </div>
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/codu-3.png" title="Screen 3: Code Battle Quiz Duel">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/codu-3.png" alt="Code Battle Duel Screen">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">03. Code Battle</div>
+                </div>
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/codu-4.png" title="Screen 4: User Profile & Streak Stats">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/codu-4.png" alt="Profile & Streaks Screen">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">04. Profile &amp; Streaks</div>
+                </div>
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/codu-5.png" title="Screen 5: AI Mascot Tutor Bot">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/codu-5.png" alt="AI Mascot Tutor Screen">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">05. AI Tutor Bot</div>
+                </div>
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/codu-6.png" title="Screen 6: Global Leaderboard & Podium">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/codu-6.png" alt="Leaderboard Screen">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">06. Leaderboard</div>
+                </div>
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/codu-7.png" title="Screen 7: Character Avatar Customization">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/codu-7.png" alt="Avatar Customization Screen">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">07. Avatar Select</div>
+                </div>
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/codu-8.png" title="Screen 8: Level Completed Celebration">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/codu-8.png" alt="Level Completed Screen">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">08. Level Complete</div>
+                </div>
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/codu-9.png" title="Screen 9: Health Depleted & Retry State">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/codu-9.png" alt="Health Depleted Screen">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">09. Out of Lives</div>
+                </div>
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/codu-10.png" title="Screen 10: Badge Reward & Achievement">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/codu-10.png" alt="Badge Reward Screen">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">10. Badge Unlock</div>
+                </div>
+              </div>
+            </div>
+          `;
+
+        // -------------------------------------------------------------
+        // 3D. UI/UX: Asian Cuisine Pixel-Art Restaurant Simulation & Cooking Game
+        // -------------------------------------------------------------
+        } else if (p.id === 'asiancuisine' || p.id === 'asian-cuisine' || (p.title && p.title.toLowerCase().includes('asian cuisine'))) {
+          modalDynamicContent.innerHTML = `
+            <!-- 1. Main Project Title Header -->
+            <div class="modal-project-header-block">
+              <h1 class="modal-headline-title">Asian Cuisine</h1>
+              <p class="modal-headline-subtitle">Pixel-Art Restaurant Management &amp; Cooking Simulation Mobile Game UI/UX</p>
+            </div>
+
+            <!-- 2. Subhead Row: Tags & Action Buttons -->
+            <div class="modal-subhead-row">
+              <div class="modal-tags-group">
+                <div class="tool-tag maya-tag" style="background:#e0f2fe; border-color:#bae6fd; color:#0284c7;" title="Designed in Canva">
+                  <img src="assets/elements_canva/profile/software_logo/canva.png" alt="Canva" class="tool-logo-img" style="border-radius:6px;">
+                  <span>Designed in Canva</span>
+                </div>
+                <div class="tool-tag class-tag" style="background:#fff7ed; border-color:#fed7aa; color:#c2410c;">
+                  <i class="fas fa-utensils" style="color:#ea580c;"></i>
+                  <span>Pixel Simulation UI/UX</span>
+                </div>
+                <div class="tool-tag sus-pill-tag" style="background:#fef3c7; border-color:#fde68a; color:#b45309;">
+                  <i class="fas fa-gamepad" style="color:#d97706;"></i>
+                  <span>Mobile Game UI</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Full-Width Mobile/App Video Player -->
+            <div class="video-fullscreen-card">
+              <div class="video-fullscreen-frame" style="background:#1b1528;">
+                <video id="modalVideoPlayer" controls playsinline preload="auto" poster="assets/elements_canva/projects/asiancuisine_cover.png">
+                  <source src="assets/videos_showcase/uiux_videos/asiancuisine_video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+            <!-- Duality Grid: Game Concept vs UI/UX Systems -->
+            <div class="showcase-duality-grid">
+              <div class="duality-card story-card">
+                <div class="duality-card-header">
+                  <div class="duality-icon-bubble" style="background: rgba(249, 115, 22, 0.15); color: #ea580c;">
+                    <i class="fas fa-bowl-rice"></i>
+                  </div>
+                  <h4 class="duality-title">Game Concept &amp; Atmosphere</h4>
+                </div>
+                <p class="duality-desc">
+                  <strong>Asian Cuisine</strong> is a cozy 2D pixel-art restaurant management and cooking simulation mobile game. Players craft authentic Pan-Asian delicacies—from Malaysian <em>Nasi Lemak</em> and Japanese <em>Tonkatsu</em> to Thai <em>Tom Yum</em> and Korean <em>Tteokbokki</em>—while expanding their bustling street bistro.
+                </p>
+                <div class="moral-golden-banner" style="background: linear-gradient(135deg, #fff7ed, #ffedd5); border-color: #fdba74;">
+                  <i class="fas fa-quote-left moral-quote-icon" style="color: #ea580c;"></i>
+                  <div>
+                    <span class="moral-label" style="color: #c2410c;">Design Philosophy</span>
+                    <p class="moral-text" style="color: #9a3412;">"A celebration of authentic Southeast &amp; East Asian culinary culture through nostalgic, tactile pixel-art game UI."</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="duality-card role-card">
+                <div class="duality-card-header">
+                  <div class="duality-icon-bubble" style="background: rgba(14, 165, 233, 0.15); color: #0284c7;">
+                    <i class="fas fa-layer-group"></i>
+                  </div>
+                  <h4 class="duality-title">UI/UX Loops &amp; Mechanics</h4>
+                </div>
+                <p class="duality-desc">
+                  Created entirely in <strong>Canva</strong> with modular retro mobile game UI components. Implemented seamless tactile interactions for kitchen cooking counters, customer thought orders, pantry inventory, closet outfits, and gacha recipe pulls.
+                </p>
+                <div class="role-focus-chips">
+                  <span class="chip-item"><i class="fas fa-palette" style="color:#0284c7;"></i> Canva UI System</span>
+                  <span class="chip-item"><i class="fas fa-user-astronaut" style="color:#8b5cf6;"></i> Avatar &amp; Closet Fitting</span>
+                  <span class="chip-item"><i class="fas fa-boxes-stacked" style="color:#10b981;"></i> 20-Slot Pantry Matrix</span>
+                  <span class="chip-item"><i class="fas fa-sparkles" style="color:#f59e0b;"></i> Secret Recipe Gacha</span>
+                  <span class="chip-item"><i class="fas fa-book-bookmark" style="color:#ef4444;"></i> Cookbook Unlock Tree</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Official Cover Art Banner (Zoomable) -->
+            <div class="poster-below-card" id="posterWrap" data-zoom-src="assets/elements_canva/projects/asiancuisine_cover.png" title="Click to inspect full cover illustration">
+              <div class="poster-below-preview">
+                <div class="poster-below-thumb">
+                  <img src="assets/elements_canva/projects/asiancuisine_cover.png" alt="Asian Cuisine Key Art Cover">
+                </div>
+                <div class="poster-below-info">
+                  <h4><i class="fas fa-palette" style="color:#f97316; margin-right:6px;"></i> Official Key Art &amp; Device Mockup</h4>
+                  <p>Wide-format promotional artwork created in Canva featuring the restaurant facade, street lanterns, and mobile device gameplay (Click to zoom).</p>
+                </div>
+              </div>
+              <button class="btn-zoom-poster-pill" data-zoom-src="assets/elements_canva/projects/asiancuisine_cover.png">
+                <i class="fas fa-expand"></i> View Full Cover Art
+              </button>
+            </div>
+
+            <!-- 8 Core Designed UI Screens Strip -->
+            <div class="kitchin-modal-screens-strip">
+              <div class="kitchin-modal-strip-title">
+                <div><i class="fas fa-layer-group" style="color: #ea580c; margin-right: 6px;"></i> 8 Core Designed Mobile UI Screens</div>
+                <span>Click any screen to view full resolution</span>
+              </div>
+              <div class="kitchin-modal-screens-row">
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/asiancuisine-1.png" title="Screen 1: Character Creation & Onboarding">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/asiancuisine-1.png" alt="Character Creation Screen">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">01. Character Select</div>
+                </div>
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/asiancuisine-2.png" title="Screen 2: Daily Check-in & Login Rewards">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/asiancuisine-2.png" alt="Daily Check-in Screen">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">02. Daily Check-in</div>
+                </div>
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/asiancuisine-3.png" title="Screen 3: Restaurant Management HUD & Live Service">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/asiancuisine-3.png" alt="Restaurant Management HUD">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">03. Restaurant HUD</div>
+                </div>
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/asiancuisine-4.png" title="Screen 4: Closet & Wardrobe Customization">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/asiancuisine-4.png" alt="Closet & Wardrobe Screen">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">04. Closet &amp; Outfits</div>
+                </div>
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/asiancuisine-5.png" title="Screen 5: Ingredient Market & Pantry Inventory">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/asiancuisine-5.png" alt="Ingredient Market & Pantry Screen">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">05. Pantry &amp; Market</div>
+                </div>
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/asiancuisine-6.png" title="Screen 6: Secret Recipe Gacha & Rarity Draw">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/asiancuisine-6.png" alt="Secret Recipe Gacha Screen">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">06. Recipe Gacha</div>
+                </div>
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/asiancuisine-7.png" title="Screen 7: Asian Dishes Cookbook Catalog">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/asiancuisine-7.png" alt="Dishes Cookbook Screen">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">07. Cookbook Catalog</div>
+                </div>
+                <div class="kitchin-modal-thumb-card" data-zoom-src="assets/elements_canva/projects/asiancuisine-8.png" title="Screen 8: Recipe Breakdown & Cooking Preparation">
+                  <div class="kitchin-modal-thumb-img-box">
+                    <img src="assets/elements_canva/projects/asiancuisine-8.png" alt="Recipe Cooking Breakdown Screen">
+                  </div>
+                  <div class="kitchin-modal-thumb-label">08. Recipe Detail</div>
+                </div>
+              </div>
+            </div>
+
+          `;
+
+        // -------------------------------------------------------------
+        // 3E. UI/UX: The Shift Toward International NBA Players (Tableau InfoVis)
+        // -------------------------------------------------------------
+        } else if (p.id === 'infovis' || p.id === 'infovis-dashboard' || (p.title && (p.title.toLowerCase().includes('shift toward') || p.title.toLowerCase().includes('international nba') || p.title.toLowerCase().includes('infovis')))) {
+          modalDynamicContent.innerHTML = `
+            <!-- 1. Main Project Title Header -->
+            <div class="modal-project-header-block">
+              <h1 class="modal-headline-title">The Shift Toward International NBA Players</h1>
+              <p class="modal-headline-subtitle">USA vs. International Player Performance Comparison (2000–2022) · Interactive Tableau Dashboard</p>
+            </div>
+
+            <!-- 2. Subhead Row: Tags & Action Buttons -->
+            <div class="modal-subhead-row">
+              <div class="modal-tags-group">
+                <div class="tool-tag maya-tag" style="background:#eff6ff; border-color:#bfdbfe; color:#1d4ed8;" title="Designed in Tableau">
+                  <img src="assets/elements_canva/profile/software_logo/tableau.svg" alt="Tableau" class="tool-logo-img" style="border-radius:4px; width:18px; height:18px;">
+                  <span>Designed in Tableau</span>
+                </div>
+                <div class="tool-tag class-tag" style="background:#fef2f2; border-color:#fecaca; color:#b91c1c;">
+                  <i class="fas fa-chart-line" style="color:#dc2626;"></i>
+                  <span>Information Visualization</span>
+                </div>
+                <div class="tool-tag sus-pill-tag" style="background:#f0fdf4; border-color:#bbf7d0; color:#15803d;">
+                  <i class="fas fa-database" style="color:#16a34a;"></i>
+                  <span>22 NBA Seasons (2000–2022)</span>
+                </div>
+              </div>
+              <div class="modal-video-buttons-group">
+                <a href="https://public.tableau.com/app/profile/jocelyne.audrey/viz/Group14_17835961965340/Dashboard3" target="_blank" rel="noopener noreferrer" class="btn-upper-video" style="background: linear-gradient(135deg, #1d4ed8, #0284c7); color: #fff;" title="Open Live Dashboard on Tableau Public">
+                  <i class="fas fa-chart-simple"></i>
+                  <span>Live Tableau Viz</span>
+                  <i class="fas fa-arrow-up-right-from-square btn-external-icon"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Full-Width Video Player -->
+            <div class="video-fullscreen-card">
+              <div class="video-fullscreen-frame" style="background:#0b1120;">
+                <video id="modalVideoPlayer" controls playsinline preload="auto" poster="assets/elements_canva/projects/infovis_cover.png">
+                  <source src="assets/videos_showcase/uiux_videos/infovis_video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+            <!-- Duality Grid: Research Narrative vs Interactive Systems (Styled identically to Asian Cuisine & Codu) -->
+            <div class="showcase-duality-grid">
+              <div class="duality-card story-card">
+                <div class="duality-card-header">
+                  <div class="duality-icon-bubble" style="background: rgba(234, 88, 12, 0.15); color: #ea580c;">
+                    <i class="fas fa-basketball"></i>
+                  </div>
+                  <h4 class="duality-title">Research Narrative &amp; Domain Study</h4>
+                </div>
+                <p class="duality-desc">
+                  Historically dominated by domestic American collegiate athletes, the NBA has undergone a profound international transformation. This study examines 22 seasons (2000–2022) of advanced tracking data, analyzing whether foreign recruits evolved from niche role players into premier franchise cornerstones and multi-year MVP winners.
+                </p>
+                <div class="moral-golden-banner" style="background: linear-gradient(135deg, #fff7ed, #ffedd5); border-color: #fdba74;">
+                  <i class="fas fa-quote-left moral-quote-icon" style="color: #ea580c;"></i>
+                  <div>
+                    <span class="moral-label" style="color: #c2410c;">Research Narrative</span>
+                    <p class="moral-text" style="color: #9a3412;">"From role players to league MVPs: Uncovering the data story behind basketball's global revolution over 22 transformative seasons."</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="duality-card role-card">
+                <div class="duality-card-header">
+                  <div class="duality-icon-bubble" style="background: rgba(37, 99, 235, 0.15); color: #2563eb;">
+                    <i class="fas fa-sliders"></i>
+                  </div>
+                  <h4 class="duality-title">Interactive Dashboard Systems</h4>
+                </div>
+                <p class="duality-desc">
+                  Engineered in <strong>Tableau Public</strong> following HCI visual perception principles. Synchronizes multi-view interactive charts: dynamic 22-season time slider, global talent choropleth map, superstar leaderboards, minutes played treemaps, and RAPTOR efficiency scatter plots.
+                </p>
+                <div class="role-focus-chips">
+                  <span class="chip-item"><i class="fas fa-chart-line" style="color:#2563eb;"></i> Tableau Public Viz</span>
+                  <span class="chip-item"><i class="fas fa-calendar" style="color:#0284c7;"></i> 2000–2022 Season Slider</span>
+                  <span class="chip-item"><i class="fas fa-earth-americas" style="color:#10b981;"></i> Choropleth Talent Map</span>
+                  <span class="chip-item"><i class="fas fa-trophy" style="color:#f59e0b;"></i> Top 10 WAR Leaderboard</span>
+                  <span class="chip-item"><i class="fas fa-table-cells-large" style="color:#8b5cf6;"></i> Minutes Played Treemap</span>
+                  <span class="chip-item"><i class="fas fa-braille" style="color:#ec4899;"></i> Impact Scatter Matrix</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Official Poster & Key Art Banner (Proper Thumbnail + Lightbox Zoom) -->
+            <div class="poster-below-card" id="posterWrap" data-zoom-src="assets/elements_canva/projects/infovis_poster.png" title="Click to view full dashboard in lightbox">
+              <div class="poster-below-preview">
+                <div class="poster-below-thumb" style="width: 86px; height: 108px; background: #0f172a; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 12px; border: 1.5px solid #cbd5e1; flex-shrink: 0;">
+                  <img src="assets/elements_canva/projects/infovis_poster.png" alt="NBA InfoVis Dashboard Poster" style="width: 100%; height: 100%; object-fit: contain; background: #0f172a;">
+                </div>
+                <div class="poster-below-info">
+                  <h4><i class="fas fa-chart-line" style="color:#2563eb; margin-right:6px;"></i> Full Tableau Dashboard Infographic</h4>
+                  <p>High-resolution dashboard layout with 6 linked visual charts, KPI metric cards, and dynamic filter controls (Click to zoom full view).</p>
+                </div>
+              </div>
+              <button class="btn-zoom-poster-pill" data-zoom-src="assets/elements_canva/projects/infovis_poster.png">
+                <i class="fas fa-expand"></i> View Full Dashboard
+              </button>
+            </div>
+
+            <!-- Bottom Actions -->
+            <div class="modal-bottom-actions" style="display:flex; justify-content:center; margin-top:20px;">
+              <a href="https://public.tableau.com/app/profile/jocelyne.audrey/viz/Group14_17835961965340/Dashboard3" target="_blank" rel="noopener noreferrer" class="btn-standalone-link" style="background: linear-gradient(135deg, #1d4ed8, #0284c7); color:#fff;">
+                <i class="fas fa-chart-simple"></i> Open Live Dashboard on Tableau Public <i class="fas fa-external-link-alt" style="margin-left:6px; font-size:0.85em;"></i>
+              </a>
+            </div>
+          `;
+
+        // -------------------------------------------------------------
+        // 4. GAME PROJECTS (The Lost Tomato, Runaway Timmy, Sea Vagabond, We Were Mummies, Code Eternis)
+        // -------------------------------------------------------------
+        } else if (cat === 'game' || p.title === 'The Lost Tomato' || p.title === 'Runaway Timmy' || p.title === 'Sea Vagabond' || p.title === 'We Were Mummies' || p.title === 'Code Eternis') {
+          
+          let storyQuote = `"Embark on an imaginative journey crafted with passion, interactive mechanics, and engaging visual art."`;
+          let storyDesc = `Explore the dynamic game world, navigate challenging obstacles, and experience responsive controls built from the ground up.`;
+          let mechanicsTitle = `Core Gameplay Mechanics`;
+          let roleDesc = `Lead developer and technical artist in charge of core loop programming, physics systems, and visual gameplay polish.`;
+          let chips = ['Unity 3D', 'C# Scripting', 'Physics Controls', 'Level Design'];
+
+          if (p.title === 'The Lost Tomato') {
+            storyQuote = `"Scientifically a fruit, culinary a vegetable — a misplaced hero searching for home."`;
+            storyDesc = `Trapped in Fruit Land, guide a brave little tomato across treacherous platforms, solve fruit cave puzzles, and defeat the dungeon bat boss to return to Veggie Land!`;
+            roleDesc = `Built physics-based sphere rolling mechanics with custom torque, mid-air double jump, and momentum conservation on uneven terrain.`;
+            chips = ['WASD Sphere Physics', 'Double Jump Platforming', 'Dungeon Maze & Boss', 'Unity 3D & C#'];
+          } else if (p.title === 'Runaway Timmy') {
+            storyQuote = `"Run fast, dodge Granny's broom, grab the coins, and escape through the town!"`;
+            storyDesc = `Timmy swiped coins from Granny's jar to buy a console! Guide him through a modular European town, avoiding roadblocks and swimming waterways.`;
+            roleDesc = `Engineered fluid 4-way swipe detection, 3-lane dodge transitions, health pickups, and stackable power-ups (magnet, shield, skateboard).`;
+            chips = ['3-Lane Mobile Swipe', 'Dynamic Road Hazards', 'Stackable Power-Ups', 'Cinemachine Camera'];
+          } else if (p.title === 'Sea Vagabond') {
+            storyQuote = `"Set sail beyond charted waters to uncover forgotten pirate relics and legendary havens."`;
+            storyDesc = `Explore Havenport Isle as an ambitious privateer! Wander stylized docks, uncover hidden coastal treasures, and experience cinematic lighting.`;
+            roleDesc = `Recognized with the XJTU Best Game Project Award for outstanding worldbuilding, ocean water shaders, and atmospheric lighting.`;
+            chips = ['Action Exploration', 'Havenport Worldbuilding', 'Water Shader Mechanics', 'Best Game Award'];
+          } else if (p.title === 'We Were Mummies') {
+            storyQuote = `"True escape requires two minds thinking as one across the ancient Pharaoh's tomb."`;
+            storyDesc = `Two players must communicate to solve asymmetric puzzles without seeing each other's camera feed to disarm ancient traps and escape.`;
+            roleDesc = `Engineered dual split-screen mechanics, synchronized glyph pressure plate puzzles, and cooperative puzzle progression.`;
+            chips = ['Asymmetric Co-op', 'Split-Screen UX', 'Glyph Puzzle Logic', 'Dynamic Dart Traps'];
+          } else if (p.title === 'Code Eternis') {
+            storyQuote = `"Fast-paced tactical sci-fi arena combat built with custom enemy AI behavior trees."`;
+            storyDesc = `Engage rogue machines in cybernetic arenas! Features responsive first-person movement, weapon recoil systems, and dynamic arena lighting.`;
+            roleDesc = `Honored at the DMT Project Showcase for exceptional gameplay programming, weapon systems, and real-time performance.`;
+            chips = ['Sci-Fi Arena FPS', 'Enemy Behavior AI', 'Modular Weapon Recoil', 'DMT Award Honor'];
+          } else if (p.title === 'Mario Arena: Luma Star Wars' || p.title.includes('Mario Arena')) {
+            storyQuote = `"Battle across cosmic planetary arenas with Mario and Luma, harnessing stellar star powers against galactic bosses."`;
+            storyDesc = `Step into a dynamic cosmic battleground! Dodge orbital obstacles, unleash cosmic spin attacks with Luma, and challenge relentless arena bosses in a fast-paced 3D space action combat experience.`;
+            mechanicsTitle = `Cosmic Combat & Arena Mechanics`;
+            roleDesc = `Programmed 3D character locomotion, dynamic projectile patterns, boss state machine AI, and responsive combat collision feedback in Unity 3D with C#.`;
+            chips = ['Galactic Boss Combat', 'Luma Star Powers', 'Orbital Arena Physics', 'Unity 3D & C#'];
+          }
+
+          modalDynamicContent.innerHTML = `
+            <!-- 1. Main Project Title Header (Most Up!) -->
+            <div class="modal-project-header-block">
+              <h1 class="modal-headline-title">${p.title}</h1>
+              ${p.subtitle ? `<p class="modal-headline-subtitle">${p.subtitle}</p>` : ''}
+            </div>
+
+            <!-- 2. Subhead Row: Created Unity / Tags + Video Action Buttons (Below Title) -->
+            <div class="modal-subhead-row">
+              <div class="modal-tags-group">
+                <div class="tool-tag maya-tag" style="background:#fef3c7; border-color:#fde68a; color:#92400e;">
+                  <i class="fab fa-unity" style="font-size:1.1rem; color:#b45309;"></i>
+                  <span>Created using Unity 3D &amp; C#</span>
+                </div>
+                <div class="tool-tag class-tag" style="background:#dbeafe; border-color:#bfdbfe; color:#1e40af;">
+                  <i class="fas fa-gamepad"></i>
+                  <span>${p.subtitle || 'Game Development'}</span>
+                </div>
+                ${p.badge ? `
+                <div class="tool-tag team-tag">
+                  <i class="fas fa-trophy"></i>
+                  <span>${p.badge}</span>
+                </div>` : ''}
+              </div>
+
+              <!-- Gameplay & Explanation Video Action Buttons -->
+              <div class="modal-video-buttons-group">
+                ${p.gameplayUrl ? `
+                <a href="${p.gameplayUrl}" target="_blank" rel="noopener noreferrer" class="btn-upper-video btn-upper-gameplay" title="Watch Full Gameplay Video">
+                  <i class="fab fa-youtube"></i>
+                  <span>Gameplay Video</span>
+                  <i class="fas fa-arrow-up-right-from-square btn-external-icon"></i>
+                </a>` : ''}
+                ${p.explanationUrl ? `
+                <a href="${p.explanationUrl}" target="_blank" rel="noopener noreferrer" class="btn-upper-video btn-upper-explanation" title="Watch Devlog & Architecture Explanation">
+                  <i class="fab fa-youtube" style="color:#ef4444;"></i>
+                  <span>Explanation Video</span>
+                  <i class="fas fa-arrow-up-right-from-square btn-external-icon"></i>
+                </a>` : ''}
+              </div>
+            </div>
+
+            <!-- 3. Full-Width Video / Key Art Player Stage -->
+            ${p.video ? `
+            <div class="video-fullscreen-card">
+              <div class="video-fullscreen-frame">
+                <video id="modalVideoPlayer" controls playsinline preload="auto" poster="${p.image}">
+                  <source src="${p.video}" type="video/mp4">
+                  <source src="${p.video}" type="video/quicktime">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>` : `
+            <div class="video-fullscreen-card">
+              <div class="video-fullscreen-frame" style="display: flex; align-items: center; justify-content: center; background: #0b1120;">
+                <img src="${p.image}" alt="${p.title}" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+              </div>
+            </div>`}
+
+            <!-- 4. Duality Grid: Story vs Mechanics -->
+            <div class="showcase-duality-grid">
+              <!-- Card 1: Story & Objective -->
+              <div class="duality-card story-card">
+                <div class="duality-card-header">
+                  <div class="duality-icon-bubble" style="background:#fef3c7; color:#d97706;">
+                    <i class="fas fa-book-open"></i>
+                  </div>
+                  <h4 class="duality-title">Game Story &amp; Objective</h4>
+                </div>
+                <p class="duality-desc">${storyDesc}</p>
+                <div class="moral-golden-banner">
+                  <i class="fas fa-quote-left moral-quote-icon"></i>
+                  <div>
+                    <span class="moral-label">Premise</span>
+                    <p class="moral-text">${storyQuote}</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2: Mechanics & Role -->
+              <div class="duality-card role-card">
+                <div class="duality-card-header">
+                  <div class="duality-icon-bubble" style="background:#dbeafe; color:#2563eb;">
+                    <i class="fas fa-gears"></i>
+                  </div>
+                  <h4 class="duality-title">${mechanicsTitle}</h4>
+                </div>
+                <p class="duality-desc">${roleDesc}</p>
+                <div class="role-focus-chips">
+                  ${chips.map(c => `<span class="chip-item"><i class="fas fa-check" style="color:#2563eb;"></i> ${c}</span>`).join('')}
+                </div>
+              </div>
+            </div>
+
+            <!-- 5. Authentic Award Certificate Card (Only when certificate exists) -->
+            ${p.certificate ? `
+            <div class="poster-below-card certificate-card" id="posterWrap" data-zoom-src="${p.certificate}" title="Click to inspect certificate">
+              <div class="poster-below-preview">
+                <div class="poster-below-thumb certificate-thumb">
+                  <img src="${p.certificate}" alt="${p.title} Certificate">
+                </div>
+                <div class="poster-below-info">
+                  <h4><i class="fas fa-award" style="color:#f59e0b; margin-right:6px;"></i> ${p.certificateTitle || 'Award Certificate & Recognition'}</h4>
+                  <p>${p.certificateDesc || 'Official project exhibition certificate (Click to inspect full resolution).'}</p>
+                </div>
+              </div>
+              <button class="btn-zoom-poster-pill" data-zoom-src="${p.certificate}">
+                <i class="fas fa-expand"></i> View Certificate
+              </button>
+            </div>
+            ` : ''}
+
+            <!-- 6. Additional Exhibition Photo (Only when additionalPhoto exists, e.g. Code Eternis) -->
+            ${p.additionalPhoto ? `
+            <div class="poster-below-card" id="posterWrapPhoto" data-zoom-src="${p.additionalPhoto}" title="Click to inspect exhibition photo">
+              <div class="poster-below-preview">
+                <div class="poster-below-thumb certificate-thumb">
+                  <img src="${p.additionalPhoto}" alt="${p.title} Exhibition Showcase">
+                </div>
+                <div class="poster-below-info">
+                  <h4><i class="fas fa-camera" style="color:#3b82f6; margin-right:6px;"></i> ${p.additionalPhotoTitle || 'Live Exhibition Showcase'}</h4>
+                  <p>${p.additionalPhotoDesc || 'Live presentation booth and player exhibition during tech showcase expo.'}</p>
+                </div>
+              </div>
+              <button class="btn-zoom-poster-pill" data-zoom-src="${p.additionalPhoto}">
+                <i class="fas fa-expand"></i> View Photo
+              </button>
+            </div>
+            ` : ''}
+
+            <!-- 7. Standalone Case Study Link (if exists) -->
+            ${p.link && !p.link.endsWith('.mp4') && !p.link.endsWith('.mov') ? `
+            <div class="modal-bottom-actions">
+              <a href="${p.link}" class="btn-standalone-link">
+                <i class="fas fa-arrow-up-right-from-square"></i> Open Full Standalone Showcase
+              </a>
+            </div>
+            ` : ''}
+          `;
+
+        // -------------------------------------------------------------
+        // 5. OTHER PROJECTS (Environment, Studies, etc.)
+        // -------------------------------------------------------------
+        } else {
+          modalDynamicContent.innerHTML = `
+            <!-- 1. Main Project Title Header (Most Up!) -->
+            <div class="modal-project-header-block">
+              <h1 class="modal-headline-title">${p.title}</h1>
+              ${p.subtitle ? `<p class="modal-headline-subtitle">${p.subtitle}</p>` : ''}
+            </div>
+
+            <!-- 2. Subhead Row: Tags -->
+            <div class="modal-subhead-row">
+              <div class="modal-tags-group">
+                ${p.software ? `
+                <div class="tool-tag maya-tag">
+                  <img src="${p.software.logo}" alt="${p.software.name}" class="tool-logo-img">
+                  <span>Created in ${p.software.name}</span>
+                </div>
+                ` : ''}
+                ${p.course ? `
+                <div class="tool-tag class-tag">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>${p.course}</span>
+                </div>
+                ` : ''}
+                ${p.badge ? `
+                <div class="tool-tag team-tag">
+                  <i class="fas fa-trophy"></i>
+                  <span>${p.badge}</span>
+                </div>
+                ` : ''}
+              </div>
+            </div>
+
+            <!-- Full-Width Video Player -->
+            ${p.video ? `
+            <div class="video-fullscreen-card">
+              <div class="video-fullscreen-frame">
+                <video id="modalVideoPlayer" controls playsinline preload="auto" poster="${p.image || ''}">
+                  <source src="${p.video}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+            ` : ''}
+
+            <!-- Study Overview Card -->
+            <div class="duality-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-top:4px solid #3b82f6;">
+              <h4 class="duality-title" style="margin-bottom:12px;">
+                <i class="fas fa-circle-info" style="color: #3b82f6; margin-right:6px;"></i> Project Overview
+              </h4>
+              <p class="duality-desc">
+                ${p.summary || p.subtitle || 'Creative digital media project created with rigorous technical standards, aesthetic lighting, and detailed modeling.'}
+              </p>
+            </div>
+          `;
+        }
+
+        // Show Modal
+        videoModal.classList.add('active');
+        videoModal.setAttribute('aria-hidden', 'false');
+
+        // Reset scroll position inside modal
+        if (modalBodyScroll) {
+          modalBodyScroll.scrollTop = 0;
+        }
+
+        // Attach zoom listeners to any zoom buttons inside modal
+        modalDynamicContent.querySelectorAll('[data-zoom-src]').forEach(zoomEl => {
+          zoomEl.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const src = zoomEl.getAttribute('data-zoom-src');
+            if (src && typeof openLightboxWithSrc === 'function') {
+              openLightboxWithSrc(src);
+            }
+          });
+        });
+
+        // Start video playback
+        const activeVideo = modalDynamicContent.querySelector('#modalVideoPlayer');
+        if (activeVideo) {
+          activeVideo.play().catch(() => {});
+        }
+      }
+
+      // Close Modal Function
+      function closeProjectModal() {
+        if (!videoModal) return;
+        if (audio) audio.playClick();
+        
+        const activeVideo = modalDynamicContent ? modalDynamicContent.querySelector('#modalVideoPlayer') : null;
+        if (activeVideo) {
+          activeVideo.pause();
+          activeVideo.currentTime = 0;
+          activeVideo.src = '';
+        }
+
+        videoModal.classList.remove('active');
+        videoModal.setAttribute('aria-hidden', 'true');
+      }
+
+      closeVideoModalBtn?.addEventListener('click', closeProjectModal);
+      modalMinimizeDot?.addEventListener('click', closeProjectModal);
+      modalBackBtn?.addEventListener('click', closeProjectModal);
+
+      videoModal?.addEventListener('click', (e) => {
+        if (e.target === videoModal) closeProjectModal();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && videoModal?.classList.contains('active')) {
+          closeProjectModal();
+        }
+      });
+
+      const folderFrequencies = {
+        game: 580,
+        environment: 500,
+        uiux: 680,
+        animation: 620
+      };
+
+      // Folder Hover & Click
+      folderButtons.forEach(btn => {
+        const cat = btn.getAttribute('data-category');
+        const freq = folderFrequencies[cat] || 550;
+
+        btn.addEventListener('mouseenter', () => {
+          if (audio) audio.playPop(freq);
+        });
+
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          if (audio) {
+            audio.playClick();
+            audio.playNavChime();
+          }
+          openFolderCategory(cat);
+        });
+      });
+
+      const categoryIcons = {
+        game: '<i class="fas fa-gamepad" style="color: #6366f1;"></i>',
+        environment: '<i class="fas fa-cubes" style="color: #16a34a;"></i>',
+        uiux: '<i class="fas fa-mobile-screen" style="color: #d97706;"></i>',
+        animation: '<i class="fas fa-film" style="color: #dc2626;"></i>'
+      };
+
+      // Open Folder Window
+      function openFolderCategory(cat) {
+        const data = categoryProjectsData[cat];
+        if (!data) return;
+
+        const iconHtml = categoryIcons[cat] || '';
+        windowCategoryTitle.innerHTML = `${iconHtml} <span>${data.title}</span>`;
+
+        // Render clean, modern cards (2 per row)
+        windowItemsGrid.innerHTML = '';
+        data.projects.forEach(p => {
+          const card = document.createElement('a');
+          card.href = p.link || '#';
+          card.className = 'card-project-tile';
+          
+          card.innerHTML = `
+            <div class="card-tile-banner">
+              <img src="${p.image}" alt="${p.title}" class="card-tile-img" loading="lazy">
+              ${p.video ? `
+                <video class="card-tile-video" src="${p.video}" muted loop playsinline preload="metadata"></video>
+              ` : ''}
+              <span class="card-tile-badge">${p.badge || 'Featured'}</span>
+            </div>
+            <div class="card-tile-info">
+              <div class="card-tile-texts">
+                <h4 class="card-tile-title">${p.title}</h4>
+                <p class="card-tile-sub">${p.subtitle}</p>
+              </div>
+              <div class="card-tile-footer">
+                <span class="card-tile-btn">${p.video ? 'Play' : 'View'} <i class="fas ${p.video ? 'fa-play' : 'fa-arrow-right'}"></i></span>
+              </div>
+            </div>
+          `;
+
+          const previewVideo = card.querySelector('.card-tile-video');
+
+          card.addEventListener('mouseenter', () => {
+            if (audio) audio.playPop(700);
+            if (previewVideo) {
+              previewVideo.currentTime = 0;
+              const playPromise = previewVideo.play();
+              if (playPromise !== undefined) {
+                playPromise.catch(() => {});
+              }
+            }
+          });
+
+          card.addEventListener('mouseleave', () => {
+            if (previewVideo) {
+              previewVideo.pause();
+              previewVideo.currentTime = 0;
+            }
+          });
+
+          card.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (audio) audio.playClick();
+            openProjectModal(p, cat);
+          });
+
+          windowItemsGrid.appendChild(card);
+        });
+
+        // Toggle Views
+        foldersGrid.classList.add('view-hidden');
+        folderWindow.classList.add('window-open');
+        folderWindow.setAttribute('aria-hidden', 'false');
+
+        // Reset scroll position to top
+        if (windowContentScroll) {
+          windowContentScroll.scrollTop = 0;
+        }
+      }
+
+      // Close Folder Window
+      function closeFolderWindow() {
+        if (audio) audio.playClick();
+        folderWindow.classList.remove('window-open');
+        folderWindow.setAttribute('aria-hidden', 'true');
+        foldersGrid.classList.remove('view-hidden');
+      }
+
+      // Poster & preview click zoom (opens nicely formatted in Clean Lightbox)
+      document.addEventListener('click', (e) => {
+        const zoomTrigger = e.target.closest('[data-zoom-src]');
+        if (zoomTrigger) {
+          e.preventDefault();
+          const zoomSrc = zoomTrigger.getAttribute('data-zoom-src');
+          if (zoomSrc && typeof window.openLightboxWithSrc === 'function') {
+            window.openLightboxWithSrc(zoomSrc);
+          }
+        }
+      });
+
+      windowCloseDot?.addEventListener('click', closeFolderWindow);
+      windowBackBtn?.addEventListener('click', closeFolderWindow);
+
+      // Directory Filter Tabs Handler
+      const tabButtons = document.querySelectorAll('.directory-tabs .tab-btn');
+      const showcaseCards = document.querySelectorAll('.directory-grid .showcase-card');
+
+      tabButtons.forEach(tab => {
+        tab.addEventListener('click', () => {
+          if (audio) audio.playPop(520);
+          tabButtons.forEach(t => t.classList.remove('tab-active'));
+          tab.classList.add('tab-active');
+
+          const filter = tab.getAttribute('data-filter');
+          showcaseCards.forEach(card => {
+            const cat = card.getAttribute('data-cat');
+            if (filter === 'all' || cat === filter) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Clean Lightbox Engine for Project Modal Screens & Posters
+      const cleanLightbox = document.getElementById('cleanLightbox');
+      const cleanLightboxImg = document.getElementById('cleanLightboxImg');
+      const cleanLightboxClose = document.getElementById('cleanLightboxClose');
+
+      window.openLightboxWithSrc = function(src) {
+        if (!cleanLightbox || !cleanLightboxImg || !src) return;
+        cleanLightboxImg.src = src;
+        cleanLightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      };
+
+      function closeLightbox() {
+        if (!cleanLightbox) return;
+        cleanLightbox.classList.remove('active');
+        document.body.style.overflow = '';
+        if (cleanLightboxImg) cleanLightboxImg.src = '';
+      }
+
+      cleanLightboxClose?.addEventListener('click', closeLightbox);
+      cleanLightbox?.addEventListener('click', (e) => {
+        if (e.target === cleanLightbox) closeLightbox();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && cleanLightbox?.classList.contains('active')) {
+          closeLightbox();
+        }
+      });
+
+      // Wire directory card for Lily and the Veggies to the macOS Project Modal
+      const showcaseLilyCard = document.getElementById('showcaseLilyCard');
+      if (showcaseLilyCard) {
+        showcaseLilyCard.addEventListener('click', (e) => {
+          e.preventDefault();
+          const lilyData = categoryProjectsData.animation.projects.find(p => p.id === 'lily-and-the-veggies');
+          if (lilyData) {
+            openProjectModal(lilyData, 'animation');
+          }
+        });
+      }
+
+      // Wire directory card for Best Rate to the macOS Project Modal
+      const showcaseBestRateCard = document.getElementById('showcaseBestRateCard');
+      if (showcaseBestRateCard) {
+        showcaseBestRateCard.addEventListener('click', (e) => {
+          e.preventDefault();
+          const bestRateData = categoryProjectsData.uiux.projects.find(p => p.id === 'bestrate');
+          if (bestRateData) {
+            openProjectModal(bestRateData, 'uiux');
+          }
+        });
+      }
+
+      // Wire directory card for Codu to the macOS Project Modal
+      const showcaseCoduCard = document.getElementById('showcaseCoduCard');
+      if (showcaseCoduCard) {
+        showcaseCoduCard.addEventListener('click', (e) => {
+          e.preventDefault();
+          const coduData = categoryProjectsData.uiux.projects.find(p => p.id === 'codu');
+          if (coduData) {
+            openProjectModal(coduData, 'uiux');
+          }
+        });
+      }
+
+      // Wire directory card for Asian Cuisine to the macOS Project Modal
+      const showcaseAsianCuisineCard = document.getElementById('showcaseAsianCuisineCard');
+      if (showcaseAsianCuisineCard) {
+        showcaseAsianCuisineCard.addEventListener('click', (e) => {
+          e.preventDefault();
+          const acData = categoryProjectsData.uiux.projects.find(p => p.id === 'asiancuisine');
+          if (acData) {
+            openProjectModal(acData, 'uiux');
+          }
+        });
+      }
+
+      // Wire directory card for InfoVis to the macOS Project Modal
+      const showcaseInfovisCard = document.getElementById('showcaseInfovisCard');
+      if (showcaseInfovisCard) {
+        showcaseInfovisCard.addEventListener('click', (e) => {
+          e.preventDefault();
+          const infoData = categoryProjectsData.uiux.projects.find(p => p.id === 'infovis');
+          if (infoData) {
+            openProjectModal(infoData, 'uiux');
+          }
+        });
+      }
+
+      // Wire directory card for Mario Arena to the macOS Project Modal
+      const showcaseMarioCard = document.getElementById('showcaseMarioCard');
+      if (showcaseMarioCard) {
+        showcaseMarioCard.addEventListener('click', (e) => {
+          e.preventDefault();
+          const marioData = categoryProjectsData.game.projects.find(p => p.title.includes('Mario'));
+          if (marioData) {
+            openProjectModal(marioData, 'game');
+          }
+        });
+      }
+
+      // Scroll Down Indicator Click & Fade Logic for Projects Page
+      const projectsScrollIndicator = document.getElementById('projectsScrollIndicator');
+      if (projectsScrollIndicator) {
+        projectsScrollIndicator.addEventListener('click', (e) => {
+          e.preventDefault();
+          const target = document.getElementById('allProjectsDirectory');
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 80) {
+            projectsScrollIndicator.classList.add('scrolled-out');
+          } else {
+            projectsScrollIndicator.classList.remove('scrolled-out');
+          }
+        }, { passive: true });
+      }
+    });
+  </script>
+
+  <!-- Clean Lightbox Modal for Full Image & Poster Zoom -->
+  <div id="cleanLightbox" class="clean-lightbox-modal">
+    <button id="cleanLightboxClose" class="clean-lightbox-close" title="Close"><i class="fas fa-xmark"></i></button>
+    <img id="cleanLightboxImg" class="clean-lightbox-img" src="" alt="Enlarged View">
+  </div>
+</body>
+</html>

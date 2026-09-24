@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celyne's Portfolio — Digital Media Engineer</title>
+  <meta name="description" content="Portfolio of Jocelyne Audrey Tando (Celyne) — Digital Media Technology student at Xiamen University Malaysia. Game Developer, UI/UX Designer & 3D Artist.">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Canva Desk Stylesheet -->
+  <link rel="stylesheet" href="profile-style.css">
+</head>
+<body>
+
+  <!-- Warm Wooden Desk Background Surface -->
+  <div class="desk-surface"></div>
+
+  <!-- Doodled Table Accents (Heart ♡ & Star ✦ on Wood) -->
+  <div class="desk-doodle doodle-h1" aria-hidden="true">♡</div>
+  <div class="desk-doodle doodle-h2" aria-hidden="true">♡</div>
+  <div class="desk-doodle doodle-s1" aria-hidden="true">✦</div>
+  <div class="desk-doodle doodle-s2" aria-hidden="true">✦</div>
+
+  <!-- ==========================================================================
+       TOP NAVIGATION BAR (Matching Mockup)
+       ========================================================================== -->
+  <header class="celyne-top-nav">
+    <!-- Brand Logo: Sun + "Celyne" -->
+    <a href="index.html" class="nav-brand-sun" title="Celyne's Portfolio (Desk View)">
+      <svg class="sun-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="12" fill="#fef08a" stroke="#f59e0b" stroke-width="2.5"/>
+        <!-- Sun Rays -->
+        <line x1="20" y1="2" x2="20" y2="5" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="20" y1="35" x2="20" y2="38" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="2" y1="20" x2="5" y2="20" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="35" y1="20" x2="38" y2="20" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="7" y1="7" x2="10" y2="10" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="30" y1="30" x2="33" y2="33" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="7" y1="33" x2="10" y2="30" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="30" y1="10" x2="33" y2="7" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- Cute Face -->
+        <circle cx="16" cy="19" r="1.5" fill="#78350f"/>
+        <circle cx="24" cy="19" r="1.5" fill="#78350f"/>
+        <path d="M17 23 Q20 26 23 23" stroke="#78350f" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span class="nav-brand-name">Celyne</span>
+    </a>
+
+    <!-- Navigation Menu Links -->
+    <nav class="nav-menu-links">
+      <a href="index.html" class="nav-item-link" title="Desk View">Home</a>
+      <a href="profile-demo.html" class="nav-item-link nav-active">Profile</a>
+      <a href="projects-demo.html" class="nav-item-link">Projects</a>
+      <a href="awards-demo.html" class="nav-item-link">Awards</a>
+      <a href="contact-demo.html" class="nav-item-link">Contact</a>
+    </nav>
+
+    <!-- Right Controls: Audio + Doodles -->
+    <div class="nav-right-actions">
+      <button id="soundToggleBtn" class="nav-btn-pill" title="Toggle Sound Effects">
+        <i class="fas fa-volume-high" id="soundIcon"></i>
+        <span id="soundLabel">Sound ON</span>
+      </button>
+
+      <div class="nav-doodle-end">
+        <span>♡</span>
+        <span class="star-doodle">✦</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MAIN HERO SECTION: 16:9 CANVA DESK CANVAS (profile_bg.png) — ABOUT ME
+       ========================================================================== -->
+  <main class="desk-canvas-hero-wrap" id="hero">
+    <div class="desk-canvas-stage">
+      
+      <!-- Transparent Profile Stage Elements Layer (ID Badge & Notebook Sheet) -->
+      <img 
+        src="assets/elements_canva/profile/profile_bg.png" 
+        alt="Jocelyne Audrey Tando (Celyne) ID Badge and Notebook" 
+        class="profile-bg-canvas"
+        draggable="false"
+      >
+
+      <!-- -------------------------------------------------------------
+           AUTHENTIC CANVA FLOATING BUBBLES LAYER (profile_floating.png)
+           ------------------------------------------------------------- -->
+      <img 
+        src="assets/elements_canva/profile/profile_floating.png" 
+        alt="Teamwork, Creative, Ambitious Floating Bubbles" 
+        class="profile-floating-layer"
+        draggable="false"
+      >
+
+      <!-- Interactive Clickable Hotspots over the 3 Floating Bubbles -->
+      <div class="bubble-hotspot hotspot-teamwork" id="bubbleTeamwork" title="Teamwork — Click to view Education"></div>
+      <div class="bubble-hotspot hotspot-creative" id="bubbleCreative" title="Creative — Click to view Software"></div>
+      <div class="bubble-hotspot hotspot-ambitious" id="bubbleAmbitious" title="Ambitious — Click to view Projects"></div>
+
+      <!-- -------------------------------------------------------------
+           RIGHT: NOTEBOOK PAPER OVERLAY (BIODATA / PARAGRAPH & SOCIAL PILLS)
+           ------------------------------------------------------------- -->
+      <div class="notebook-content-overlay">
+        
+        <!-- Bio Written Text in Blank Area below 'About me' (Paragraph Narrative Style) -->
+        <div class="notebook-body-text" id="bioContentArea">
+          <p class="bio-para-1">
+            I'm <strong>Jocelyne Audrey Tando</strong> a Digital Media Technology engineering student at <strong>Xiamen University Malaysia</strong> (Class of 2027). I love turning creative art concepts into living interactive worlds—combining <strong>game engine development, 3D modeling, and playful UI/UX design</strong>.
+          </p>
+          <p class="bio-para-2">
+            Passionate about interactive storytelling, intuitive interface architecture, and bringing ambitious ideas to life.
+          </p>
+        </div>
+
+        <!-- 3 Interactive Contact & Social Pills -->
+        <div class="notebook-contact-pills">
+          
+          <!-- Instagram Pill -->
+          <a href="https://www.instagram.com/jocelyneaudrey_/" target="_blank" rel="noopener noreferrer" class="social-pill-btn" title="Follow on Instagram">
+            <span class="pill-icon-wrap icon-ig">
+              <i class="fab fa-instagram"></i>
+            </span>
+            <span>@jocelyneaudrey_</span>
+          </a>
+
+          <!-- WhatsApp Pill -->
+          <a href="https://wa.me/60165432530" target="_blank" rel="noopener noreferrer" class="social-pill-btn" title="Chat on WhatsApp">
+            <span class="pill-icon-wrap icon-wa">
+              <i class="fab fa-whatsapp"></i>
+            </span>
+            <span>+60 165432530</span>
+          </a>
+
+          <!-- LinkedIn Pill -->
+          <a href="https://www.linkedin.com/in/jocelyne-audrey-tando-7a840b379/" target="_blank" rel="noopener noreferrer" class="social-pill-btn" title="Connect on LinkedIn">
+            <span class="pill-icon-wrap icon-li">
+              <i class="fab fa-linkedin-in"></i>
+            </span>
+            <span>Jocelyne Audrey</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Floating Cute Scroll Down Indicator -->
+    <a href="#software" class="desk-scroll-indicator" id="heroScrollIndicator" title="Scroll down to Software Skills">
+      <span class="scroll-mouse-icon" aria-hidden="true">
+        <span class="mouse-wheel-dot"></span>
+      </span>
+      <span class="scroll-hint-text">Scroll</span>
+      <i class="fas fa-chevron-down scroll-bounce-arrow" aria-hidden="true"></i>
+    </a>
+
+  </main>
+
+  <!-- SVG Filter for Clean Crisp White Die-Cut Sticker Outlines -->
+  <svg style="position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none;" aria-hidden="true">
+    <defs>
+      <filter id="stickerWhiteOutline" x="-30%" y="-30%" width="160%" height="160%">
+        <!-- Dilate alpha channel by 5.2px for clean, thicker die-cut sticker outline -->
+        <feMorphology in="SourceAlpha" result="DILATED" operator="dilate" radius="5.2"/>
+        <feFlood flood-color="#ffffff" result="WHITE_COLOR"/>
+        <feComposite in="WHITE_COLOR" in2="DILATED" operator="in" result="WHITE_BORDER"/>
+        <feDropShadow in="WHITE_BORDER" dx="0" dy="4.5" stdDeviation="2.8" flood-color="rgba(0,0,0,0.26)" result="SHADOW"/>
+        <feMerge>
+          <feMergeNode in="SHADOW"/>
+          <feMergeNode in="WHITE_BORDER"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+      <filter id="stickerWhiteOutlineHover" x="-35%" y="-35%" width="170%" height="170%">
+        <feMorphology in="SourceAlpha" result="DILATED" operator="dilate" radius="6.4"/>
+        <feFlood flood-color="#ffffff" result="WHITE_COLOR"/>
+        <feComposite in="WHITE_COLOR" in2="DILATED" operator="in" result="WHITE_BORDER"/>
+        <feDropShadow in="WHITE_BORDER" dx="0" dy="8" stdDeviation="5" flood-color="rgba(0,0,0,0.36)" result="SHADOW"/>
+        <feMerge>
+          <feMergeNode in="SHADOW"/>
+          <feMergeNode in="WHITE_BORDER"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- ==========================================================================
+       SOFTWARE CORKBOARD SECTION (Canva software_bg.png)
+       ========================================================================== -->
+  <section class="desk-canvas-software-wrap" id="software" aria-label="Software and Tools">
+    <div class="software-canvas-stage">
+      
+      <!-- Corkboard Background & Taped 'Software' Title Ribbon -->
+      <img 
+        src="assets/elements_canva/profile/software_bg.png" 
+        alt="Celyne's Software Corkboard Frame" 
+        class="software-bg-canvas"
+        draggable="false"
+      >
+
+      <!-- 12 Interactive Software Sticker Pins matching reference mockup -->
+      <div class="software-stickers-layer">
+        
+        <!-- 1. Unity (Top Left) -->
+        <button type="button" class="software-sticker-pin sticker-unity" data-name="Unity" aria-label="Unity">
+          <img src="assets/elements_canva/profile/software_logo/unity.png" alt="Unity Logo" class="software-logo-img" draggable="false">
+          <div class="software-tooltip-pill">
+            <span class="software-tooltip-title">Unity</span>
+            <span class="sticker-star-row"><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span></span>
+          </div>
+        </button>
+
+        <!-- 2. Adobe Animate (Upper Mid-Left) -->
+        <button type="button" class="software-sticker-pin sticker-animate" data-name="Adobe Animate" aria-label="Adobe Animate">
+          <img src="assets/elements_canva/profile/software_logo/animate.png" alt="Adobe Animate Logo" class="software-logo-img" draggable="false">
+          <div class="software-tooltip-pill">
+            <span class="software-tooltip-title">Animate</span>
+            <span class="sticker-star-row"><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-empty">★</span><span class="star-empty">★</span></span>
+          </div>
+        </button>
+
+        <!-- 3. Tableau (Upper Mid-Right) -->
+        <button type="button" class="software-sticker-pin sticker-tableau" data-name="Tableau" aria-label="Tableau">
+          <img src="assets/elements_canva/profile/software_logo/tableau.svg" alt="Tableau Logo" class="software-logo-img" draggable="false">
+          <div class="software-tooltip-pill">
+            <span class="software-tooltip-title">Tableau</span>
+            <span class="sticker-star-row"><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-empty">★</span><span class="star-empty">★</span></span>
+          </div>
+        </button>
+
+        <!-- 4. Microsoft Excel (Top Right) -->
+        <button type="button" class="software-sticker-pin sticker-excel" data-name="Microsoft Excel" aria-label="Microsoft Excel">
+          <img src="assets/elements_canva/profile/software_logo/excel.png" alt="Microsoft Excel Logo" class="software-logo-img" draggable="false">
+          <div class="software-tooltip-pill">
+            <span class="software-tooltip-title">Excel</span>
+            <span class="sticker-star-row"><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-empty">★</span></span>
+          </div>
+        </button>
+
+        <!-- 5. Canva (Middle Left) -->
+        <button type="button" class="software-sticker-pin sticker-canva" data-name="Canva" aria-label="Canva">
+          <img src="assets/elements_canva/profile/software_logo/canva.png" alt="Canva Logo" class="software-logo-img" draggable="false">
+          <div class="software-tooltip-pill">
+            <span class="software-tooltip-title">Canva</span>
+            <span class="sticker-star-row"><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span></span>
+          </div>
+        </button>
+
+        <!-- 6. Microsoft PowerPoint (Dead Center) -->
+        <button type="button" class="software-sticker-pin sticker-powerpoint" data-name="Microsoft PowerPoint" aria-label="Microsoft PowerPoint">
+          <img src="assets/elements_canva/profile/software_logo/ppt.png" alt="Microsoft PowerPoint Logo" class="software-logo-img" draggable="false">
+          <div class="software-tooltip-pill">
+            <span class="software-tooltip-title">PowerPoint</span>
+            <span class="sticker-star-row"><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-empty">★</span></span>
+          </div>
+        </button>
+
+        <!-- 7. CapCut (Lower Mid-Left) -->
+        <button type="button" class="software-sticker-pin sticker-capcut" data-name="CapCut" aria-label="CapCut">
+          <img src="assets/elements_canva/profile/software_logo/capcut.png" alt="CapCut Logo" class="software-logo-img" draggable="false">
+          <div class="software-tooltip-pill">
+            <span class="software-tooltip-title">CapCut</span>
+            <span class="sticker-star-row"><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span></span>
+          </div>
+        </button>
+
+        <!-- 8. Adobe Illustrator (Lower Mid-Right) -->
+        <button type="button" class="software-sticker-pin sticker-illustrator" data-name="Adobe Illustrator" aria-label="Adobe Illustrator">
+          <img src="assets/elements_canva/profile/software_logo/illustrator.png" alt="Adobe Illustrator Logo" class="software-logo-img" draggable="false">
+          <div class="software-tooltip-pill">
+            <span class="software-tooltip-title">Illustrator</span>
+            <span class="sticker-star-row"><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-empty">★</span><span class="star-empty">★</span></span>
+          </div>
+        </button>
+
+        <!-- 9. Adobe Audition (Middle Right) -->
+        <button type="button" class="software-sticker-pin sticker-audition" data-name="Adobe Audition" aria-label="Adobe Audition">
+          <img src="assets/elements_canva/profile/software_logo/audition.png" alt="Adobe Audition Logo" class="software-logo-img" draggable="false">
+          <div class="software-tooltip-pill">
+            <span class="software-tooltip-title">Audition</span>
+            <span class="sticker-star-row"><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-empty">★</span><span class="star-empty">★</span></span>
+          </div>
+        </button>
+
+        <!-- 10. Autodesk Maya (Bottom Left) -->
+        <button type="button" class="software-sticker-pin sticker-maya" data-name="Autodesk Maya" aria-label="Autodesk Maya">
+          <img src="assets/elements_canva/profile/software_logo/maya.png" alt="Autodesk Maya Logo" class="software-logo-img" draggable="false">
+          <div class="software-tooltip-pill">
+            <span class="software-tooltip-title">Maya</span>
+            <span class="sticker-star-row"><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-empty">★</span><span class="star-empty">★</span></span>
+          </div>
+        </button>
+
+        <!-- 11. Figma (Bottom Center) -->
+        <button type="button" class="software-sticker-pin sticker-figma" data-name="Figma" aria-label="Figma">
+          <img src="assets/elements_canva/profile/software_logo/figma.png" alt="Figma Logo" class="software-logo-img" draggable="false">
+          <div class="software-tooltip-pill">
+            <span class="software-tooltip-title">Figma</span>
+            <span class="sticker-star-row"><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-empty">★</span></span>
+          </div>
+        </button>
+
+        <!-- 12. Microsoft Word (Bottom Right) -->
+        <button type="button" class="software-sticker-pin sticker-word" data-name="Microsoft Word" aria-label="Microsoft Word">
+          <img src="assets/elements_canva/profile/software_logo/word.png" alt="Microsoft Word Logo" class="software-logo-img" draggable="false">
+          <div class="software-tooltip-pill">
+            <span class="software-tooltip-title">Word</span>
+            <span class="sticker-star-row"><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span></span>
+          </div>
+        </button>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Audio Script & Micro-interactions -->
+  <script src="desk-audio.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Interactive Speech Bubbles (Teamwork, Creative, Ambitious)
+      const bubbleTeamwork = document.getElementById('bubbleTeamwork');
+      const bubbleCreative = document.getElementById('bubbleCreative');
+      const bubbleAmbitious = document.getElementById('bubbleAmbitious');
+
+      function triggerBubbleBounce(bubbleEl, targetSectionId) {
+        if (!bubbleEl) return;
+        if (window.deskAudio) window.deskAudio.playPop(520);
+
+        bubbleEl.style.transform = 'scale(1.2) translateY(-6px)';
+        bubbleEl.style.boxShadow = '0 16px 36px rgba(59, 130, 246, 0.4)';
+        bubbleEl.style.color = '#2563eb';
+
+        setTimeout(() => {
+          bubbleEl.style.transform = '';
+          bubbleEl.style.boxShadow = '';
+          bubbleEl.style.color = '';
+        }, 500);
+
+        if (targetSectionId) {
+          const target = document.getElementById(targetSectionId);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      }
+
+      if (bubbleTeamwork) {
+        bubbleTeamwork.addEventListener('click', () => triggerBubbleBounce(bubbleTeamwork));
+        bubbleTeamwork.addEventListener('mouseenter', () => {
+          if (window.deskAudio) window.deskAudio.playHover();
+        });
+      }
+
+      if (bubbleCreative) {
+        bubbleCreative.addEventListener('click', () => triggerBubbleBounce(bubbleCreative, 'software'));
+        bubbleCreative.addEventListener('mouseenter', () => {
+          if (window.deskAudio) window.deskAudio.playHover();
+        });
+      }
+
+      if (bubbleAmbitious) {
+        bubbleAmbitious.addEventListener('click', () => {
+          triggerBubbleBounce(bubbleAmbitious);
+          setTimeout(() => {
+            window.location.href = 'projects-demo.html';
+          }, 350);
+        });
+        bubbleAmbitious.addEventListener('mouseenter', () => {
+          if (window.deskAudio) window.deskAudio.playHover();
+        });
+      }
+
+      // Interactive Software Sticker Pins Hover & Click Effects
+      const softwareStickers = document.querySelectorAll('.software-sticker-pin');
+      softwareStickers.forEach(sticker => {
+        sticker.addEventListener('mouseenter', () => {
+          if (window.deskAudio) window.deskAudio.playHover();
+        });
+
+        sticker.addEventListener('click', () => {
+          if (window.deskAudio) {
+            window.deskAudio.playPop(620);
+            setTimeout(() => window.deskAudio.playSparkle(), 120);
+          }
+          
+          sticker.style.transform = 'rotate(0deg) scale(1.35) translateY(-14px)';
+          sticker.style.filter = 'drop-shadow(0 22px 36px rgba(59, 130, 246, 0.5)) drop-shadow(0 0 16px rgba(255, 255, 255, 1))';
+          
+          setTimeout(() => {
+            sticker.style.transform = '';
+            sticker.style.filter = '';
+          }, 600);
+        });
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('.nav-item-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+          const targetId = link.getAttribute('href');
+          if (targetId && targetId.startsWith('#')) {
+            const targetEl = document.querySelector(targetId);
+            if (targetEl) {
+              e.preventDefault();
+              targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+          if (window.deskAudio) window.deskAudio.playClick();
+        });
+      });
+
+      // Scrollspy active nav update on scroll
+      const sections = ['hero', 'software'];
+      window.addEventListener('scroll', () => {
+        let currentSection = 'hero';
+        const scrollPos = window.scrollY + 180;
+        
+        sections.forEach(id => {
+          const el = document.getElementById(id);
+          if (el && el.offsetTop <= scrollPos) {
+            currentSection = id;
+          }
+        });
+      }, { passive: true });
+
+      // Scroll Down Indicator Click & Fade Logic
+      const scrollIndicator = document.getElementById('heroScrollIndicator');
+      if (scrollIndicator) {
+        scrollIndicator.addEventListener('click', (e) => {
+          e.preventDefault();
+          const target = document.getElementById('software');
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+            if (window.deskAudio) window.deskAudio.playClick();
+          }
+        });
+
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 80) {
+            scrollIndicator.classList.add('scrolled-out');
+          } else {
+            scrollIndicator.classList.remove('scrolled-out');
+          }
+        }, { passive: true });
+      }
+    });
+  </script>
+  <!-- Sound Audio System -->
+  <script src="desk-audio.js"></script>
+  <script>
+    const audio = window.deskAudio || new DeskAudio();
+    window.deskAudio = audio;
+    const soundToggleBtn = document.getElementById('soundToggleBtn');
+    const soundIcon = document.getElementById('soundIcon');
+    const soundLabel = document.getElementById('soundLabel');
+
+    function updateSoundBtnUI() {
+      if (!soundIcon || !soundLabel) return;
+      if (audio.isMuted) {
+        soundIcon.className = 'fas fa-volume-xmark';
+        soundLabel.textContent = 'Sound OFF';
+      } else {
+        soundIcon.className = 'fas fa-volume-high';
+        soundLabel.textContent = 'Sound ON';
+      }
+    }
+
+    if (soundToggleBtn) {
+      soundToggleBtn.addEventListener('click', () => {
+        audio.toggleMute();
+        updateSoundBtnUI();
+        if (!audio.isMuted) audio.playPop(700);
+      });
+      updateSoundBtnUI();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ==========================================================================
+     PORTFOLIO SITE CONTENT & WRITINGS
+     Edit the About bio, timeline experience, and skill lists here.
+     ========================================================================== -->
+<siteContent>
+
+  <!-- ==========================================================================
+       HERO & PROFILE SECTION
+       ========================================================================== -->
+  <profile>
+    <name>Jocelyne Audrey Tando</name>
+    <role>Game Developer &amp; UI/UX Designer</role>
+    <education>Xiamen University Malaysia (Class of 2027)</education>
+    <tagline>Crafting worlds at the intersection of game engineering, immersive UI/UX, and cinematic storytelling.</tagline>
+  </profile>
+
+  <!-- ==========================================================================
+       ABOUT & BIO SECTION
+       ========================================================================== -->
+  <about>
+    <sectionTitle>Engineering Experiences &amp; Visual Worlds</sectionTitle>
+    <paragraphs>
+      <p>As a Digital Media Technology engineering student at Xiamen University Malaysia, my focus spans from the technical architecture of game mechanics to the nuances of user flow and cinematic direction.</p>
+      <p>Whether it's programming a PC game in Unity, designing an intuitive mobile app prototype in Figma, building 3D environments in Blender, or directing dramatic animation cutscenes, I thrive on bringing imaginative ideas into tangible, responsive reality.</p>
+      <p>I am constantly exploring new game engines, web interaction paradigms, and real-time rendering technologies to push creative boundaries.</p>
+    </paragraphs>
+    <stats>
+      <stat>
+        <number>06+</number>
+        <title>Featured Projects</title>
+        <desc>Games, Mobile Apps &amp; 3D Worlds</desc>
+      </stat>
+      <stat>
+        <number>04</number>
+        <title>Core Disciplines</title>
+        <desc>Game Dev, UI/UX, 3D Art, Animation</desc>
+      </stat>
+      <stat>
+        <number>100%</number>
+        <title>Engineering Focus</title>
+        <desc>Code Quality, Performance &amp; Polish</desc>
+      </stat>
+      <stat>
+        <number>2027</number>
+        <title>Expected Grad</title>
+        <desc>XMUM Digital Media Technology</desc>
+      </stat>
+    </stats>
+  </about>
+
+  <!-- ==========================================================================
+       SKILLS & CAPABILITIES
+       ========================================================================== -->
+  <skills>
+    <category name="Game Development &amp; Real-time">
+      <skill>Unity 3D / 2D</skill>
+      <skill>C# Scripting</skill>
+      <skill>Cinemachine &amp; Timeline</skill>
+      <skill>Physics &amp; State Machines</skill>
+      <skill>Photon PUN Multiplayer</skill>
+      <skill>Shader Graph</skill>
+    </category>
+    <category name="UI/UX &amp; Web Technologies">
+      <skill>Figma Prototyping</skill>
+      <skill>Design Systems</skill>
+      <skill>User Research &amp; Wireframing</skill>
+      <skill>HTML5 / CSS3 / JavaScript</skill>
+      <skill>Responsive Web Design</skill>
+      <skill>Three.js / WebGL Basics</skill>
+    </category>
+    <category name="3D Art &amp; Asset Creation">
+      <skill>Blender 3D</skill>
+      <skill>Substance 3D Painter</skill>
+      <skill>PBR Texturing</skill>
+      <skill>Modular Environment Art</skill>
+      <skill>Lighting &amp; Volumetrics</skill>
+      <skill>Low-Poly / High-Poly Baking</skill>
+    </category>
+    <category name="Animation &amp; Audio Post">
+      <skill>Adobe Premiere Pro</skill>
+      <skill>Adobe After Effects</skill>
+      <skill>Storyboarding &amp; Staging</skill>
+      <skill>2D Keyframing</skill>
+      <skill>Color Grading &amp; Compositing</skill>
+      <skill>Spatial Audio Staging</skill>
+    </category>
+  </skills>
+
+  <!-- ==========================================================================
+       CONTACT CHANNELS & SOCIAL LINKS
+       ========================================================================== -->
+  <contact>
+    <email>jocelyneaudreytando@gmail.com</email>
+    <linkedin>https://www.linkedin.com/in/jocelyne-audrey-tando-7a840b379/</linkedin>
+    <whatsapp>+60 165432530</whatsapp>
+    <instagram>@jocelyneaudrey_</instagram>
+    <github>https://github.com/celyne</github>
+  </contact>
+
+</siteContent>

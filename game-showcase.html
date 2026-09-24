@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Runaway Timmy: 3D Mobile Endless Runner — Celyne's Portfolio</title>
+  <meta name="description" content="Case study of Runaway Timmy: a cartoon-style 3D mobile endless runner created in Unity 3D with C#, dynamic obstacles, and stackable power-ups.">
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏃</text></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="showcase-style.css">
+</head>
+<body>
+
+  <!-- Fixed Wooden Desk Background -->
+  <div class="desk-surface"></div>
+
+  <!-- Ambient Doodles on Desk -->
+  <div class="desk-doodle doodle-h1" aria-hidden="true">♡</div>
+  <div class="desk-doodle doodle-h2" aria-hidden="true">♡</div>
+  <div class="desk-doodle doodle-s1" aria-hidden="true">✦</div>
+  <div class="desk-doodle doodle-s2" aria-hidden="true">✦</div>
+
+  <!-- Top Navigation Bar -->
+  <header class="celyne-top-nav">
+    <a href="profile-demo.html" class="nav-brand-sun" title="Celyne's Home">
+      <svg class="sun-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="12" fill="#fef08a" stroke="#f59e0b" stroke-width="2.5"/>
+        <line x1="20" y1="2" x2="20" y2="5" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="20" y1="35" x2="20" y2="38" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="2" y1="20" x2="5" y2="20" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="35" y1="20" x2="38" y2="20" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="7" y1="7" x2="10" y2="10" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="30" y1="30" x2="33" y2="33" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="7" y1="33" x2="10" y2="30" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="30" y1="10" x2="33" y2="7" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="16" cy="19" r="1.5" fill="#78350f"/>
+        <circle cx="24" cy="19" r="1.5" fill="#78350f"/>
+        <path d="M17 23 Q20 26 23 23" stroke="#78350f" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span class="nav-brand-name">Celyne</span>
+    </a>
+
+    <nav class="nav-menu-links">
+      <a href="index.html" class="nav-item-link" title="Desk View">Home</a>
+      <a href="profile-demo.html" class="nav-item-link">Profile</a>
+      <a href="projects-demo.html" class="nav-item-link nav-active">Projects</a>
+      <a href="awards-demo.html" class="nav-item-link">Awards</a>
+      <a href="profile-demo.html#contact" class="nav-item-link">Contact</a>
+    </nav>
+
+    <div class="nav-right-actions">
+      <a href="projects-demo.html" class="nav-btn-pill">
+        <i class="fas fa-arrow-left"></i>
+        <span>Back to Projects</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Showcase Content -->
+  <main class="showcase-stage-container">
+    
+    <!-- BOX 1: Header, Tagline & Meta Chips -->
+    <section class="showcase-box has-washi has-washi-yellow">
+      <div class="box-header-top">
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <span class="category-tag-pill pill-amber">
+            <i class="fas fa-gamepad"></i> 3D Mobile Endless Runner
+          </span>
+          <span class="category-tag-pill pill-blue">
+            <i class="fab fa-unity"></i> Unity 3D &amp; C#
+          </span>
+        </div>
+        <span class="category-tag-pill pill-green">
+          <i class="fas fa-bolt"></i> Mobile Gameplay
+        </span>
+      </div>
+
+      <h1 class="showcase-title-main">
+        Runaway Timmy: 3D Mobile Endless Runner
+      </h1>
+
+      <div class="showcase-quote-banner quote-amber">
+        <i class="fas fa-quote-left" style="font-size: 1.1rem; opacity: 0.8;"></i>
+        <span>"Run fast, dodge Granny's broom, grab the coins, and escape through the town!"</span>
+      </div>
+
+      <p class="showcase-lead-summary">
+        Inspired by classic endless runners like <em>Subway Surfers</em>, <strong>Runaway Timmy</strong> puts players in control of a mischievous boy dashing through a vibrant European town. Escape an enraged Granny, leap over barricades, slide under market arches, and swim across canals while grabbing stackable power-ups!
+      </p>
+
+      <!-- Quick Meta Chips -->
+      <div class="meta-chips-strip">
+        <div class="meta-chip-item"><i class="fas fa-user-gear"></i> Role: Lead Game Developer &amp; Tech Artist</div>
+        <div class="meta-chip-item"><i class="fas fa-mobile-screen"></i> Platform: Mobile (Android / iOS) &amp; PC</div>
+        <div class="meta-chip-item"><i class="fab fa-unity"></i> Engine: Unity 3D, C#, Cinemachine</div>
+        <div class="meta-chip-item"><i class="fas fa-trophy"></i> Features: 3-Lane Swiping, Swimming, 5 Power-Ups</div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="action-buttons-strip">
+        <a href="https://youtu.be/maJktk8v5lA" target="_blank" rel="noopener noreferrer" class="btn-aesthetic-primary btn-aesthetic-blue">
+          <i class="fas fa-play-circle"></i>
+          <span>Watch Full Gameplay Video</span>
+          <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.78rem;"></i>
+        </a>
+        <a href="https://youtu.be/h-d8EciMMEw" target="_blank" rel="noopener noreferrer" class="btn-aesthetic-secondary">
+          <i class="fab fa-youtube" style="color: #ef4444;"></i>
+          <span>Devlog &amp; Architecture Explanation</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- BOX 2: Centerpiece Mobile Video Player -->
+    <section class="showcase-box box-video-player">
+      <div class="video-frame-inner mobile-aspect">
+        <video id="timmyVideoPlayer" loop muted playsinline autoplay preload="auto" poster="assets/elements_canva/projects/timmy_cover.png">
+          <source src="assets/videos_showcase/game_videos/timmy_gameplay.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+        <button class="audio-toggle-floating" data-target-video="timmyVideoPlayer" title="Toggle Sound">
+          <i class="fas fa-volume-xmark"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- BOX 3: The 3 Core Pillars (Clean, Punchy, Simple Boxes) -->
+    <section class="showcase-box">
+      <h2 class="box-subheading">
+        <i class="fas fa-cubes" style="color: #f59e0b;"></i> Core Game Highlights
+      </h2>
+
+      <div class="pillars-grid-3">
+        
+        <!-- Pillar 1: Story & Objective -->
+        <div class="pillar-card">
+          <div class="pillar-header">
+            <div class="pillar-icon-wrap" style="background: #fef3c7; color: #d97706;">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <h3 class="pillar-title">Story &amp; Goal</h3>
+          </div>
+          <p class="pillar-desc">
+            Timmy steals his Granny's coin jar to buy a brand new gaming console. When caught, the chase begins through the cobblestone streets!
+          </p>
+          <ul class="pillar-list">
+            <li><i class="fas fa-check" style="color: #d97706;"></i> <span>Escape Granny's relentless pursuit</span></li>
+            <li><i class="fas fa-check" style="color: #d97706;"></i> <span>Modular European town generation</span></li>
+            <li><i class="fas fa-check" style="color: #d97706;"></i> <span>Climb the global high-score ladder</span></li>
+          </ul>
+        </div>
+
+        <!-- Pillar 2: Controls & Traversal -->
+        <div class="pillar-card">
+          <div class="pillar-header">
+            <div class="pillar-icon-wrap" style="background: #dbeafe; color: #2563eb;">
+              <i class="fas fa-hand-pointer"></i>
+            </div>
+            <h3 class="pillar-title">Swipe Controls</h3>
+          </div>
+          <p class="pillar-desc">
+            Responsive mobile swipe mechanics engineered for split-second reflexes and fluid momentum:
+          </p>
+          <ul class="pillar-list">
+            <li><i class="fas fa-arrow-up" style="color: #2563eb;"></i> <span><strong>Swipe Up:</strong> Jump over low hurdles</span></li>
+            <li><i class="fas fa-arrow-down" style="color: #2563eb;"></i> <span><strong>Swipe Down:</strong> Slide under arches</span></li>
+            <li><i class="fas fa-arrows-left-right" style="color: #2563eb;"></i> <span><strong>Swipe Left/Right:</strong> Switch lanes</span></li>
+            <li><i class="fas fa-water" style="color: #06b6d4;"></i> <span><strong>Canal Swim:</strong> Dodge river buoys</span></li>
+          </ul>
+        </div>
+
+        <!-- Pillar 3: Power-Ups & Health -->
+        <div class="pillar-card">
+          <div class="pillar-header">
+            <div class="pillar-icon-wrap" style="background: #dcfce7; color: #16a34a;">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3 class="pillar-title">Items &amp; Lives</h3>
+          </div>
+          <p class="pillar-desc">
+            Survive using stackable power-ups collected from mystery crates scattered on roads:
+          </p>
+          <ul class="pillar-list">
+            <li><i class="fas fa-heart" style="color: #ef4444;"></i> <span><strong>3 Hearts:</strong> Restorable with Heal drops</span></li>
+            <li><i class="fas fa-magnet" style="color: #8b5cf6;"></i> <span><strong>Coin Magnet:</strong> Attracts all gold</span></li>
+            <li><i class="fas fa-shield" style="color: #3b82f6;"></i> <span><strong>Shield:</strong> Absorbs 1 fatal hit</span></li>
+            <li><i class="fas fa-person-snowboarding" style="color: #f59e0b;"></i> <span><strong>Skateboard:</strong> High-speed immunity</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BOX 4: YouTube Devlog & Walkthrough Card -->
+    <div class="youtube-banner-box">
+      <div class="youtube-banner-info">
+        <div class="youtube-brand-icon">
+          <i class="fab fa-youtube"></i>
+        </div>
+        <div class="youtube-banner-text">
+          <h3>Full Devlog &amp; Gameplay Recordings on YouTube</h3>
+          <p>Watch the complete behind-the-scenes system breakdown, C# architecture, and gameplay walkthrough.</p>
+        </div>
+      </div>
+      <div class="youtube-buttons-row">
+        <a href="https://youtu.be/h-d8EciMMEw" target="_blank" rel="noopener noreferrer" class="btn-youtube-red">
+          <i class="fab fa-youtube"></i> Explanation &amp; Devlog
+        </a>
+        <a href="https://youtu.be/maJktk8v5lA" target="_blank" rel="noopener noreferrer" class="btn-youtube-outline">
+          <i class="fas fa-play-circle"></i> Gameplay Walkthrough
+        </a>
+      </div>
+    </div>
+
+    <!-- BOX 5: Project Navigation -->
+    <section class="showcase-box box-next-navigation">
+      <div>
+        <a href="projects-demo.html" class="next-nav-pill">
+          <i class="fas fa-arrow-left"></i> All Projects
+        </a>
+      </div>
+      <div class="next-nav-links">
+        <span style="font-size: 0.88rem; color: #64748b; font-weight: 600;">Next Games:</span>
+        <a href="tomato-showcase.html" class="next-nav-pill">
+          <i class="fas fa-circle-dot" style="color: #ef4444;"></i> The Lost Tomato
+        </a>
+        <a href="sea-vagabond-showcase.html" class="next-nav-pill">
+          <i class="fas fa-anchor" style="color: #0284c7;"></i> Sea Vagabond
+        </a>
+        <a href="we-were-mummies-showcase.html" class="next-nav-pill">
+          <i class="fas fa-pyramid" style="color: #d97706;"></i> We Were Mummies
+        </a>
+        <a href="kitchin-showcase.html" class="next-nav-pill">
+          <i class="fas fa-kitchen-set" style="color: #10b981;"></i> Kitchin UI/UX
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="showcase-helper.js"></script>
+</body>
+</html>
