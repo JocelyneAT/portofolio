@@ -1324,6 +1324,34 @@ body {
   box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
 }
 
+.btn-upper-certificate {
+  background: #ffffff;
+  color: #92400e !important;
+  border: 1.5px solid #fcd34d;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.15);
+}
+
+.btn-upper-certificate:hover {
+  background: #fffbeb;
+  border-color: #f59e0b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(245, 158, 11, 0.25);
+}
+
+.btn-upper-cutscenes {
+  background: #ffffff;
+  color: #0369a1 !important;
+  border: 1.5px solid #7dd3fc;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.15);
+}
+
+.btn-upper-cutscenes:hover {
+  background: #f0f9ff;
+  border-color: #0284c7;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(2, 132, 199, 0.25);
+}
+
 .btn-external-icon {
   font-size: 0.72rem;
   opacity: 0.85;

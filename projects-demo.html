@@ -227,7 +227,7 @@
     <div class="directory-grid" id="directoryCardsGrid">
       
       <!-- 1. Sea Vagabond -->
-      <a href="sea-vagabond-showcase.html" class="showcase-card" data-cat="game">
+      <a href="#laptopStage" class="showcase-card" data-cat="game" id="showcaseSeaVagabondCard">
         <div class="showcase-banner banner-game">
           <i class="fas fa-anchor banner-icon" style="color: #312e81;"></i>
           <span class="banner-category-badge">Game Dev</span>
@@ -241,12 +241,12 @@
             <span class="showcase-tag">Award Winner</span>
             <span class="showcase-tag">Team Lead</span>
           </div>
-          <span class="showcase-link-btn">Explore Showcase <i class="fas fa-arrow-right"></i></span>
+          <span class="showcase-link-btn" style="color: #6366f1;">View in Workspace <i class="fas fa-arrow-right"></i></span>
         </div>
       </a>
 
       <!-- 2. We Were Mummies -->
-      <a href="we-were-mummies-showcase.html" class="showcase-card" data-cat="game">
+      <a href="#laptopStage" class="showcase-card" data-cat="game" id="showcaseMummiesCard">
         <div class="showcase-banner banner-game">
           <i class="fas fa-pyramid banner-icon" style="color: #9a3412;"></i>
           <span class="banner-category-badge">Game Dev</span>
@@ -260,12 +260,12 @@
             <span class="showcase-tag">Multiplayer Co-op</span>
             <span class="showcase-tag">Puzzle Design</span>
           </div>
-          <span class="showcase-link-btn">Explore Showcase <i class="fas fa-arrow-right"></i></span>
+          <span class="showcase-link-btn" style="color: #6366f1;">View in Workspace <i class="fas fa-arrow-right"></i></span>
         </div>
       </a>
 
       <!-- 3. Runaway Timmy -->
-      <a href="game-showcase.html" class="showcase-card" data-cat="game">
+      <a href="#laptopStage" class="showcase-card" data-cat="game" id="showcaseTimmyCard">
         <div class="showcase-banner banner-game">
           <i class="fas fa-person-running banner-icon" style="color: #4338ca;"></i>
           <span class="banner-category-badge">Game Dev</span>
@@ -279,12 +279,12 @@
             <span class="showcase-tag">Mobile</span>
             <span class="showcase-tag">Blender</span>
           </div>
-          <span class="showcase-link-btn">Explore Showcase <i class="fas fa-arrow-right"></i></span>
+          <span class="showcase-link-btn" style="color: #6366f1;">View in Workspace <i class="fas fa-arrow-right"></i></span>
         </div>
       </a>
 
       <!-- 4. The Lost Tomato -->
-      <a href="tomato-showcase.html" class="showcase-card" data-cat="game">
+      <a href="#laptopStage" class="showcase-card" data-cat="game" id="showcaseTomatoCard">
         <div class="showcase-banner banner-game">
           <i class="fas fa-circle-dot banner-icon" style="color: #be123c;"></i>
           <span class="banner-category-badge">Game Dev</span>
@@ -297,12 +297,12 @@
             <span class="showcase-tag">Physics Ball</span>
             <span class="showcase-tag">3D Platformer</span>
           </div>
-          <span class="showcase-link-btn">Explore Showcase <i class="fas fa-arrow-right"></i></span>
+          <span class="showcase-link-btn" style="color: #6366f1;">View in Workspace <i class="fas fa-arrow-right"></i></span>
         </div>
       </a>
 
       <!-- 5. Havenport Isle 3D Island -->
-      <a href="sea-vagabond-showcase.html" class="showcase-card" data-cat="environment">
+      <a href="#laptopStage" class="showcase-card" data-cat="environment" id="showcaseHavenportCard">
         <div class="showcase-banner banner-env">
           <i class="fas fa-mountain-sun banner-icon" style="color: #15803d;"></i>
           <span class="banner-category-badge">Environment</span>
@@ -316,7 +316,7 @@
             <span class="showcase-tag">Level Art</span>
             <span class="showcase-tag">Lighting</span>
           </div>
-          <span class="showcase-link-btn">Explore Breakdown <i class="fas fa-arrow-right"></i></span>
+          <span class="showcase-link-btn" style="color: #15803d;">View in Workspace <i class="fas fa-arrow-right"></i></span>
         </div>
       </a>
 
@@ -340,7 +340,7 @@
       </a>
 
       <!-- 7. Kitchin Mobile UI/UX -->
-      <a href="kitchin-showcase.html" class="showcase-card" data-cat="uiux">
+      <a href="#laptopStage" class="showcase-card" data-cat="uiux" id="showcaseKitchinCard">
         <div class="showcase-banner banner-uiux" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
           <i class="fas fa-mobile-screen banner-icon" style="color: #ffffff;"></i>
           <span class="banner-category-badge" style="background: rgba(255, 255, 255, 0.25); color: #fff;">HCI &amp; UI/UX</span>
@@ -354,7 +354,7 @@
             <span class="showcase-tag">SUS 85.4</span>
             <span class="showcase-tag">Interactive Prototype</span>
           </div>
-          <span class="showcase-link-btn" style="color: #059669;">Explore Case Study <i class="fas fa-arrow-right"></i></span>
+          <span class="showcase-link-btn" style="color: #059669;">View in Workspace <i class="fas fa-arrow-right"></i></span>
         </div>
       </a>
 
@@ -518,8 +518,7 @@
             badge: 'Physics Platformer',
             image: 'assets/elements_canva/projects/tomato_cover.png',
             video: 'assets/videos_showcase/game_videos/tomato_gameplay.mp4',
-            gameplayUrl: 'https://youtu.be/utgsa_6fV0M',
-            link: 'tomato-showcase.html'
+            gameplayUrl: 'https://youtu.be/utgsa_6fV0M'
           },
           {
             title: 'Runaway Timmy',
@@ -528,20 +527,18 @@
             image: 'assets/elements_canva/projects/timmy_cover.png',
             video: 'assets/videos_showcase/game_videos/timmy_gameplay.mp4',
             gameplayUrl: 'https://youtu.be/maJktk8v5lA',
-            explanationUrl: 'https://youtu.be/h-d8EciMMEw',
-            link: 'game-showcase.html'
+            explanationUrl: 'https://youtu.be/h-d8EciMMEw'
           },
           {
             title: 'Sea Vagabond',
             subtitle: '3D Pirate Action-Adventure',
-            badge: 'Award Winner',
+            badge: 'Best Game Award Winner',
             image: 'assets/elements_canva/projects/seavagabond_cover.png',
             video: 'assets/videos_showcase/game_videos/seavagabond_gameplay.mp4',
             gameplayUrl: 'https://youtu.be/BEFC1k0lOBw',
             certificate: 'assets/photo_showcase/seavagabond_certificate.png',
             certificateTitle: '🏆 Best Game Project Award Certificate',
-            certificateDesc: 'Official Project Exhibition Award Certificate for Worldbuilding, Dialogue & Visual Art.',
-            link: 'sea-vagabond-showcase.html'
+            certificateDesc: 'Official Project Exhibition Award Certificate for Worldbuilding, Dialogue & Visual Art.'
           },
           {
             title: 'We Were Mummies',
@@ -549,8 +546,7 @@
             badge: 'Multiplayer Co-op',
             image: 'assets/elements_canva/projects/mummies_cover.png',
             video: 'assets/videos_showcase/game_videos/mummy_gameplay.mp4',
-            gameplayUrl: 'https://youtu.be/WZfB8VD5NtY',
-            link: 'we-were-mummies-showcase.html'
+            gameplayUrl: 'https://youtu.be/WZfB8VD5NtY'
           },
           {
             title: 'Code Eternis',
@@ -562,8 +558,7 @@
             certificateDesc: 'Official Digital Media Technology Exhibition Award Certificate of Excellence.',
             additionalPhoto: 'assets/photo_showcase/code_dmtshowcase.png',
             additionalPhotoTitle: '📸 DMT Live Exhibition Showcase',
-            additionalPhotoDesc: 'Live presentation booth and player exhibition during the campus tech expo.',
-            link: 'game-showcase.html'
+            additionalPhotoDesc: 'Live presentation booth and player exhibition during the campus tech expo.'
           },
           {
             title: 'Mario Arena: Luma Star Wars',
@@ -571,8 +566,7 @@
             badge: 'Unity 3D Action / FPS',
             image: 'assets/elements_canva/projects/mario_cover.png',
             video: 'assets/videos_showcase/game_videos/mario_gameplay.mp4',
-            gameplayUrl: 'https://youtu.be/Ie3MEz1A0PE',
-            link: 'https://youtu.be/Ie3MEz1A0PE'
+            gameplayUrl: 'https://youtu.be/Ie3MEz1A0PE'
           }
         ]
       },
@@ -584,24 +578,21 @@
             subtitle: '3D Level & Environmental Design',
             badge: '3D Environment',
             image: 'assets/elements_canva/projects/pirate_cover.png',
-            video: 'assets/videos_showcase/game_videos/pirate_environment.mp4',
-            link: 'assets/videos_showcase/game_videos/pirate_environment.mp4'
+            video: 'assets/videos_showcase/game_videos/pirate_environment.mp4'
           },
           {
             title: 'Abandoned School',
             subtitle: 'Atmospheric Horror Interior Design',
             badge: 'Level Design',
             image: 'assets/elements_canva/projects/school_cover.png',
-            video: 'assets/videos_showcase/game_videos/environment_school.mp4',
-            link: 'assets/videos_showcase/game_videos/environment_school.mp4'
+            video: 'assets/videos_showcase/game_videos/environment_school.mp4'
           },
           {
             title: 'Fantasy Dwarf Hut',
             subtitle: 'Stylized Foliage & Modular Prop Art',
             badge: 'Stylized 3D',
             image: 'assets/elements_canva/projects/hut_cover.png',
-            video: 'assets/videos_showcase/game_videos/environment_hut.mp4',
-            link: 'assets/videos_showcase/game_videos/environment_hut.mp4'
+            video: 'assets/videos_showcase/game_videos/environment_hut.mp4'
           }
         ]
       },
@@ -616,7 +607,6 @@
             image: 'assets/elements_canva/projects/kitchin_cover.png',
             poster: 'assets/elements_canva/projects/kitchin_poster.png',
             video: 'assets/videos_showcase/uiux_videos/kitchin_video.mp4',
-            link: 'kitchin-showcase.html',
             figma: 'https://www.figma.com/proto/Q5gTXsWb1tPzoU5ZLWw5bB/HCI-Prototype?node-id=0-1&p=f&viewport=-1074%2C1054%2C1&t=OS76Hi7PPhiikFMD-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=149%3A87',
             software: {
               name: 'Figma',
@@ -1764,7 +1754,176 @@
         // -------------------------------------------------------------
         // 4. GAME PROJECTS (The Lost Tomato, Runaway Timmy, Sea Vagabond, We Were Mummies, Code Eternis)
         // -------------------------------------------------------------
-        } else if (cat === 'game' || p.title === 'The Lost Tomato' || p.title === 'Runaway Timmy' || p.title === 'Sea Vagabond' || p.title === 'We Were Mummies' || p.title === 'Code Eternis') {
+        // -------------------------------------------------------------
+        // 4A. SEA VAGABOND (Matching Screenshot Content in macOS Pop-up Style)
+        // -------------------------------------------------------------
+        } else if (p.title === 'Sea Vagabond' || (p.title && p.title.includes('Sea Vagabond'))) {
+          
+          modalDynamicContent.innerHTML = `
+            <!-- 1. Main Project Title Header -->
+            <div class="modal-project-header-block">
+              <h1 class="modal-headline-title">Sea Vagabond: 3D Pirate Adventure</h1>
+            </div>
+
+            <!-- 2. Subhead Row: Badges & Action Buttons -->
+            <div class="modal-subhead-row">
+              <div class="modal-tags-group">
+                <div class="tool-tag class-tag" style="background:#e0f2fe; border-color:#bae6fd; color:#0369a1; padding: 6px 14px; font-weight: 700;">
+                  <i class="fas fa-anchor"></i>
+                  <span>3D Action-Adventure · Team Project</span>
+                </div>
+                <div class="tool-tag team-tag" style="background:#fef3c7; border-color:#fde68a; color:#b45309; padding: 6px 14px; font-weight: 700;">
+                  <i class="fas fa-trophy" style="color:#d97706;"></i>
+                  <span>Best Game Award Winner</span>
+                </div>
+              </div>
+
+              <!-- Gameplay Video, Cutscenes Video & Award Certificate Action Buttons -->
+              <div class="modal-video-buttons-group">
+                <a href="https://youtu.be/BEFC1k0lOBw" target="_blank" rel="noopener noreferrer" class="btn-upper-video btn-upper-gameplay" style="background: linear-gradient(135deg, #2563eb, #1d4ed8); border-color: #1d4ed8;" title="Watch Full Gameplay Video">
+                  <i class="fab fa-youtube"></i>
+                  <span>Watch Full Gameplay Video</span>
+                  <i class="fas fa-arrow-up-right-from-square btn-external-icon"></i>
+                </a>
+                <button type="button" class="btn-upper-video btn-upper-cutscenes" id="btnUpperCutscenes" title="View In-Game Cutscenes Video">
+                  <i class="fas fa-clapperboard" style="color:#0284c7;"></i>
+                  <span>Cutscenes Video</span>
+                </button>
+                <button type="button" class="btn-upper-video btn-upper-certificate" data-zoom-src="assets/photo_showcase/seavagabond_certificate.png" title="View Award Certificate">
+                  <i class="fas fa-award" style="color:#f59e0b;"></i>
+                  <span>View Award Certificate</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Story Quote Banner & Summary from User Screenshot -->
+            <div style="background: #f0f7ff; border-left: 4px solid #3b82f6; border-radius: 12px; padding: 14px 18px; margin: 16px 0 14px; display: flex; align-items: center; gap: 12px; font-style: italic; color: #1e3a8a; font-weight: 500; font-size: 0.95rem; line-height: 1.55;">
+              <i class="fas fa-quote-left" style="color: #3b82f6; font-size: 1.2rem; flex-shrink: 0;"></i>
+              <span>"Across 5 island realms, brave the uncharted seas to fulfill a dying father's pirate legacy."</span>
+            </div>
+
+            <p style="font-size: 0.96rem; color: #334155; line-height: 1.7; margin-bottom: 14px;">
+              An ambitious team-built 3D pirate action-adventure game in Unity. Guide the young pirate captain across archipelago realms, complete tutorial quests on Havenport Isle, interact with voiced characters, and recover the mystical stones to unlock legendary secrets.
+            </p>
+
+            <!-- Quick Meta Chips from User Screenshot -->
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
+              <span class="chip-item" style="background: #f8fafc; color: #334155; border: 1.5px solid #e2e8f0; padding: 7px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 7px;"><i class="fas fa-user-pen" style="color: #2563eb;"></i> My Focus: Havenport Isle, Dialogue, Cutscenes</span>
+              <span class="chip-item" style="background: #f8fafc; color: #334155; border: 1.5px solid #e2e8f0; padding: 7px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 7px;"><i class="fab fa-unity" style="color: #2563eb;"></i> Engine: Unity 3D &amp; C++</span>
+              <span class="chip-item" style="background: #f8fafc; color: #334155; border: 1.5px solid #e2e8f0; padding: 7px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 7px;"><i class="fas fa-users" style="color: #2563eb;"></i> Team: 5 Members</span>
+              <span class="chip-item" style="background: #fef3c7; color: #92400e; border: 1.5px solid #fde68a; padding: 7px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 7px;"><i class="fas fa-trophy" style="color: #d97706;"></i> Honor: Project Exhibition Award</span>
+            </div>
+
+            <!-- Centerpiece Gameplay Video Stage -->
+            <div class="video-fullscreen-card">
+              <div class="video-fullscreen-frame">
+                <video id="modalVideoPlayer" controls playsinline preload="auto" poster="assets/elements_canva/projects/seavagabond_cover.png">
+                  <source src="assets/videos_showcase/game_videos/seavagabond_gameplay.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+            <!-- Duality Grid: Story & Setting vs Core Mechanics -->
+            <div class="showcase-duality-grid">
+              <!-- Card 1: Havenport Isle & Quests -->
+              <div class="duality-card story-card">
+                <div class="duality-card-header">
+                  <div class="duality-icon-bubble" style="background:#eff6ff; color:#2563eb;">
+                    <i class="fas fa-map-location-dot"></i>
+                  </div>
+                  <h4 class="duality-title">Havenport Isle &amp; Quests</h4>
+                </div>
+                <p class="duality-desc" style="margin-bottom:12px;">As lead designer for <strong>Area 1 (Havenport Isle)</strong>, created the starting harbor pier, tropical foliage, atmospheric ocean lighting, branching dialogues, and tutorial quest cinematics in Unity 3D &amp; C++.</p>
+                <div style="background: #eff6ff; border: 1.5px solid #bfdbfe; border-radius: 12px; padding: 12px 16px;">
+                  <strong style="color: #1d4ed8; font-size: 0.88rem; display: block; margin-bottom: 6px;">Key Responsibilities:</strong>
+                  <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.84rem; color: #334155; display: flex; flex-direction: column; gap: 6px;">
+                    <li>🏝️ <strong>Island Environment Art:</strong> Pier docks, tropical foliage, atmospheric ocean lighting.</li>
+                    <li>💬 <strong>Branching Dialogues:</strong> Writing NPC conversations and tutorial quest interactions.</li>
+                    <li>🎬 <strong>Cinematic Cutscenes:</strong> Directing camera choreography and character staging.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Card 2: Core Game Mechanics -->
+              <div class="duality-card role-card">
+                <div class="duality-card-header">
+                  <div class="duality-icon-bubble" style="background:#ecfdf5; color:#059669;">
+                    <i class="fas fa-compass"></i>
+                  </div>
+                  <h4 class="duality-title">Core Game Mechanics</h4>
+                </div>
+                <div class="role-focus-chips" style="margin-top:6px;">
+                  <span class="chip-item"><i class="fas fa-ship" style="color:#0284c7;"></i> Open Ocean Sailing Buoyancy</span>
+                  <span class="chip-item"><i class="fas fa-person-hiking" style="color:#16a34a;"></i> 3D Island Exploration</span>
+                  <span class="chip-item"><i class="fas fa-comments" style="color:#8b5cf6;"></i> Branching NPC Dialogue</span>
+                  <span class="chip-item"><i class="fas fa-gem" style="color:#d97706;"></i> Mystical Stone Quest System</span>
+                  <span class="chip-item"><i class="fas fa-water" style="color:#0284c7;"></i> Ocean Water Physics Shader</span>
+                  <span class="chip-item"><i class="fas fa-award" style="color:#f59e0b;"></i> Best Game Award Honor</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cinematic In-Game Cutscenes Showcase Card -->
+            <div class="duality-card" id="seaCutscenesSection" style="background:#ffffff; border:1.5px solid #e2e8f0; border-top:4px solid #0284c7; margin-bottom: 24px; padding: 22px;">
+              <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 14px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                  <div class="duality-icon-bubble" style="background:#e0f2fe; color:#0284c7; width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.15rem;">
+                    <i class="fas fa-clapperboard"></i>
+                  </div>
+                  <div>
+                    <h4 class="duality-title" style="margin: 0; font-size: 1.18rem; color: #0f172a;">Cinematic In-Game Cutscenes</h4>
+                    <p style="font-size: 0.86rem; color: #64748b; margin: 3px 0 0;">Directed camera choreography, NPC dialogue staging, and atmospheric cinematic lighting in Unity 3D</p>
+                  </div>
+                </div>
+
+                <!-- Interactive Cutscene Switcher Pills -->
+                <div class="cutscene-selector-pills" style="display: flex; gap: 6px; flex-wrap: wrap;">
+                  <button type="button" class="cutscene-pill-btn active" data-cutscene-src="assets/videos_showcase/game_videos/cutscenes/sea_cutscene1.mp4" data-poster="assets/photo_showcase/cutscene1_10s.jpg" style="padding: 6px 14px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; border: 1.5px solid #0284c7; background: #0284c7; color: #fff; cursor: pointer; transition: all 0.2s;">
+                    <i class="fas fa-film" style="font-size: 0.72rem; margin-right: 4px;"></i> Cutscene 1
+                  </button>
+                  <button type="button" class="cutscene-pill-btn" data-cutscene-src="assets/videos_showcase/game_videos/cutscenes/sea_cutscene2.mp4" data-poster="assets/photo_showcase/cutscene1_25s.jpg" style="padding: 6px 14px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; border: 1.5px solid #cbd5e1; background: #f8fafc; color: #475569; cursor: pointer; transition: all 0.2s;">
+                    <i class="fas fa-film" style="font-size: 0.72rem; margin-right: 4px;"></i> Cutscene 2
+                  </button>
+                  <button type="button" class="cutscene-pill-btn" data-cutscene-src="assets/videos_showcase/game_videos/cutscenes/sea_cutscene3.mp4" data-poster="assets/photo_showcase/cutscene1_10s.jpg" style="padding: 6px 14px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; border: 1.5px solid #cbd5e1; background: #f8fafc; color: #475569; cursor: pointer; transition: all 0.2s;">
+                    <i class="fas fa-film" style="font-size: 0.72rem; margin-right: 4px;"></i> Cutscene 3
+                  </button>
+                  <button type="button" class="cutscene-pill-btn" data-cutscene-src="assets/videos_showcase/game_videos/cutscenes/sea_cutscene4.mp4" data-poster="assets/photo_showcase/cutscene1_25s.jpg" style="padding: 6px 14px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; border: 1.5px solid #cbd5e1; background: #f8fafc; color: #475569; cursor: pointer; transition: all 0.2s;">
+                    <i class="fas fa-film" style="font-size: 0.72rem; margin-right: 4px;"></i> Cutscene 4
+                  </button>
+                </div>
+              </div>
+
+              <!-- Cutscene Video Player Frame -->
+              <div class="video-fullscreen-frame" style="border-radius: 12px; overflow: hidden; background: #000; box-shadow: 0 4px 16px rgba(0,0,0,0.15); position: relative;">
+                <video id="modalCutscenePlayer" controls playsinline preload="metadata" poster="assets/photo_showcase/cutscene1_10s.jpg" style="width: 100%; aspect-ratio: 16/9; display: block; object-fit: cover;">
+                  <source src="assets/videos_showcase/game_videos/cutscenes/sea_cutscene1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+            <!-- Award Certificate Card -->
+            <div class="poster-below-card certificate-card" id="posterWrap" data-zoom-src="assets/photo_showcase/seavagabond_certificate.png" title="Click to inspect certificate">
+              <div class="poster-below-preview">
+                <div class="poster-below-thumb certificate-thumb">
+                  <img src="assets/photo_showcase/seavagabond_certificate.png" alt="Sea Vagabond Certificate">
+                </div>
+                <div class="poster-below-info">
+                  <h4><i class="fas fa-award" style="color:#f59e0b; margin-right:6px;"></i> 🏆 Best Game Project Award Certificate</h4>
+                  <p>Awarded Best Creative Third-Person Action-Adventure Game for developing SEA VAGABOND (Click to inspect full resolution).</p>
+                </div>
+              </div>
+              <button type="button" class="btn-zoom-poster-pill" data-zoom-src="assets/photo_showcase/seavagabond_certificate.png">
+                <i class="fas fa-expand"></i> View Certificate
+              </button>
+            </div>
+          `;
+
+        // -------------------------------------------------------------
+        // 4B. OTHER GAME PROJECTS (The Lost Tomato, Runaway Timmy, We Were Mummies, Code Eternis, Mario Arena)
+        // -------------------------------------------------------------
+        } else if (cat === 'game' || p.title === 'The Lost Tomato' || p.title === 'Runaway Timmy' || p.title === 'We Were Mummies' || p.title === 'Code Eternis' || (p.title && p.title.includes('Mario'))) {
           
           let storyQuote = `"Embark on an imaginative journey crafted with passion, interactive mechanics, and engaging visual art."`;
           let storyDesc = `Explore the dynamic game world, navigate challenging obstacles, and experience responsive controls built from the ground up.`;
@@ -1782,11 +1941,6 @@
             storyDesc = `Timmy swiped coins from Granny's jar to buy a console! Guide him through a modular European town, avoiding roadblocks and swimming waterways.`;
             roleDesc = `Engineered fluid 4-way swipe detection, 3-lane dodge transitions, health pickups, and stackable power-ups (magnet, shield, skateboard).`;
             chips = ['3-Lane Mobile Swipe', 'Dynamic Road Hazards', 'Stackable Power-Ups', 'Cinemachine Camera'];
-          } else if (p.title === 'Sea Vagabond') {
-            storyQuote = `"Set sail beyond charted waters to uncover forgotten pirate relics and legendary havens."`;
-            storyDesc = `Explore Havenport Isle as an ambitious privateer! Wander stylized docks, uncover hidden coastal treasures, and experience cinematic lighting.`;
-            roleDesc = `Recognized with the XJTU Best Game Project Award for outstanding worldbuilding, ocean water shaders, and atmospheric lighting.`;
-            chips = ['Action Exploration', 'Havenport Worldbuilding', 'Water Shader Mechanics', 'Best Game Award'];
           } else if (p.title === 'We Were Mummies') {
             storyQuote = `"True escape requires two minds thinking as one across the ancient Pharaoh's tomb."`;
             storyDesc = `Two players must communicate to solve asymmetric puzzles without seeing each other's camera feed to disarm ancient traps and escape.`;
@@ -1844,6 +1998,11 @@
                   <span>Explanation Video</span>
                   <i class="fas fa-arrow-up-right-from-square btn-external-icon"></i>
                 </a>` : ''}
+                ${p.certificate ? `
+                <button type="button" class="btn-upper-video btn-upper-certificate" data-zoom-src="${p.certificate}" title="View Award Certificate">
+                  <i class="fas fa-award" style="color:#f59e0b;"></i>
+                  <span>View Certificate</span>
+                </button>` : ''}
               </div>
             </div>
 
@@ -1934,15 +2093,6 @@
               </button>
             </div>
             ` : ''}
-
-            <!-- 7. Standalone Case Study Link (if exists) -->
-            ${p.link && !p.link.endsWith('.mp4') && !p.link.endsWith('.mov') ? `
-            <div class="modal-bottom-actions">
-              <a href="${p.link}" class="btn-standalone-link">
-                <i class="fas fa-arrow-up-right-from-square"></i> Open Full Standalone Showcase
-              </a>
-            </div>
-            ` : ''}
           `;
 
         // -------------------------------------------------------------
@@ -2020,6 +2170,44 @@
             const src = zoomEl.getAttribute('data-zoom-src');
             if (src && typeof openLightboxWithSrc === 'function') {
               openLightboxWithSrc(src);
+            }
+        // Wire cutscenes button and video switcher if present
+        const btnUpperCutscenes = modalDynamicContent.querySelector('#btnUpperCutscenes');
+        if (btnUpperCutscenes) {
+          btnUpperCutscenes.addEventListener('click', (e) => {
+            e.preventDefault();
+            const cutscenesSection = modalDynamicContent.querySelector('#seaCutscenesSection');
+            const cutscenePlayer = modalDynamicContent.querySelector('#modalCutscenePlayer');
+            if (cutscenesSection) {
+              cutscenesSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            if (cutscenePlayer) {
+              cutscenePlayer.play().catch(() => {});
+            }
+          });
+        }
+
+        modalDynamicContent.querySelectorAll('.cutscene-pill-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const cutscenePlayer = modalDynamicContent.querySelector('#modalCutscenePlayer');
+            const targetSrc = btn.getAttribute('data-cutscene-src');
+            const targetPoster = btn.getAttribute('data-poster');
+            if (cutscenePlayer && targetSrc) {
+              cutscenePlayer.src = targetSrc;
+              if (targetPoster) cutscenePlayer.poster = targetPoster;
+              cutscenePlayer.load();
+              cutscenePlayer.play().catch(() => {});
+
+              modalDynamicContent.querySelectorAll('.cutscene-pill-btn').forEach(b => {
+                b.classList.remove('active');
+                b.style.background = '#f8fafc';
+                b.style.borderColor = '#cbd5e1';
+                b.style.color = '#475569';
+              });
+              btn.classList.add('active');
+              btn.style.background = '#0284c7';
+              btn.style.borderColor = '#0284c7';
+              btn.style.color = '#ffffff';
             }
           });
         });
@@ -2278,15 +2466,85 @@
         }
       });
 
+      // Helper to smoothly scroll to laptop stage and open the project modal
+      function openModalFromDirectoryCard(projectData, category) {
+        if (!projectData) return;
+        const laptopStage = document.getElementById('laptopStage');
+        if (laptopStage) {
+          laptopStage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        setTimeout(() => {
+          openProjectModal(projectData, category);
+        }, 180);
+      }
+
+      // Wire directory card for Sea Vagabond to the macOS Project Modal
+      const showcaseSeaVagabondCard = document.getElementById('showcaseSeaVagabondCard');
+      if (showcaseSeaVagabondCard) {
+        showcaseSeaVagabondCard.addEventListener('click', (e) => {
+          e.preventDefault();
+          const seaData = categoryProjectsData.game.projects.find(p => p.title.includes('Sea Vagabond'));
+          if (seaData) openModalFromDirectoryCard(seaData, 'game');
+        });
+      }
+
+      // Wire directory card for Havenport Isle to the macOS Project Modal
+      const showcaseHavenportCard = document.getElementById('showcaseHavenportCard');
+      if (showcaseHavenportCard) {
+        showcaseHavenportCard.addEventListener('click', (e) => {
+          e.preventDefault();
+          const seaData = categoryProjectsData.game.projects.find(p => p.title.includes('Sea Vagabond'));
+          if (seaData) openModalFromDirectoryCard(seaData, 'game');
+        });
+      }
+
+      // Wire directory card for We Were Mummies to the macOS Project Modal
+      const showcaseMummiesCard = document.getElementById('showcaseMummiesCard');
+      if (showcaseMummiesCard) {
+        showcaseMummiesCard.addEventListener('click', (e) => {
+          e.preventDefault();
+          const mummiesData = categoryProjectsData.game.projects.find(p => p.title.includes('Mummies'));
+          if (mummiesData) openModalFromDirectoryCard(mummiesData, 'game');
+        });
+      }
+
+      // Wire directory card for Runaway Timmy to the macOS Project Modal
+      const showcaseTimmyCard = document.getElementById('showcaseTimmyCard');
+      if (showcaseTimmyCard) {
+        showcaseTimmyCard.addEventListener('click', (e) => {
+          e.preventDefault();
+          const timmyData = categoryProjectsData.game.projects.find(p => p.title.includes('Timmy'));
+          if (timmyData) openModalFromDirectoryCard(timmyData, 'game');
+        });
+      }
+
+      // Wire directory card for The Lost Tomato to the macOS Project Modal
+      const showcaseTomatoCard = document.getElementById('showcaseTomatoCard');
+      if (showcaseTomatoCard) {
+        showcaseTomatoCard.addEventListener('click', (e) => {
+          e.preventDefault();
+          const tomatoData = categoryProjectsData.game.projects.find(p => p.title.includes('Tomato'));
+          if (tomatoData) openModalFromDirectoryCard(tomatoData, 'game');
+        });
+      }
+
+      // Wire directory card for Kitchin to the macOS Project Modal
+      const showcaseKitchinCard = document.getElementById('showcaseKitchinCard');
+      if (showcaseKitchinCard) {
+        showcaseKitchinCard.addEventListener('click', (e) => {
+          e.preventDefault();
+          const kitchinData = categoryProjectsData.uiux.projects.find(p => p.id === 'kitchin');
+          if (kitchinData) openModalFromDirectoryCard(kitchinData, 'uiux');
+        });
+      }
+
       // Wire directory card for Lily and the Veggies to the macOS Project Modal
       const showcaseLilyCard = document.getElementById('showcaseLilyCard');
       if (showcaseLilyCard) {
         showcaseLilyCard.addEventListener('click', (e) => {
           e.preventDefault();
           const lilyData = categoryProjectsData.animation.projects.find(p => p.id === 'lily-and-the-veggies');
-          if (lilyData) {
-            openProjectModal(lilyData, 'animation');
-          }
+          if (lilyData) openModalFromDirectoryCard(lilyData, 'animation');
         });
       }
 
@@ -2296,9 +2554,7 @@
         showcaseBestRateCard.addEventListener('click', (e) => {
           e.preventDefault();
           const bestRateData = categoryProjectsData.uiux.projects.find(p => p.id === 'bestrate');
-          if (bestRateData) {
-            openProjectModal(bestRateData, 'uiux');
-          }
+          if (bestRateData) openModalFromDirectoryCard(bestRateData, 'uiux');
         });
       }
 
@@ -2308,9 +2564,7 @@
         showcaseCoduCard.addEventListener('click', (e) => {
           e.preventDefault();
           const coduData = categoryProjectsData.uiux.projects.find(p => p.id === 'codu');
-          if (coduData) {
-            openProjectModal(coduData, 'uiux');
-          }
+          if (coduData) openModalFromDirectoryCard(coduData, 'uiux');
         });
       }
 
@@ -2320,9 +2574,7 @@
         showcaseAsianCuisineCard.addEventListener('click', (e) => {
           e.preventDefault();
           const acData = categoryProjectsData.uiux.projects.find(p => p.id === 'asiancuisine');
-          if (acData) {
-            openProjectModal(acData, 'uiux');
-          }
+          if (acData) openModalFromDirectoryCard(acData, 'uiux');
         });
       }
 
@@ -2332,9 +2584,7 @@
         showcaseInfovisCard.addEventListener('click', (e) => {
           e.preventDefault();
           const infoData = categoryProjectsData.uiux.projects.find(p => p.id === 'infovis');
-          if (infoData) {
-            openProjectModal(infoData, 'uiux');
-          }
+          if (infoData) openModalFromDirectoryCard(infoData, 'uiux');
         });
       }
 
@@ -2344,9 +2594,7 @@
         showcaseMarioCard.addEventListener('click', (e) => {
           e.preventDefault();
           const marioData = categoryProjectsData.game.projects.find(p => p.title.includes('Mario'));
-          if (marioData) {
-            openProjectModal(marioData, 'game');
-          }
+          if (marioData) openModalFromDirectoryCard(marioData, 'game');
         });
       }
 

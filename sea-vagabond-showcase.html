@@ -99,6 +99,10 @@
           <span>Watch Full Gameplay Video</span>
           <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.78rem;"></i>
         </a>
+        <a href="#cutscenesSection" class="btn-aesthetic-secondary" style="border-color: #7dd3fc; color: #0369a1;">
+          <i class="fas fa-clapperboard" style="color: #0284c7;"></i>
+          <span>Cutscenes Video</span>
+        </a>
         <button class="btn-aesthetic-secondary" data-zoom-src="assets/photo_showcase/seavagabond_certificate.png">
           <i class="fas fa-award" style="color: #f59e0b;"></i>
           <span>View Award Certificate</span>
@@ -170,6 +174,43 @@
       </section>
     </div>
 
+    <!-- BOX 3B: Cinematic In-Game Cutscenes Showcase -->
+    <section class="showcase-box" id="cutscenesSection">
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 14px;">
+        <div>
+          <h3 class="box-subheading" style="margin-bottom: 4px;">
+            <i class="fas fa-clapperboard" style="color: #0284c7;"></i> Cinematic In-Game Cutscenes
+          </h3>
+          <p style="font-size: 0.92rem; color: #64748b; margin: 0;">
+            Directed camera choreography, character staging, and quest dialogues for Havenport Isle tutorial encounters in Unity 3D.
+          </p>
+        </div>
+
+        <!-- Cutscene Selector Switcher Pills -->
+        <div class="cutscene-selector-pills" style="display: flex; gap: 6px; flex-wrap: wrap;">
+          <button type="button" class="cutscene-standalone-pill active" data-cutscene-src="assets/videos_showcase/game_videos/cutscenes/sea_cutscene1.mp4" data-poster="assets/photo_showcase/cutscene1_10s.jpg" style="padding: 6px 14px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; border: 1.5px solid #0284c7; background: #0284c7; color: #fff; cursor: pointer; transition: all 0.2s;">
+            <i class="fas fa-film" style="font-size: 0.72rem; margin-right: 4px;"></i> Cutscene 1
+          </button>
+          <button type="button" class="cutscene-standalone-pill" data-cutscene-src="assets/videos_showcase/game_videos/cutscenes/sea_cutscene2.mp4" data-poster="assets/photo_showcase/cutscene1_25s.jpg" style="padding: 6px 14px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; border: 1.5px solid #cbd5e1; background: #f8fafc; color: #475569; cursor: pointer; transition: all 0.2s;">
+            <i class="fas fa-film" style="font-size: 0.72rem; margin-right: 4px;"></i> Cutscene 2
+          </button>
+          <button type="button" class="cutscene-standalone-pill" data-cutscene-src="assets/videos_showcase/game_videos/cutscenes/sea_cutscene3.mp4" data-poster="assets/photo_showcase/cutscene1_10s.jpg" style="padding: 6px 14px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; border: 1.5px solid #cbd5e1; background: #f8fafc; color: #475569; cursor: pointer; transition: all 0.2s;">
+            <i class="fas fa-film" style="font-size: 0.72rem; margin-right: 4px;"></i> Cutscene 3
+          </button>
+          <button type="button" class="cutscene-standalone-pill" data-cutscene-src="assets/videos_showcase/game_videos/cutscenes/sea_cutscene4.mp4" data-poster="assets/photo_showcase/cutscene1_25s.jpg" style="padding: 6px 14px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; border: 1.5px solid #cbd5e1; background: #f8fafc; color: #475569; cursor: pointer; transition: all 0.2s;">
+            <i class="fas fa-film" style="font-size: 0.72rem; margin-right: 4px;"></i> Cutscene 4
+          </button>
+        </div>
+      </div>
+
+      <div class="video-frame-inner" style="border-radius: 12px; overflow: hidden; background: #000; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
+        <video id="seaCutscenePlayer" controls playsinline preload="metadata" poster="assets/photo_showcase/cutscene1_10s.jpg" style="width: 100%; aspect-ratio: 16/9; display: block; object-fit: cover;">
+          <source src="assets/videos_showcase/game_videos/cutscenes/sea_cutscene1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
     <!-- BOX 4: Award Certificate Highlight -->
     <section class="showcase-box">
       <div class="poster-showcase-row">
@@ -215,5 +256,31 @@
   </div>
 
   <script src="showcase-helper.js"></script>
+  <script>
+    document.querySelectorAll('.cutscene-standalone-pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const player = document.getElementById('seaCutscenePlayer');
+        const src = btn.getAttribute('data-cutscene-src');
+        const poster = btn.getAttribute('data-poster');
+        if (player && src) {
+          player.src = src;
+          if (poster) player.poster = poster;
+          player.load();
+          player.play().catch(() => {});
+
+          document.querySelectorAll('.cutscene-standalone-pill').forEach(b => {
+            b.classList.remove('active');
+            b.style.background = '#f8fafc';
+            b.style.borderColor = '#cbd5e1';
+            b.style.color = '#475569';
+          });
+          btn.classList.add('active');
+          btn.style.background = '#0284c7';
+          btn.style.borderColor = '#0284c7';
+          btn.style.color = '#ffffff';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
