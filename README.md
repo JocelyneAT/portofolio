@@ -16,13 +16,13 @@ Welcome to your custom portfolio website! Built with modern Vanilla HTML5, CSS3,
      - 📱 *UI/UX & Frontend* (Mobile App Design, Web Apps, Interactive Prototypes)
      - 🧊 *3D Modeling & Environment* (Assets, Props, Atmospheric Levels)
      - ✨ *2D & 3D Animation* (Motion Graphics, Narrative Shorts, Storyboards)
-   - **Skills & Toolset Matrix**: Categorized tech stacks (Unity, Unreal, C#, JavaScript, React, Figma, Blender, Maya, Premiere, After Effects).
+   - **Skills & Toolset Matrix**: Categorized tech stacks (Unity, Unreal, C++, JavaScript, React, Figma, Blender, Maya, Premiere, After Effects).
    - **Education & Experience Timeline**: Academic milestones at Xiamen University Malaysia.
    - **Direct Contact & Social Footer**: Inquiry form and social links.
 
 2. **`game-showcase.html` (Game Dev & Cutscene Case Study Template)**
    - Tailored specifically for 3D Game Development and in-game cinematics.
-   - Includes floating 5-step quick dock (`01 Overview`, `02 Gameplay Trailer`, `03 Cutscenes & Story`, `04 C# Mechanics`, `05 3D Environment`).
+   - Includes floating 5-step quick dock (`01 Overview`, `02 Gameplay Trailer`, `03 Cutscenes & Story`, `04 C++ Mechanics`, `05 3D Environment`).
    - Integrated full-screen lightbox image zoom and video player modal.
 
 3. **`project-detail.html` (UI/UX & Mobile App Case Study Template)**

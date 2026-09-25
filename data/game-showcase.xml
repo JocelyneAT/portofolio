@@ -21,7 +21,7 @@
       <metaItem label="My Role" value="Lead Game Dev &amp; Technical Artist" />
       <metaItem label="Platform" value="Mobile (Android / iOS) &amp; PC" />
       <metaItem label="Genre" value="3D Cartoon Endless Runner" />
-      <metaItem label="Tech Stack" value="Unity 3D, C#, Blender, Cinemachine" />
+      <metaItem label="Tech Stack" value="Unity 3D, C++, Blender, Cinemachine" />
     </metaList>
     <youtubeStreams>
       <explanationVideoUrl>https://youtu.be/h-d8EciMMEw</explanationVideoUrl>

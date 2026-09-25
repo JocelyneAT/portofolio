@@ -22,7 +22,7 @@
     <description>An epic team-built 3D pirate action-adventure game. Continue a father's legacy across 5 island realms to recover the mystical stones and unlock a legendary treasure. Featured focus on Area 1 (Havenport Isle) environment design, tutorial quest, dialogues, and cutscenes.</description>
     <tags>
       <tag>Unity 3D</tag>
-      <tag>C#</tag>
+      <tag>C++</tag>
       <tag>Award Winner</tag>
       <tag>Level Design</tag>
       <tag>Team Project</tag>
@@ -50,7 +50,7 @@
     <description>A stylized 2-player online cooperative escape game inspired by We Were Here. Trapped and transformed into mummies inside an ancient Egyptian tomb, two players must communicate across separate chambers, solve interconnected puzzles, and defeat the Guardian Statue to break the curse.</description>
     <tags>
       <tag>Unity 3D</tag>
-      <tag>C#</tag>
+      <tag>C++</tag>
       <tag>Online Co-op</tag>
       <tag>Puzzle Design</tag>
       <tag>Level Art</tag>
@@ -79,7 +79,7 @@
     <description>A fast-paced cartoon mobile endless runner inspired by Subway Surfers. Escape an enraged Granny through modular European town streets, dodging obstacles, swimming canals, collecting coins, and stacking mystery power-ups in Unity 3D.</description>
     <tags>
       <tag>Unity 3D</tag>
-      <tag>C#</tag>
+      <tag>C++</tag>
       <tag>Endless Runner</tag>
       <tag>Blender</tag>
       <tag>Mobile Game</tag>
@@ -107,7 +107,7 @@
     <description>A physics-based 3D ball adventure game where a lost tomato journeys through Fruit Land to find its way back home to Veggie Land. Roll, jump, dash across traps, solve maze puzzles, and collect power-ups in Unity 3D.</description>
     <tags>
       <tag>Unity 3D</tag>
-      <tag>C#</tag>
+      <tag>C++</tag>
       <tag>Physics Ball</tag>
       <tag>3D Platformer</tag>
       <tag>Blender</tag>
@@ -271,10 +271,10 @@
       <videoUrl>https://youtu.be/Ie3MEz1A0PE</videoUrl>
     </mediaButton>
     <title>Mario Arena: Luma Star Wars</title>
-    <description>Cosmic 3D arena action combat prototype developed in Unity with C#. Guide Mario and Luma through planetary battlegrounds, dodge orbital hazards, and challenge galactic bosses.</description>
+    <description>Cosmic 3D arena action combat prototype developed in Unity with C++. Guide Mario and Luma through planetary battlegrounds, dodge orbital hazards, and challenge galactic bosses.</description>
     <tags>
       <tag>Unity 3D</tag>
-      <tag>C# Scripting</tag>
+      <tag>C++ Scripting</tag>
       <tag>Boss AI</tag>
       <tag>Combat Prototype</tag>
     </tags>
